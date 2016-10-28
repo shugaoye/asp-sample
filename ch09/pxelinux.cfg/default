@@ -2,33 +2,28 @@ prompt 1
 default menu.c32
 timeout 100
 
-label 1. x86vbox NFS Installation
-menu x86vbox
+label 1. x86vbox NFS Installation (serial port)
+menu x86vbox_S3
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product qemu=1 qemu.gles=0
 
-label 2. x86vbox sda1
-menu x86vbox_sda1
+label 2. x86vbox sda1 (serial port)
+menu x86vbox_sda1_S3
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox
 
-label 3. x86vbox sda1 tty
-menu x86vbox_sda1_tty
+label 3. x86vbox NFS Installation
+menu x86vbox
 kernel x86vbox/kernel
-append ip=dhcp initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/x86vbox
+append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product qemu=1 qemu.gles=0
 
-label 4. x86vbox recovery
+label 4. x86vbox sda1
+menu x86vbox_sda1
+kernel x86vbox/kernel
+append ip=dhcp initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox
+
+label 5. x86vbox recovery
 menu x86vbox_recovery
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox DEBUG=2 SRC=/x86vbox
-
-label 5. android-6.0-rc2 (x86 kernel NFS)
-menu android-6.0-rc2-nfs
-kernel x86/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86/initrd.img root=/dev/nfs rw androidboot.hardware=android_x86 DEBUG=2 SRC=/x86 ROOT=192.168.56.1:/home/sgye/vol1/android-x86/out/target/product qemu=1 qemu.gles=0
-
-label 6. android-6.0-rc2
-menu android-6.0-rc2
-kernel x86/kernel
-append ip=dhcp root=/dev/ram0 rw console=ttyS3,115200 androidboot.hardware=android_x86 DEBUG=2 initrd=x86/initrd.img SRC=/android-x86vbox
 
