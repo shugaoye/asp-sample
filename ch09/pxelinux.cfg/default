@@ -12,7 +12,7 @@ menu x86vbox_sda1_S3
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1
 
-label 3. x86vbox NFS Installation - x86vbox
+label 3. NFS Installation - x86vbox
 menu x86vbox_install
 kernel x86vbox/kernel
 append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product qemu=1 qemu.gles=0
