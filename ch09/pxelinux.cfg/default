@@ -17,18 +17,28 @@ menu x86vbox_sda1_debug
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1
 
-label 4. x86vbox (ROOT=/dev/sda1)
-menu x86vbox_sda1
+label 4. x86vbox (ROOT=/dev/sda2, Guest Additions)
+menu x86vbox_sda2_debug
 kernel x86vbox/kernel
-append ip=dhcp initrd=x86vbox/initrd.img androidboot.hardware=x86vbox SRC=/android-x86vbox ROOT=/dev/sda1
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda2 SDCARD=/sdcard VBOX_GUEST_ADDITIONS=1
 
-label 5. NFS Installation (debug vbox230) - x86vbox
-menu x86vbox_install_serial
+label 5. Recovery (NFS debug vbox240) - x86vbox
+menu x86vbox_recovery_nfs_debug240
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.228.230:/home/sgye/vol1/android-6/out/target/product qemu=1 qemu.gles=0
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox DEBUG=2 SRC=x86vbox RECOVERY=1 ROOT=10.210.252.240:/home/roger/src/android/out/target/product SDCARD=/sdcard VBOX_GUEST_ADDITIONS=1
 
-label 6. x86vbox recovery (ROOT=/dev/sda2)
+label 6. NFS Installation (debug vbox240) - x86vbox
+menu x86vbox_install_serial240
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.252.240:/home/roger/src/android/out/target/product
+
+label 7. NFS Installation (debug vbox230) - x86vbox
+menu x86vbox_install_serial230
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.228.230:/home/sgye/vol1/android-6/out/target/product
+
+label 8. x86vbox recovery (ROOT=/dev/sda2)
 menu x86vbox_recovery
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda2
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda2 RECOVERY=1
 
