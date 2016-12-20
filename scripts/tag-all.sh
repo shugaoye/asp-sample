@@ -2,8 +2,33 @@
 
 source build/envsetup.sh
 
+	case $1 in
+		android-6.0.1_r61_x86vbox*|android-7.1.0_r7_x86vbox*)
+			if [ -d device/generic/x86vbox ]; then
+				echo Tagging x86vbox ...
+				cd device/generic/x86vbox; git tag $1; git push github $1; croot
+			else
+				echo "Cannot find x86vbox."
+				exit
+			fi
+			;;
+		android-6.0.1_r61_x86emu*|android-7.1.0_r7_x86emu*)
+			if [ -d device/generic/x86emu ]; then
+				echo Tagging x86emu ...
+				cd device/generic/x86emu; git tag $1; git push github $1; croot
+			else
+				echo "Cannot find x86emu."
+				exit
+			fi
+			;;
+		*)
+			echo Tag is not valid.
+			exit
+			;;
+	esac
+
+echo "Start tagging ..."
 cd device/generic/goldfish; git tag $1; git push github $1; croot
-cd device/generic/x86emu; git tag $1; git push github $1; croot
 cd kernel; git tag $1; git push github $1; croot
 cd bionic; git tag $1; git push github $1; croot
 cd bootable/newinstaller; git tag $1; git push github $1; croot
