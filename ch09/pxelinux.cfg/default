@@ -2,43 +2,39 @@ prompt 1
 default menu.c32
 timeout 100
 
-label 1. NFS Installation from vbox240 - x86vbox
+label 1. x86vbox (ROOT=/dev/sda1, debug)
+menu x86vbox_sda1_debug
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 VBOX_GUEST_ADDITIONS=1 SDCARD=x86vbox DATA=sda2
+
+label 2. Recovery (ROOT=/dev/sda1) - x86vbox
+menu x86vbox_recovery_sda1
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 RECOVERY=1 SDCARD=x86vbox VBOX_GUEST_ADDITIONS=1 DATA=sda2
+
+label 3. NFS Installation from vbox240 - x86vbox
 menu x86vbox_install_vbox240
 kernel x86vbox/kernel
-append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=10.210.252.240:/home/roger/src/android/out/target/product
+append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=10.210.252.240:/home/roger/src/android/out/target/product DATA=sda2
 
-label 2. NFS Installation from vbox230 - x86vbox
+label 4. NFS Installation from vbox230 - x86vbox
 menu x86vbox_install_vbox230
 kernel x86vbox/kernel
 append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=10.210.228.230:/home/sgye/vol1/android-6/out/target/product
 
-label 3. x86vbox (ROOT=/dev/sda1, debug)
-menu x86vbox_sda1_debug
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1
-
-label 4. x86vbox (ROOT=/dev/sda2, Guest Additions)
-menu x86vbox_sda2_debug
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda2 SDCARD=/sdcard VBOX_GUEST_ADDITIONS=1
-
 label 5. Recovery (NFS debug vbox240) - x86vbox
 menu x86vbox_recovery_nfs_debug240
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox DEBUG=2 SRC=x86vbox RECOVERY=1 ROOT=10.210.252.240:/home/roger/src/android/out/target/product SDCARD=/sdcard VBOX_GUEST_ADDITIONS=1
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox DEBUG=2 SRC=x86vbox RECOVERY=1 ROOT=10.210.252.240:/home/roger/src/android/out/target/product SDCARD=x86vbox VBOX_GUEST_ADDITIONS=1
 
 label 6. NFS Installation (debug vbox240) - x86vbox
 menu x86vbox_install_serial240
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.252.240:/home/roger/src/android/out/target/product
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.252.240:/home/roger/src/android/out/target/product DATA=sda2
 
 label 7. NFS Installation (debug vbox230) - x86vbox
 menu x86vbox_install_serial230
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.210.228.230:/home/sgye/vol1/android-6/out/target/product
 
-label 8. x86vbox recovery (ROOT=/dev/sda2)
-menu x86vbox_recovery
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda2 RECOVERY=1
 
