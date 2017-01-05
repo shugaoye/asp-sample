@@ -25,15 +25,20 @@ append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidb
 label 3. NFS Installation - x86vbox
 menu x86vbox_install
 kernel x86vbox/kernel
-append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
+append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
 
 label 4. NFS Installation (serial port) - x86vbox
 menu x86vbox_install_serial
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
 
 label 8. Recovery (NFS debug) - x86vbox
 menu x86vbox_recovery_debug_nfs
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/mcafee/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2 RECOVERY=1
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2 RECOVERY=1
+
+label 9. x86vbox (Two stags /dev/sda1)
+menu x86vbox_sda1_debug
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
 
