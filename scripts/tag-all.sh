@@ -32,6 +32,7 @@ cd device/generic/goldfish; git tag $1; git push github $1; croot
 cd kernel; git tag $1; git push github $1; croot
 cd bionic; git tag $1; git push github $1; croot
 cd bootable/newinstaller; git tag $1; git push github $1; croot
+cd bootable/recovery; git tag $1; git push github $1; croot
 cd device/generic/common; git tag $1; git push github $1; croot
 cd device/generic/firmware; git tag $1; git push github $1; croot
 cd external/alsa-lib; git tag $1; git push github $1; croot
