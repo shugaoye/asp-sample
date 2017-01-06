@@ -2,37 +2,12 @@
 
 source build/envsetup.sh
 
-	case $1 in
-		android-6.0.1_r61_x86vbox*|android-7.1.0_r7_x86vbox*)
-			if [ -d device/generic/x86vbox ]; then
-				echo Tagging x86vbox ...
-				cd device/generic/x86vbox; git tag $1; git push github $1; croot
-			else
-				echo "Cannot find x86vbox."
-				exit
-			fi
-			;;
-		android-6.0.1_r61_x86emu*|android-7.1.0_r7_x86emu*)
-			if [ -d device/generic/x86emu ]; then
-				echo Tagging x86emu ...
-				cd device/generic/x86emu; git tag $1; git push github $1; croot
-			else
-				echo "Cannot find x86emu."
-				exit
-			fi
-			;;
-		*)
-			echo Tag is not valid.
-			exit
-			;;
-	esac
-
-echo "Start tagging ..."
-cd device/generic/goldfish; git tag $1; git push github $1; croot
-cd kernel; git tag $1; git push github $1; croot
-cd bionic; git tag $1; git push github $1; croot
+tag_android_x86()
+{
 cd bootable/newinstaller; git tag $1; git push github $1; croot
 cd device/generic/common; git tag $1; git push github $1; croot
+
+cd bionic; git tag $1; git push github $1; croot
 cd device/generic/firmware; git tag $1; git push github $1; croot
 cd external/alsa-lib; git tag $1; git push github $1; croot
 cd external/alsa-utils; git tag $1; git push github $1; croot
@@ -68,4 +43,61 @@ cd hardware/libsensors; git tag $1; git push github $1; croot
 cd hardware/ril; git tag $1; git push github $1; croot
 cd hardware/x86power; git tag $1; git push github $1; croot
 cd system/core; git tag $1; git push github $1; croot
+}
+
+tag_goldfish()
+{
+cd device/generic/goldfish; git tag $1; git push github $1; croot
+}
+
+case $1 in
+	android-6.0.1_r61_x86vbox*|android-7.1.0_r7_x86vbox*)
+		if [ -d device/generic/x86vbox ]; then
+			echo Tagging x86vbox ...
+			cd device/generic/x86vbox; git tag $1; git push github $1; croot
+			tag_goldfish
+			tag_android_x86
+		else
+			echo "Cannot find x86vbox."
+			exit
+		fi
+		;;
+	android-6.0.1_r61_x86emu*)
+		if [ -d device/generic/x86emu ]; then
+			echo Tagging x86emu ...
+			tag_goldfish
+			cd device/generic/x86emu; git tag $1; git push github $1; croot
+		else
+			echo "Cannot find x86emu."
+			exit
+		fi
+		;;
+	android-7.1.0_r7_x86emu_ch04_r*)
+		if [ -d device/generic/x86emu ]; then
+			echo Tagging android-7.1.0_r7_x86emu_ch04...
+			cd device/generic/x86emu; git tag $1; git push github $1; croot
+		else
+			echo "Cannot find x86emu."
+			exit
+		fi
+		;;
+	android-7.1.0_r7_x86emu_ch05_r*)
+		if [ -d device/generic/x86emu ]; then
+			echo Tagging android-7.1.0_r7_x86emu_ch05...
+			cd device/generic/x86emu; git tag $1; git push github $1; croot
+			cd device/generic/common; git tag $1; git push github $1; croot
+		else
+			echo "Cannot find x86emu."
+			exit
+		fi
+		;;
+	*)
+		echo Tag is not valid.
+		exit
+		;;
+esac
+
+echo "Start tagging ..."
+cd kernel; git tag $1; git push github $1; croot
+
 
