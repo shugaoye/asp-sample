@@ -1,0 +1,19 @@
+prompt 1
+default menu.c32
+timeout 100
+
+label 1. x86vbox (2 stages boot)
+menu x86vbox_initrd
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2 X86VBOX=1
+
+label 2. x86vbox
+menu x86vbox_ramdisk
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk.img androidboot.hardware=x86vbox
+
+label 3. Recovery - x86vbox
+menu x86vbox_ramdisk_recovery
+kernel x86vbox/kernel
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox
+

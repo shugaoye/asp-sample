@@ -5,6 +5,7 @@ source build/envsetup.sh
 tag_android_x86()
 {
 cd bootable/newinstaller; git tag $1; git push github $1; croot
+cd bootable/recovery; git tag $1; git push github $1; croot
 cd device/generic/common; git tag $1; git push github $1; croot
 
 cd bionic; git tag $1; git push github $1; croot
