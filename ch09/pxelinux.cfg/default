@@ -42,3 +42,4 @@ menu x86vbox_sda1_debug
 kernel x86vbox/kernel
 append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
 
+
