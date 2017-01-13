@@ -25,7 +25,7 @@ append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img root=/de
 label 5. Recovery (NFS 2 stages) - x86vbox
 menu x86vbox_recovery_nfs_debug240
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox DEBUG=2 SRC=x86vbox RECOVERY=1 ROOT=10.210.252.240:/home/roger/src/android/out/target/product SDCARD=vendor VBOX_GUEST_ADDITIONS=1 DATA=sda2
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox DEBUG=2 SRC=x86vbox RECOVERY=1 ROOT=10.0.2.2:/home/roger/src/android/out/target/product SDCARD=vendor VBOX_GUEST_ADDITIONS=1 DATA=sda2
 
 label 6. NFS Installation from vbox240 - x86vbox
 menu x86vbox_install_vbox240
