@@ -127,6 +127,7 @@ case $1 in
 	android-7.1.0_r7_x86emu_ch05_r*|android-7.1.1_r4_x86emu_ch05_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo Tagging android-7.1.0_r7_x86emu_ch05...
+			tag_goldfish $1
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
 			cd device/generic/common; git tag $1; git push ${REPO_T} $1; croot
 		else
