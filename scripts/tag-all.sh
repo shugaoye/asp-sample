@@ -115,16 +115,16 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch04_r*)
+	android-7.1.0_r7_x86emu_ch04_r*|android-7.1.1_r4_x86emu_ch04_r*)
 		if [ -d device/generic/x86emu ]; then
-			echo Tagging android-7.1.0_r7_x86emu_ch04...
+			echo "Tagging $1..."
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
 		else
 			echo "Cannot find x86emu."
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch05_r*)
+	android-7.1.0_r7_x86emu_ch05_r*|android-7.1.1_r4_x86emu_ch05_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo Tagging android-7.1.0_r7_x86emu_ch05...
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
@@ -138,7 +138,6 @@ case $1 in
 		tag_android_x86 $1
 		cd external/libpciaccess; git tag $1; git push ${REPO_T} $1; croot
 		;;
-	*)
 	android-x86-7.1.1_r*)
 		tag_android_x86 $1
 		;;
