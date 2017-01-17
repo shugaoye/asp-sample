@@ -109,6 +109,7 @@ case $1 in
 		if [ -d device/generic/x86emu ]; then
 			echo Tagging x86emu ...
 			tag_goldfish $1
+			tag_android_x86 $1
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
 		else
 			echo "Cannot find x86emu."
