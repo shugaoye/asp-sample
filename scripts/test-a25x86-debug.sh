@@ -14,7 +14,7 @@ else
   IMG_ROOT=$OUT
 fi
 
-$EMULATOR1 @a25x86 -ranchu -verbose -show-kernel -accel off -shell -system $IMG_ROOT/system.img -ramdisk $IMG_ROOT/ramdisk.img -initdata $IMG_ROOT/userdata.img -kernel $IMG_ROOT/kernel -qemu -s -S
+$EMULATOR1 @a25x86 -ranchu -verbose -show-kernel -accel off -shell -system $IMG_ROOT/system.img -ramdisk $IMG_ROOT/ramdisk.img -initdata $IMG_ROOT/userdata.img -kernel $IMG_ROOT/kernel -qemu -append "console=ttyS0,11520 androidboot.selinux=permissive" -s -S
 
 #/home/sgye/vol1/android-sdk-linux/system-images/android-25/google_apis/x86/kernel-ranchu
 # -accel off 

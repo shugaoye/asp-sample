@@ -1,0 +1,178 @@
+[    0.567218] init: init first stage started!
+[    0.631098] type=1403 audit(1484619021.630:2): policy loaded auid=4294967295 ses=4294967295
+[    0.631859] init: kernel_enforcing=0, is_enforcing=1
+[    0.632241] type=1404 audit(1484619021.630:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    0.680149] init: (Initializing SELinux enforcing took 0.11s.)
+[    0.681387] init: init second stage started!
+[    0.682886] init: Running restorecon...
+[    0.687384] init: waitpid failed: No child processes
+[    0.687816] init: (Loading properties from /default.prop took 0.00s.)
+[    0.688847] init: (Parsing /init.environ.rc took 0.00s.)
+[    0.689372] init: (Parsing /init.usb.rc took 0.00s.)
+[    0.689767] init: (Parsing /init.ranchu.rc took 0.00s.)
+[    0.690382] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[    0.690777] init: (Parsing /init.zygote32.rc took 0.00s.)
+[    0.691124] init: (Parsing /init.rc took 0.00s.)
+[    0.691552] init: Starting service 'ueventd'...
+[    0.691969] type=1400 audit(1484619021.690:4): avc:  denied  { mounton } for  pid=1 comm="init" path="/sys/kernel/debug" dev="debugfs" ino=1 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=dir permissive=0
+[    0.692394] ueventd: ueventd started!
+[    0.693543] init: Waiting for /dev/.coldboot_done...
+[    0.729349] ueventd: Coldboot took 0.04s.
+[    0.734182] init: Waiting for /dev/.coldboot_done took 0.04s.
+[    0.734651] init: /dev/hw_random not found
+[    0.735072] type=1400 audit(1484619021.730:5): avc:  denied  { write } for  pid=1 comm="init" name="ttyS0" dev="tmpfs" ino=3203 scontext=u:r:init:s0 tcontext=u:object_r:serial_device:s0 tclass=chr_file permissive=0
+[    0.737422] init: write_file: Unable to open '/proc/sys/kernel/hung_task_timeout_secs': No such file or directory
+[    0.738167] init: write_file: Unable to open '/proc/cpu/alignment': No such file or directory
+[    0.739538] init: write_file: Unable to open '/proc/sys/abi/swp': No such file or directory
+[    0.740386] init: /dev/hw_random not found
+[    0.742161] EXT4-fs (vda): mounted filesystem with ordered data mode. Opts: (null)
+[    0.742744] fs_mgr: __mount(source=/dev/block/vda,target=/system,type=ext4)=0
+[    0.743383] EXT4-fs (vdb): Ignoring removed nomblk_io_submit option
+[    0.773111] EXT4-fs (vdb): recovery complete
+[    0.794425] EXT4-fs (vdb): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[    0.795207] fs_mgr: __mount(source=/dev/block/vdb,target=/cache,type=ext4)=0
+[    0.796020] EXT4-fs (vdc): Ignoring removed nomblk_io_submit option
+[    0.907850] EXT4-fs (vdc): recovery complete
+[    0.925017] EXT4-fs (vdc): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    0.925970] fs_mgr: check_fs(): mount(/dev/block/vdc,/data,ext4)=0: Success
+[    0.927287] fs_mgr: check_fs(): unmount(/data) succeeded
+[    0.927994] fs_mgr: Running /system/bin/e2fsck on /dev/block/vdc
+[    1.010072] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    1.010072] 
+[    1.010534] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[    1.010534] 
+[    1.011066] e2fsck: Pass 2: Checking directory structure
+[    1.011066] 
+[    1.011541] e2fsck: Pass 3: Checking directory connectivity
+[    1.011541] 
+[    1.012032] e2fsck: Pass 4: Checking reference counts
+[    1.012032] 
+[    1.012488] e2fsck: Pass 5: Checking group summary information
+[    1.012488] 
+[    1.012997] e2fsck: data: 1339/35200 files (11.9% non-contiguous), 43303/140800 blocks
+[    1.012997] 
+[    1.013839] EXT4-fs (vdc): Ignoring removed nomblk_io_submit option
+[    1.015419] EXT4-fs (vdc): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[    1.016138] fs_mgr: __mount(source=/dev/block/vdc,target=/data,type=ext4)=0
+[    1.017144] init: (Parsing /system/etc/init/atrace.rc took 0.00s.)
+[    1.017762] init: (Parsing /system/etc/init/audioserver.rc took 0.00s.)
+[    1.018398] init: (Parsing /system/etc/init/bootanim.rc took 0.00s.)
+[    1.018970] init: (Parsing /system/etc/init/bootstat.rc took 0.00s.)
+[    1.019559] init: (Parsing /system/etc/init/cameraserver.rc took 0.00s.)
+[    1.020216] init: (Parsing /system/etc/init/debuggerd.rc took 0.00s.)
+[    1.020867] init: (Parsing /system/etc/init/drmserver.rc took 0.00s.)
+[    1.021548] init: (Parsing /system/etc/init/dumpstate.rc took 0.00s.)
+[    1.022164] init: (Parsing /system/etc/init/gatekeeperd.rc took 0.00s.)
+[    1.022782] init: (Parsing /system/etc/init/init-debug.rc took 0.00s.)
+[    1.023487] init: (Parsing /system/etc/init/installd.rc took 0.00s.)
+[    1.024131] init: (Parsing /system/etc/init/keystore.rc took 0.00s.)
+[    1.024711] init: (Parsing /system/etc/init/lmkd.rc took 0.00s.)
+[    1.025376] init: (Parsing /system/etc/init/logcatd.rc took 0.00s.)
+[    1.026197] init: (Parsing /system/etc/init/logd.rc took 0.00s.)
+[    1.026917] init: (Parsing /system/etc/init/mdnsd.rc took 0.00s.)
+[    1.027516] init: (Parsing /system/etc/init/mediacodec.rc took 0.00s.)
+[    1.028124] init: (Parsing /system/etc/init/mediadrmserver.rc took 0.00s.)
+[    1.028759] init: (Parsing /system/etc/init/mediaextractor.rc took 0.00s.)
+[    1.029396] init: (Parsing /system/etc/init/mediaserver.rc took 0.00s.)
+[    1.029998] init: (Parsing /system/etc/init/mtpd.rc took 0.00s.)
+[    1.030591] init: (Parsing /system/etc/init/netd.rc took 0.00s.)
+[    1.031158] init: (Parsing /system/etc/init/perfprofd.rc took 0.00s.)
+[    1.031759] init: (Parsing /system/etc/init/racoon.rc took 0.00s.)
+[    1.032460] init: (Parsing /system/etc/init/rild.rc took 0.00s.)
+[    1.033051] init: (Parsing /system/etc/init/servicemanager.rc took 0.00s.)
+[    1.033726] init: (Parsing /system/etc/init/surfaceflinger.rc took 0.00s.)
+[    1.034395] init: (Parsing /system/etc/init/uncrypt.rc took 0.00s.)
+[    1.035003] init: (Parsing /system/etc/init/vdc.rc took 0.00s.)
+[    1.035615] init: (Parsing /system/etc/init/vold.rc took 0.00s.)
+[    1.036345] type=1400 audit(1484619022.030:6): avc:  denied  { write } for  pid=1 comm="init" name="tracing_on" dev="debugfs" ino=28 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=0
+[    1.037559] init: write_file: Unable to open '/sys/kernel/debug/tracing/tracing_on': Permission denied
+[    1.038356] init: Starting service 'logd'...
+[    1.046217] type=1400 audit(1484619022.040:7): avc:  denied  { dac_override } for  pid=1198 comm="logd" capability=1  scontext=u:r:logd:s0 tcontext=u:r:logd:s0 tclass=capability permissive=0
+[    1.048193] type=1400 audit(1484619022.040:8): avc:  denied  { dac_read_search } for  pid=1198 comm="logd" capability=2  scontext=u:r:logd:s0 tcontext=u:r:logd:s0 tclass=capability permissive=0
+[    1.060065] logd.auditd: start
+[    1.060453] logd.klogd: 1060447373
+[    1.078707] init: property_set("ro.kernel.android.checkjni", "1") failed
+[    1.079244] init: (Loading properties from /system/build.prop took 0.00s.)
+[    1.079771] init: (Loading properties from /vendor/build.prop took 0.00s.)
+[    1.080299] init: (Loading properties from /factory/factory.prop took 0.00s.)
+[    1.080807] init: /recovery not specified in fstab
+[    1.081198] init: Starting service 'debuggerd'...
+[    1.081603] init: do_start: Service debuggerd64 not found
+[    1.082318] init: Starting service 'vold'...
+[    1.083428] init: Not bootcharting.
+[    1.230143] tsc: Refined TSC clocksource calibration: 2693.771 MHz
+[    1.400227] init: Starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[    1.405104] init: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 1244) exited with status 0
+[    1.406377] init: (Loading properties from /data/local.prop took 0.00s.)
+[    1.575764] init: Starting service 'logd-reinit'...
+[    1.577664] init: Starting service 'healthd'...
+[    1.578401] init: Starting service 'qemu-props'...
+[    1.579009] init: Starting service 'lmkd'...
+[    1.579684] init: Starting service 'servicemanager'...
+[    1.580409] init: Starting service 'surfaceflinger'...
+[    1.581009] init: property_set("ro.build.product", "generic") failed
+[    1.581596] init: property_set("ro.product.device", "generic") failed
+[    1.582232] init: do_stop: Service dund not found
+[    1.582660] init: do_stop: Service akmd not found
+[    1.583353] init: Starting service 'goldfish-logcat'...
+[    1.584067] init: Starting service 'goldfish-setup'...
+[    1.584725] init: service 'console' requires console
+[    1.585189] init: Starting service 'adbd'...
+[    1.585683] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.586249] logd.daemon: reinit
+[    1.588087] binder: 1246:1246 transaction failed 29189, size 0-0
+[    1.589750] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[    1.591481] init: Service 'logd-reinit' (pid 1245) exited with status 0
+[    1.592364] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[    1.593618] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[    1.594849] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.596084] init: cannot find '/system/bin/update_verifier' (No such file or directory), disabling 'exec 2 (/system/bin/update_verifier)'
+[    1.597367] init: Service 'qemu-props' (pid 1247) exited with status 0
+[    1.598058] init: cannot find '/system/bin/install-recovery.sh' (No such file or directory), disabling 'flash_recovery'
+[    1.599210] init: Starting service 'zygote'...
+[    1.599830] init: Starting service 'audioserver'...
+[    1.600672] init: Starting service 'cameraserver'...
+[    1.601687] type=1400 audit(1484619022.600:9): avc: denied { getattr } for pid=1258 comm="audioserver" path="/vendor" dev="rootfs" ino=3119 scontext=u:r:audioserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[    1.606220] init: Starting service 'drm'...
+[    1.606735] init: Starting service 'installd'...
+[    1.607255] init: Starting service 'keystore'...
+[    1.607800] init: Starting service 'mediacodec'...
+[    1.608525] init: Starting service 'mediadrm'...
+[    1.609160] init: Starting service 'mediaextractor'...
+[    1.609480] type=1400 audit(1484619022.600:10): avc: denied { getattr } for pid=1263 comm="mediacodec" path="/vendor" dev="rootfs" ino=3119 scontext=u:r:mediacodec:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[    1.611243] init: Starting service 'media'...
+[    1.611711] init: couldn't write 1259 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[    1.612540] init: Starting service 'netd'...
+[    1.612975] init: Starting service 'ril-daemon'...
+[    1.613466] init: Starting service 'fingerprintd'...
+[    1.613957] init: Starting service 'gatekeeperd'...
+[    1.621566] type=1400 audit(1484619022.620:11): avc: denied { getattr } for pid=1264 comm="mediadrmserver" path="/vendor" dev="rootfs" ino=3119 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[    1.624336] type=1400 audit(1484619022.620:12): avc: denied { getattr } for pid=1259 comm="cameraserver" path="/vendor" dev="rootfs" ino=3119 scontext=u:r:cameraserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[    1.660231] init: Starting service 'perfprofd'...
+[    1.660981] init: Service 'goldfish-logcat' (pid 1251) exited with status 0
+[    1.664446] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.665658] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[    1.666877] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[    1.668105] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[    1.669335] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.682661] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.683798] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[    1.684950] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[    1.702208] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[    1.703270] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[    1.909325] init: Starting service 'bootanim'...
+[    1.913817] type=1400 audit(1484619022.910:13): avc: denied { getattr } for pid=1297 comm="bootanimation" path="/vendor" dev="rootfs" ino=3119 scontext=u:r:bootanim:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=0
+[    1.916129] init: Service 'goldfish-setup' (pid 1252) exited with status 0
+[    2.520912] warning: `main' uses 32-bit capabilities (legacy support in use)
+[    2.590032] healthd: BatteryVoltagePath not found
+[    2.590620] healthd: BatteryTemperaturePath not found
+[    2.591224] healthd: BatteryCurrentNowPath not found
+[    2.591805] healthd: BatteryFullChargePath not found
+[    2.592375] healthd: BatteryCycleCountPath not found
+[    3.584337] healthd: battery l=50 v=0 t=0.0 h=2 st=2 chg=a
+[    3.584823] type=1400 audit(1484619024.580:14): avc: denied { dac_override } for pid=1246 comm="healthd" capability=1 scontext=u:r:healthd:s0 tcontext=u:r:healthd:s0 tclass=capability permissive=0
+[    3.586511] type=1400 audit(1484619024.580:15): avc: denied { dac_read_search } for pid=1246 comm="healthd" capability=2 scontext=u:r:healthd:s0 tcontext=u:r:healthd:s0 tclass=capability permissive=0
+[    4.745193] FAT-fs (vdd): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    6.292792] init: Service 'bootanim' (pid 1297) exited with status 0
+[   62.590356] healthd: battery l=50 v=0 t=0.0 h=2 st=2 chg=a
+

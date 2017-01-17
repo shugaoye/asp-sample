@@ -1,0 +1,274 @@
+[   29.767904] init: init first stage started!
+[   29.831418] type=1403 audit(1484619229.830:2): policy loaded auid=4294967295 ses=4294967295
+[   29.832558] init: kernel_enforcing=0, is_enforcing=0
+[   29.833160] init: (Initializing SELinux non-enforcing took 0.06s.)
+[   29.833874] type=1400 audit(1484619229.830:3): avc:  denied  { open } for  pid=1 comm="init" path="/selinux_version" dev="tmpfs" ino=3605 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   29.836080] type=1400 audit(1484619229.830:4): avc:  denied  { relabelfrom } for  pid=1 comm="init" name="init" dev="tmpfs" ino=3585 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   29.837817] init: init second stage started!
+[   29.839478] init: Running restorecon...
+[   29.839965] type=1400 audit(1484619229.830:5): avc:  denied  { relabelfrom } for  pid=1 comm="init" name="property_contexts" dev="tmpfs" ino=3596 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   29.845962] init: waitpid failed: No child processes
+[   29.846550] init: (Loading properties from /default.prop took 0.00s.)
+[   29.847839] init: (Parsing /init.environ.rc took 0.00s.)
+[   29.848542] init: (Parsing /init.usb.rc took 0.00s.)
+[   29.849127] init: (Parsing /init.ranchu.rc took 0.00s.)
+[   29.849895] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[   29.850566] init: (Parsing /init.zygote32.rc took 0.00s.)
+[   29.851172] init: (Parsing /init.rc took 0.00s.)
+[   29.851782] init: Starting service 'ueventd'...
+[   29.852373] type=1400 audit(1484619229.850:6): avc:  denied  { mounton } for  pid=1 comm="init" path="/sys/kernel/debug" dev="debugfs" ino=1 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=dir permissive=1
+[   29.852787] ueventd: ueventd started!
+[   29.852812] type=1400 audit(1484619229.850:7): avc:  denied  { open } for  pid=964 comm="ueventd" path="/ueventd.rc" dev="tmpfs" ino=3613 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   29.857004] init: Waiting for /dev/.coldboot_done...
+[   29.874350] ueventd: Coldboot took 0.02s.
+[   29.877847] init: Waiting for /dev/.coldboot_done took 0.02s.
+[   29.878347] init: /dev/hw_random not found
+[   29.879939] init: write_file: Unable to open '/proc/sys/kernel/hung_task_timeout_secs': No such file or directory
+[   29.880654] init: write_file: Unable to open '/proc/cpu/alignment': No such file or directory
+[   29.881905] init: write_file: Unable to open '/proc/sys/abi/swp': No such file or directory
+[   29.882487] init: /dev/hw_random not found
+[   29.883224] EXT4-fs (vdb): Ignoring removed nomblk_io_submit option
+[   29.908720] EXT4-fs (vdb): recovery complete
+[   29.930003] EXT4-fs (vdb): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[   29.930871] fs_mgr: __mount(source=/dev/block/vdb,target=/cache,type=ext4)=0
+[   29.931738] type=1400 audit(1484619229.930:8): avc:  denied  { mounton } for  pid=966 comm="init" path="/data" dev="sda" ino=13 scontext=u:r:init:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+[   29.934149] EXT4-fs (vdc): Ignoring removed nomblk_io_submit option
+[   30.032608] EXT4-fs (vdc): recovery complete
+[   30.049526] EXT4-fs (vdc): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[   30.050388] fs_mgr: check_fs(): mount(/dev/block/vdc,/data,ext4)=0: Success
+[   30.052098] fs_mgr: check_fs(): unmount(/data) succeeded
+[   30.052596] fs_mgr: Running /system/bin/e2fsck on /dev/block/vdc
+[   30.053360] type=1400 audit(1484619230.050:9): avc:  denied  { read } for  pid=928 comm="loop0" path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   30.140107] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[   30.140107] 
+[   30.140513] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[   30.140513] 
+[   30.140972] e2fsck: Pass 2: Checking directory structure
+[   30.140972] 
+[   30.141402] e2fsck: Pass 3: Checking directory connectivity
+[   30.141402] 
+[   30.141847] e2fsck: Pass 4: Checking reference counts
+[   30.141847] 
+[   30.142259] e2fsck: Pass 5: Checking group summary information
+[   30.142259] 
+[   30.142718] e2fsck: data: 1348/35200 files (12.2% non-contiguous), 43329/140800 blocks
+[   30.142718] 
+[   30.143638] EXT4-fs (vdc): Ignoring removed nomblk_io_submit option
+[   30.144984] EXT4-fs (vdc): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[   30.145770] fs_mgr: __mount(source=/dev/block/vdc,target=/data,type=ext4)=0
+[   30.147115] init: (Parsing /system/etc/init/atrace.rc took 0.00s.)
+[   30.148107] init: (Parsing /system/etc/init/audioserver.rc took 0.00s.)
+[   30.148947] init: (Parsing /system/etc/init/bootanim.rc took 0.00s.)
+[   30.150228] init: (Parsing /system/etc/init/bootstat.rc took 0.00s.)
+[   30.151174] init: (Parsing /system/etc/init/cameraserver.rc took 0.00s.)
+[   30.152016] init: (Parsing /system/etc/init/debuggerd.rc took 0.00s.)
+[   30.152806] init: (Parsing /system/etc/init/drmserver.rc took 0.00s.)
+[   30.153690] init: (Parsing /system/etc/init/dumpstate.rc took 0.00s.)
+[   30.154889] init: (Parsing /system/etc/init/gatekeeperd.rc took 0.00s.)
+[   30.155782] init: (Parsing /system/etc/init/init-debug.rc took 0.00s.)
+[   30.156571] init: (Parsing /system/etc/init/installd.rc took 0.00s.)
+[   30.157297] init: (Parsing /system/etc/init/keystore.rc took 0.00s.)
+[   30.158026] init: (Parsing /system/etc/init/lmkd.rc took 0.00s.)
+[   30.158764] init: (Parsing /system/etc/init/logcatd.rc took 0.00s.)
+[   30.159497] init: (Parsing /system/etc/init/logd.rc took 0.00s.)
+[   30.160338] init: (Parsing /system/etc/init/mdnsd.rc took 0.00s.)
+[   30.161470] init: (Parsing /system/etc/init/mediacodec.rc took 0.00s.)
+[   30.162255] init: (Parsing /system/etc/init/mediadrmserver.rc took 0.00s.)
+[   30.162854] init: (Parsing /system/etc/init/mediaextractor.rc took 0.00s.)
+[   30.163480] init: (Parsing /system/etc/init/mediaserver.rc took 0.00s.)
+[   30.164058] init: (Parsing /system/etc/init/mtpd.rc took 0.00s.)
+[   30.164613] init: (Parsing /system/etc/init/netd.rc took 0.00s.)
+[   30.165152] init: (Parsing /system/etc/init/perfprofd.rc took 0.00s.)
+[   30.165714] init: (Parsing /system/etc/init/racoon.rc took 0.00s.)
+[   30.166270] init: (Parsing /system/etc/init/rild.rc took 0.00s.)
+[   30.166815] init: (Parsing /system/etc/init/servicemanager.rc took 0.00s.)
+[   30.167422] init: (Parsing /system/etc/init/surfaceflinger.rc took 0.00s.)
+[   30.168028] init: (Parsing /system/etc/init/uncrypt.rc took 0.00s.)
+[   30.168547] init: (Parsing /system/etc/init/vdc.rc took 0.00s.)
+[   30.169031] init: (Parsing /system/etc/init/vold.rc took 0.00s.)
+[   30.169756] type=1400 audit(1484619230.160:10): avc:  denied  { write } for  pid=1 comm="init" name="tracing_on" dev="debugfs" ino=28 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+[   30.171359] init: Starting service 'logd'...
+[   30.182288] type=1400 audit(1484619230.180:11): avc:  denied  { dac_override } for  pid=974 comm="logd" capability=1  scontext=u:r:logd:s0 tcontext=u:r:logd:s0 tclass=capability permissive=1
+[   30.183787] logd.auditd: start
+[   30.184019] logd.klogd: 30184015493
+[   30.206869] init: property_set("ro.kernel.android.checkjni", "1") failed
+[   30.207427] init: (Loading properties from /system/build.prop took 0.00s.)
+[   30.207919] init: (Loading properties from /vendor/build.prop took 0.00s.)
+[   30.208405] init: (Loading properties from /factory/factory.prop took 0.00s.)
+[   30.208930] init: /recovery not specified in fstab
+[   30.209372] init: Starting service 'debuggerd'...
+[   30.209815] init: do_start: Service debuggerd64 not found
+[   30.210536] init: Starting service 'vold'...
+[   30.212215] init: Not bootcharting.
+[   30.268718] type=1400 audit(1484619230.260:12): avc: denied { open } for pid=983 comm="vold" path="/selinux_version" dev="tmpfs" ino=3605 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.530691] init: Starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[   30.535751] init: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 990) exited with status 0
+[   30.536595] init: (Loading properties from /data/local.prop took 0.00s.)
+[   30.700071] init: Starting service 'logd-reinit'...
+[   30.701118] init: Starting service 'healthd'...
+[   30.701590] init: Starting service 'qemu-props'...
+[   30.702198] init: Starting service 'lmkd'...
+[   30.703414] init: Starting service 'servicemanager'...
+[   30.705385] init: Starting service 'surfaceflinger'...
+[   30.706608] init: property_set("ro.build.product", "generic") failed
+[   30.707570] init: property_set("ro.product.device", "generic") failed
+[   30.708632] init: do_stop: Service dund not found
+[   30.709335] init: do_stop: Service akmd not found
+[   30.710442] type=1400 audit(1484619230.710:13): avc: denied { execute } for pid=993 comm="init" name="healthd" dev="tmpfs" ino=3599 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.711679] logd.daemon: reinit
+[   30.714756] init: Starting service 'goldfish-logcat'...
+[   30.715277] binder: 993:993 transaction failed 29189, size 0-0
+[   30.715738] type=1400 audit(1484619230.710:14): avc: denied { read } for pid=928 comm="loop0" path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   30.715795] type=1400 audit(1484619230.710:15): avc: denied { entrypoint } for pid=993 comm="init" path="/sbin/healthd" dev="tmpfs" ino=3599 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.719772] init: Starting service 'goldfish-setup'...
+[   30.720527] init: Service 'logd-reinit' (pid 992) exited with status 0
+[   30.731570] init: Service 'qemu-props' (pid 994) exited with status 0
+[   30.732612] init: Starting service 'console'...
+[   30.733855] init: Service 'goldfish-logcat' (pid 998) exited with status 0
+[   30.734761] init: Starting service 'adbd'...
+[   30.735910] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.737120] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[   30.738752] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[   30.740132] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[   30.742655] type=1400 audit(1484619230.720:16): avc: denied { open } for pid=996 comm="servicemanager" path="/selinux_version" dev="tmpfs" ino=3605 scontext=u:r:servicemanager:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.744510] type=1400 audit(1484619230.730:17): avc: denied { entrypoint } for pid=1002 comm="init" path="/sbin/adbd" dev="tmpfs" ino=3598 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.744765] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.744839] init: cannot find '/system/bin/update_verifier' (No such file or directory), disabling 'exec 2 (/system/bin/update_verifier)'
+[   30.744846] init: cannot find '/system/bin/install-recovery.sh' (No such file or directory), disabling 'flash_recovery'
+[   30.744925] init: Starting service 'zygote'...
+[   30.745070] init: Starting service 'audioserver'...
+[   30.745196] init: Starting service 'cameraserver'...
+[   30.745314] init: Starting service 'drm'...
+[   30.745559] init: Starting service 'installd'...
+[   30.745679] init: Starting service 'keystore'...
+[   30.745796] init: Starting service 'mediacodec'...
+[   30.745911] init: Starting service 'mediadrm'...
+[   30.746023] init: Starting service 'mediaextractor'...
+[   30.746135] init: Starting service 'media'...
+[   30.746244] init: Starting service 'netd'...
+[   30.746355] init: Starting service 'ril-daemon'...
+[   30.746475] init: Starting service 'fingerprintd'...
+[   30.746585] init: Starting service 'gatekeeperd'...
+[   30.746699] init: Starting service 'perfprofd'...
+[   30.748230] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.748236] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[   30.748240] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[   30.748248] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[   30.748253] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.748866] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.748871] init: write_file: Unable to open '/sys/class/android_usb/android0/idVendor': No such file or directory
+[   30.748875] init: write_file: Unable to open '/sys/class/android_usb/android0/idProduct': No such file or directory
+[   30.748884] init: write_file: Unable to open '/sys/class/android_usb/android0/functions': No such file or directory
+[   30.748888] init: write_file: Unable to open '/sys/class/android_usb/android0/enable': No such file or directory
+[   30.752523] init: couldn't write 1009 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+x86emu:/ # [   30.762222] type=1400 audit(1484619230.730:18): avc: denied { read } for pid=1002 comm="adbd" path="/sbin/adbd" dev="tmpfs" ino=3598 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+[   30.765655] type=1400 audit(1484619230.760:19): avc: denied { getattr } for pid=1013 comm="mediacodec" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.767694] type=1400 audit(1484619230.760:20): avc: denied { read } for pid=1013 comm="mediacodec" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.771028] type=1400 audit(1484619230.770:21): avc: denied { getattr } for pid=1009 comm="cameraserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.772777] type=1400 audit(1484619230.770:22): avc: denied { read } for pid=1009 comm="cameraserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.778124] type=1400 audit(1484619230.770:23): avc: denied { getattr } for pid=1014 comm="mediadrmserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.780182] type=1400 audit(1484619230.770:24): avc: denied { read } for pid=1014 comm="mediadrmserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.782926] type=1400 audit(1484619230.780:25): avc: denied { getattr } for pid=1008 comm="audioserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.784590] init: Service 'goldfish-setup' (pid 999) exited with status 0
+[   30.786193] type=1400 audit(1484619230.780:26): avc: denied { read } for pid=1008 comm="audioserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   30.898538] type=1400 audit(1484619230.890:27): avc: denied { read } for pid=928 comm="loop0" path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+[   31.107828] init: Starting service 'bootanim'...
+[   31.120050] type=1400 audit(1484619231.110:28): avc: denied { getattr } for pid=1050 comm="bootanimation" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.333534] type=1400 audit(1484619231.120:29): avc: denied { read } for pid=1050 comm="bootanimation" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.335860] type=1400 audit(1484619231.290:30): avc: denied { read } for pid=1009 comm="cameraserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.512685] type=1400 audit(1484619231.360:31): avc: denied { read } for pid=1008 comm="audioserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   31.717286] healthd: BatteryVoltagePath not found
+[   31.718070] healthd: BatteryTemperaturePath not found
+[   31.719551] healthd: BatteryCurrentNowPath not found
+[   31.721018] healthd: BatteryFullChargePath not found
+[   31.722085] healthd: BatteryCycleCountPath not found
+[   32.219216] type=1400 audit(1484619232.210:32): avc: denied { mounton } for pid=1007 comm="main" path="/" dev="tmpfs" ino=3569 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+[   32.906206] warning: `main' uses 32-bit capabilities (legacy support in use)
+[   33.540620] init: Service 'zygote' (pid 1007) killed by signal 6
+[   33.541176] init: Service 'zygote' (pid 1007) killing any children in process group
+[   33.541783] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   33.542504] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   33.543086] init: Service 'audioserver' is being killed...
+[   33.543562] init: Service 'cameraserver' is being killed...
+[   33.544242] init: Service 'media' is being killed...
+[   33.544647] init: Service 'netd' is being killed...
+[   33.545109] init: Service 'audioserver' (pid 1008) killed by signal 9
+[   33.545590] init: Service 'audioserver' (pid 1008) killing any children in process group
+[   33.546215] init: Service 'cameraserver' (pid 1009) killed by signal 9
+[   33.546684] init: Service 'cameraserver' (pid 1009) killing any children in process group
+[   33.547376] init: Service 'media' (pid 1016) killed by signal 9
+[   33.547830] init: Service 'media' (pid 1016) killing any children in process group
+[   33.548430] init: Service 'netd' (pid 1017) killed by signal 9
+[   33.548914] init: Service 'netd' (pid 1017) killing any children in process group
+[   35.552448] init: Starting service 'zygote'...
+[   35.553053] init: Starting service 'audioserver'...
+[   35.553602] init: Starting service 'cameraserver'...
+[   35.554125] init: couldn't write 1274 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[   35.554186] init: Starting service 'media'...
+[   35.554293] init: Starting service 'netd'...
+[   35.567691] type=1400 audit(1484619235.550:33): avc: denied { getattr } for pid=1274 comm="cameraserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   35.688238] type=1400 audit(1484619235.570:34): avc: denied { getattr } for pid=1273 comm="audioserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   36.550900] init: Service 'zygote' (pid 1272) killed by signal 6
+[   36.551770] init: Service 'zygote' (pid 1272) killing any children in process group
+[   36.552716] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   36.553442] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   36.554013] init: Service 'audioserver' is being killed...
+[   36.554906] init: Service 'cameraserver' is being killed...
+[   36.555356] init: Service 'media' is being killed...
+[   36.556075] init: Service 'netd' is being killed...
+[   36.556506] init: Service 'audioserver' (pid 1273) killed by signal 9
+[   36.556985] init: Service 'audioserver' (pid 1273) killing any children in process group
+[   36.557608] init: Service 'cameraserver' (pid 1274) killed by signal 9
+[   36.558092] init: Service 'cameraserver' (pid 1274) killing any children in process group
+[   36.558734] init: Service 'media' (pid 1275) killed by signal 9
+[   36.559179] init: Service 'media' (pid 1275) killing any children in process group
+[   36.560182] init: Service 'netd' (pid 1276) killed by signal 9
+[   36.560642] init: Service 'netd' (pid 1276) killing any children in process group
+[   36.561242] init: Untracked pid 1435 killed by signal 9
+[   40.565953] init: Starting service 'zygote'...
+[   40.566511] init: Starting service 'audioserver'...
+[   40.567044] init: Starting service 'cameraserver'...
+[   40.567514] init: couldn't write 1438 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[   40.567558] init: Starting service 'media'...
+[   40.567654] init: Starting service 'netd'...
+[   40.590441] type=1400 audit(1484619240.590:35): avc: denied { getattr } for pid=1437 comm="audioserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   40.670694] type=1400 audit(1484619240.590:36): avc: denied { read } for pid=1437 comm="audioserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   41.350466] init: Service 'zygote' (pid 1436) killed by signal 6
+[   41.351185] init: Service 'zygote' (pid 1436) killing any children in process group
+[   41.352061] init: write_file: Unable to open '/sys/android_power/request_state': No such file or directory
+[   41.353146] init: write_file: Unable to write to '/sys/power/state': Invalid argument
+[   41.354021] init: Service 'audioserver' is being killed...
+[   41.355177] init: Service 'cameraserver' is being killed...
+[   41.356109] init: Service 'media' is being killed...
+[   41.357035] init: Service 'netd' is being killed...
+[   41.357665] init: Service 'audioserver' (pid 1437) killed by signal 9
+[   41.358400] init: Service 'audioserver' (pid 1437) killing any children in process group
+[   41.359356] init: Service 'cameraserver' (pid 1438) killed by signal 9
+[   41.360105] init: Service 'cameraserver' (pid 1438) killing any children in process group
+[   41.361076] init: Service 'media' (pid 1439) killed by signal 9
+[   41.361735] init: Service 'media' (pid 1439) killing any children in process group
+[   41.362621] init: Service 'netd' (pid 1440) killed by signal 9
+[   41.363286] init: Service 'netd' (pid 1440) killing any children in process group
+[   41.364279] init: Untracked pid 1530 exited with status 0
+[   45.037924] init: no such service 'zygote_secondary'
+[   45.038615] init: Starting service 'zygote'...
+[   45.039331] init: Starting service 'audioserver'...
+[   45.040033] init: Starting service 'cameraserver'...
+[   45.040953] init: Starting service 'media'...
+[   45.041594] init: Starting service 'netd'...
+[   45.042654] init: Service 'zygote' is being killed...
+[   45.044339] init: Service 'surfaceflinger' is being killed...
+[   45.045136] init: Service 'netd' is being killed...
+[   45.046747] binder: undelivered death notification, 00000000aec9b6c0
+[   45.047526] init: Service 'surfaceflinger' (pid 997) killed by signal 9
+[   45.047529] init: Service 'surfaceflinger' (pid 997) killing any children in process group
+[   45.047603] init: Service 'bootanim' (pid 1050) killed by signal 9
+[   45.047622] init: Service 'zygote' (pid 1533) killed by signal 9
+[   45.047625] init: Service 'zygote' (pid 1533) killing any children in process group
+[   45.050168] init: couldn't write 1535 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[   45.050609] type=1400 audit(1484619245.040:37): avc: denied { getattr } for pid=1535 comm="cameraserver" path="/vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+[   45.050712] type=1400 audit(1484619245.040:38): avc: denied { read } for pid=1535 comm="cameraserver" name="vendor" dev="tmpfs" ino=3614 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+emulator: Done with QEMU main loop
+emulator: User configuration saved to /home/sgye/.android/avd/a25x86.avd/emulator-user.ini
+sgye@x86emu:~/vol1/android/out/target/product/x86emu$ 
+

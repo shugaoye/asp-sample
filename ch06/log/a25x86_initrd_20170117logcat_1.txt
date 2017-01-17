@@ -1,0 +1,971 @@
+--------- beginning of main
+01-17 02:28:24.310   972   972 W auditd  : type=2000 audit(0.0:1): initialized
+01-17 02:29:04.940   972   972 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-17 02:29:04.940     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=2975 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:04.940     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=2955 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:04.940     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=2966 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:04.950     1     1 I init    : type=1400 audit(0.0:6): avc: denied { mounton } for path="/sys/kernel/debug" dev="debugfs" ino=1 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=dir permissive=1
+01-17 02:29:04.950   962   962 I ueventd : type=1400 audit(0.0:7): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=2983 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.040   964   964 I init    : type=1400 audit(0.0:8): avc: denied { mounton } for path="/data" dev="sda" ino=13 scontext=u:r:init:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-17 02:29:05.170   927   927 I loop0   : type=1400 audit(0.0:9): avc: denied { read } for path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-17 02:29:05.280     1     1 I init    : type=1400 audit(0.0:10): avc: denied { write } for name="tracing_on" dev="debugfs" ino=28 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+01-17 02:29:05.290   972   972 I logd    : type=1400 audit(0.0:11): avc: denied { dac_override } for capability=1 scontext=u:r:logd:s0 tcontext=u:r:logd:s0 tclass=capability permissive=1
+01-17 02:29:05.344   980   980 I         : debuggerd: starting
+01-17 02:29:05.370   981   981 I vold    : type=1400 audit(0.0:12): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=2975 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+--------- beginning of system
+01-17 02:29:05.376   981   981 I vold    : Vold 3.0 (the awakening) firing up
+01-17 02:29:05.376   981   981 V vold    : Detected support for: ext4 vfat
+01-17 02:29:05.634   981   984 D vold    : Recognized experimental block major ID 253 as virtio-blk (emulator's virtual SD card device)
+01-17 02:29:05.634   981   984 V vold    : /system/bin/sgdisk
+01-17 02:29:05.634   981   984 V vold    :     --android-dump
+01-17 02:29:05.634   981   984 V vold    :     /dev/block/vold/disk:253,48
+01-17 02:29:05.638   981   986 D vold    : e4crypt_init_user0
+01-17 02:29:05.638   981   986 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-17 02:29:05.638   981   986 D vold    : Preparing: /data/system/users/0
+01-17 02:29:05.638   981   986 D vold    : Preparing: /data/misc/profiles/cur/0
+01-17 02:29:05.639   981   986 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-17 02:29:05.639   981   986 D vold    : Preparing: /data/system_de/0
+01-17 02:29:05.640   981   986 D vold    : Preparing: /data/misc_de/0
+01-17 02:29:05.640   981   986 D vold    : Preparing: /data/user_de/0
+01-17 02:29:05.641   981   986 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-17 02:29:05.641   981   986 E vold    : Failed to chmod /data/system_ce/0: No such file or directory
+01-17 02:29:05.642   981   986 E vold    : Failed to chmod /data/misc_ce/0: No such file or directory
+01-17 02:29:05.642   981   986 E vold    : Failed to chmod /data/media/0: No such file or directory
+01-17 02:29:05.643     1     1 I vdc     : 200 982 Command succeeded
+01-17 02:29:05.647   981   984 V vold    : DISK mbr
+01-17 02:29:05.647   981   984 V vold    : 
+01-17 02:29:05.647   981   984 W vold    : disk:253,48 has unknown partition table; trying entire device
+01-17 02:29:05.647   981   984 V vold    : /system/bin/blkid
+01-17 02:29:05.647   981   984 V vold    :     -c
+01-17 02:29:05.647   981   984 V vold    :     /dev/null
+01-17 02:29:05.647   981   984 V vold    :     -s
+01-17 02:29:05.647   981   984 V vold    :     TYPE
+01-17 02:29:05.647   981   984 V vold    :     -s
+01-17 02:29:05.647   981   984 V vold    :     UUID
+01-17 02:29:05.647   981   984 V vold    :     -s
+01-17 02:29:05.647   981   984 V vold    :     LABEL
+01-17 02:29:05.647   981   984 V vold    :     /dev/block/vold/disk:253,48
+01-17 02:29:05.653   981   984 V vold    : /dev/block/vold/disk:253,48: LABEL="SDCARD" UUID="09EA-370E" TYPE="vfat" 
+01-17 02:29:05.653   981   984 V vold    : 
+01-17 02:29:05.655   989   989 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-17 02:29:05.660   991   991 I init    : type=1400 audit(0.0:13): avc: denied { execute } for name="healthd" dev="tmpfs" ino=2969 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.660   991   991 I init    : type=1400 audit(0.0:14): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=2969 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.660   927   927 I loop0   : type=1400 audit(0.0:15): avc: denied { read } for path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-17 02:29:05.665   992   992 I qemu-props: connected to 'boot-properties' qemud service.
+01-17 02:29:05.665   992   992 I qemu-props: receiving..
+01-17 02:29:05.665   992   992 I qemu-props: received: qemu.sf.fake_camera=both
+01-17 02:29:05.670   994   994 I servicemanager: type=1400 audit(0.0:16): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=2975 scontext=u:r:servicemanager:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.674   993   993 I lowmemorykiller: Using in-kernel low memory killer interface
+01-17 02:29:05.674   992   992 I qemu-props: receiving..
+01-17 02:29:05.674   992   992 I qemu-props: received: ro.opengles.version=131072
+01-17 02:29:05.674   992   992 I qemu-props: receiving..
+01-17 02:29:05.674   992   992 I qemu-props: received: dalvik.vm.heapsize=192m
+01-17 02:29:05.675   992   992 I qemu-props: receiving..
+01-17 02:29:05.675   992   992 I qemu-props: received: qemu.hw.mainkeys=1
+01-17 02:29:05.678   992   992 I qemu-props: receiving..
+01-17 02:29:05.678   992   992 I qemu-props: received: qemu.sf.lcd_density=240
+01-17 02:29:05.679   992   992 I qemu-props: receiving..
+01-17 02:29:05.679   992   992 I qemu-props: exiting (5 properties set).
+01-17 02:29:05.690   999   999 I init    : type=1400 audit(0.0:17): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=2968 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.690   999   999 I adbd    : type=1400 audit(0.0:18): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=2968 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-17 02:29:05.700  1003  1003 I audioserver: type=1400 audit(0.0:19): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.700  1003  1003 I audioserver: type=1400 audit(0.0:20): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.720  1012  1012 I mediacodec: type=1400 audit(0.0:21): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.720  1012  1012 I mediacodec: type=1400 audit(0.0:22): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:mediacodec:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.720  1013  1013 I mediadrmserver: type=1400 audit(0.0:23): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.720  1013  1013 I mediadrmserver: type=1400 audit(0.0:24): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.750  1007  1007 I cameraserver: type=1400 audit(0.0:25): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.750  1007  1007 I cameraserver: type=1400 audit(0.0:26): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:05.766  1009  1009 I         : installd firing up
+01-17 02:29:05.799  1020  1020 I perfprofd: starting Android Wide Profiling daemon
+01-17 02:29:05.800  1020  1020 E perfprofd: unable to open configuration file /data/data/com.google.android.gms/files/perfprofd.conf
+01-17 02:29:05.801  1020  1020 I perfprofd: random seed set to 2885151252
+01-17 02:29:05.802  1018  1018 I fingerprintd: Starting fingerprintd
+01-17 02:29:05.831  1019  1019 I gatekeeperd: Starting gatekeeperd...
+01-17 02:29:05.831  1019  1019 W gatekeeperd: falling back to software GateKeeper
+01-17 02:29:05.836  1011  1011 I keystore: Found keymaster0 module Keymaster OpenSSL HAL, version 2
+01-17 02:29:05.836  1011  1011 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-17 02:29:05.836  1011  1011 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb3930000
+01-17 02:29:05.836  1011  1011 I keystore: Keymaster0 module is software-only.  Using SoftKeymasterDevice instead.
+01-17 02:29:05.836  1011  1011 I SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 131: Creating device
+01-17 02:29:05.836  1011  1011 D SoftKeymaster: system/keymaster/soft_keymaster_device.cpp, Line 132: Device address: 0xb3930200
+01-17 02:29:05.842  1016  1016 I Netd    : Netd 1.0 starting
+01-17 02:29:05.843  1016  1016 D TetherController: Setting IP forward enable = 0
+01-17 02:29:05.854   995   995 I SurfaceFlinger: SurfaceFlinger is starting
+01-17 02:29:05.854   995   995 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-17 02:29:05.854   995   995 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-17 02:29:05.860   927   927 I loop0   : type=1400 audit(0.0:27): avc: denied { read } for path="/mnt/x86emu_x86/system.img" dev="sda" ino=17 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-17 02:29:05.864   995   995 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-17 02:29:05.939   995   995 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-17 02:29:05.944   995   995 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-17 02:29:05.963   995   995 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-17 02:29:05.977   995   995 D         : HostConnection::get() New Host Connection established 0xa989b100, tid 995
+01-17 02:29:06.001   995   995 W         : Process pipe failed
+01-17 02:29:06.006   995   995 E SurfaceFlinger: hwcomposer module not found
+01-17 02:29:06.006   995   995 W SurfaceFlinger: no suitable EGLConfig found, trying a simpler query
+01-17 02:29:06.006   995   995 I SurfaceFlinger: EGL information:
+01-17 02:29:06.006   995   995 I SurfaceFlinger: vendor    : Android
+01-17 02:29:06.006   995   995 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-17 02:29:06.006   995   995 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_fence_sync EGL_KHR_create_context EGL_ANDROID_image_native_buffer EGL_ANDROID_recordable 
+01-17 02:29:06.006   995   995 I SurfaceFlinger: Client API: OpenGL_ES
+01-17 02:29:06.006   995   995 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0x2d
+01-17 02:29:06.008   995   995 I SurfaceFlinger: OpenGL ES informations:
+01-17 02:29:06.008   995   995 I SurfaceFlinger: vendor    : Google Inc.
+01-17 02:29:06.008   995   995 I SurfaceFlinger: renderer  : Google SwiftShader
+01-17 02:29:06.008   995   995 I SurfaceFlinger: version   : OpenGL ES 2.0 SwiftShader 3.3.0.0
+01-17 02:29:06.008   995   995 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_element_index_uint GL_OES_framebuffer_object GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_3D GL_EXT_blend_minmax GL_EXT_color_buffer_half_float GL_EXT_draw_buffers GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_ANGLE_framebuffer_blit GL_NV_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_NV_fence GL_NV_read_depth GL_EXT_instanced_arrays GL_ANGLE_instanced_arraysANDROID_EMU_CHECKSUM_HELPER_v1 
+01-17 02:29:06.008   995   995 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-17 02:29:06.008   995   995 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 4096
+01-17 02:29:06.008   995   995 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:06.009   995   995 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-17 02:29:06.108   995   995 D SurfaceFlinger: shader cache generated - 24 shaders in 97.287125 ms
+01-17 02:29:06.110   995   995 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xa98b0000
+01-17 02:29:06.140  1054  1054 I bootanimation: type=1400 audit(0.0:28): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:06.140  1054  1054 I bootanimation: type=1400 audit(0.0:29): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:06.230  1007  1007 I cameraserver: type=1400 audit(0.0:30): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:06.231  1012  1012 I mediacodec: @@@ mediacodecservice starting
+01-17 02:29:06.231  1007  1007 I cameraserver: ServiceManager: 0xb2e1afe0
+01-17 02:29:06.232  1012  1012 W         : No seccomp filter defined for this architecture.
+01-17 02:29:06.236  1007  1007 I CameraService: CameraService started (pid=1007)
+01-17 02:29:06.236  1007  1007 I CameraService: CameraService process starting
+01-17 02:29:06.236  1007  1007 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.236  1007  1007 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.241  1003  1003 I         : sMaxFastTracks = 8
+01-17 02:29:06.246  1007  1007 D EmulatedCamera_QemuClient: Emulated camera list: 
+01-17 02:29:06.246  1007  1007 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing back
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:06.246  1007  1007 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing front
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:06.246  1007  1007 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.0', error: 'Permission denied' (13)
+01-17 02:29:06.246  1007  1007 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.1', error: 'Permission denied' (13)
+01-17 02:29:06.246  1007  1007 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:06.246  1007  1007 I CameraService: Loaded "Emulated Camera Module" camera module
+01-17 02:29:06.246  1007  1007 E CameraService: setUpVendorTags: Vendor tag operations not fully defined. Ignoring definitions.
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.246  1007  1007 I CameraFlashlight: Opening camera 0
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:06.246  1007  1007 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb359a000, 0xb359a050, 0xb359a170, 0xb359a290 (0xb2e43140)
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb2e43150
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb2e43150 -> new: 0x0
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:06.247  1007  1007 I CameraFlashlight: Destroying camera 0
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.247  1007  1007 I CameraFlashlight: Opening camera 1
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:06.247  1007  1007 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb359a000, 0xb359a050, 0xb359a170, 0xb359a290 (0xb2e43140)
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb2e43150
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb2e43150 -> new: 0x0
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:06.248  1007  1007 I CameraFlashlight: Destroying camera 1
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:06.248  1007  1007 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:06.248  1007  1007 I ServiceManager: Waiting for service media.camera.proxy...
+01-17 02:29:06.250  1003  1003 I audioserver: type=1400 audit(0.0:31): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:06.250  1003  1003 I audioserver: ServiceManager: 0xafb1afe0
+01-17 02:29:06.250  1003  1003 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.250  1003  1003 I AudioFlinger: Using default 3000 mSec as standby time.
+01-17 02:29:06.250  1003  1003 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-17 02:29:06.256  1003  1003 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-17 02:29:06.257  1003  1003 I AudioFlinger: loadHwModule() Loaded primary audio interface from Generic audio HW HAL (audio) handle 10
+01-17 02:29:06.257  1003  1003 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-17 02:29:06.257  1003  1003 I AudioFlinger: HAL output buffer size 1024 frames, normal sink buffer size 1024 frames
+01-17 02:29:06.258  1013  1013 I mediaserver: ServiceManager: 0xa623c060
+01-17 02:29:06.259   995   995 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-17 02:29:06.267  1003  1003 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-17 02:29:06.281  1014  1014 V MediaUtils: physMem: 1055424512
+01-17 02:29:06.281  1014  1014 V MediaUtils: requested limit: 211084900
+01-17 02:29:06.281  1014  1014 V MediaUtils: actual limit: 211084900
+01-17 02:29:06.281  1014  1014 V MediaUtils: original limits: 4294967295/4294967295
+01-17 02:29:06.281  1014  1014 V MediaUtils: new limits: 211084900/4294967295
+01-17 02:29:06.281  1014  1014 W /system/bin/mediaextractor: libminijail: allowing syscall: socketcall
+01-17 02:29:06.281  1014  1014 W /system/bin/mediaextractor: libminijail: allowing syscall: writev
+01-17 02:29:06.281  1014  1014 W /system/bin/mediaextractor: libminijail: allowing syscall: fcntl64
+01-17 02:29:06.281  1014  1014 W /system/bin/mediaextractor: libminijail: allowing syscall: clock_gettime
+01-17 02:29:06.281  1014  1014 W /system/bin/mediaextractor: libminijail: logging seccomp filter failures
+01-17 02:29:06.290  1003  1003 I AudioFlinger: Using module 10 has the primary audio interface
+01-17 02:29:06.290  1003  1065 I AudioFlinger: AudioFlinger's thread 0xaf683600 ready to run
+01-17 02:29:06.290  1003  1065 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.290  1003  1065 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.291  1003  1003 E audio_hw_generic: Error opening input stream format 1, channel_mask 0010, sample_rate 16000
+01-17 02:29:06.291  1003  1065 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.291  1003  1065 W AudioFlinger: no wake lock to update, system not ready yet
+01-17 02:29:06.291  1003  1065 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:06.293  1015  1015 I mediaserver: ServiceManager: 0xa643c060
+01-17 02:29:06.300  1003  1067 I AudioFlinger: AudioFlinger's thread 0xaf483b00 ready to run
+01-17 02:29:06.300  1003  1003 E AudioFlinger: int android::load_audio_interface(const char *, audio_hw_device_t **) couldn't load audio hw module audio.r_submix (No such file or directory)
+01-17 02:29:06.300  1003  1003 E AudioFlinger: loadHwModule() error -2 loading module r_submix
+01-17 02:29:06.300  1003  1003 W APM_AudioPolicyManager: could not open HW module r_submix
+01-17 02:29:06.300  1003  1003 W APM_AudioPolicyManager: Input device 80000100 unreachable
+01-17 02:29:06.300  1015  1015 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:06.301  1003  1003 I RadioService: RadioService
+01-17 02:29:06.301  1003  1003 I RadioService: onFirstRef
+01-17 02:29:06.301  1003  1003 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-17 02:29:06.302  1003  1003 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-17 02:29:06.610   995  1026 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+01-17 02:29:06.611  1054  1098 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-17 02:29:06.612  1054  1098 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-17 02:29:06.612  1054  1098 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-17 02:29:06.613  1054  1098 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-17 02:29:06.616  1002  1002 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-17 02:29:06.619  1054  1098 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-17 02:29:06.629  1054  1098 D         : HostConnection::get() New Host Connection established 0xb2684100, tid 1098
+01-17 02:29:06.630  1054  1098 W         : Process pipe failed
+01-17 02:29:06.631  1054  1098 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:06.631   995  1100 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-17 02:29:06.631   995  1100 D         : HostConnection::get() New Host Connection established 0xa989bb00, tid 1100
+01-17 02:29:06.645  1002  1002 D AndroidRuntime: CheckJNI is ON
+01-17 02:29:06.658  1002  1002 I art     : option[0]=-Xzygote
+01-17 02:29:06.658  1002  1002 I art     : option[1]=-Xcheck:jni
+01-17 02:29:06.658  1002  1002 I art     : option[2]=-Xstacktracefile:/data/anr/traces.txt
+01-17 02:29:06.658  1002  1002 I art     : option[3]=exit
+01-17 02:29:06.658  1002  1002 I art     : option[4]=vfprintf
+01-17 02:29:06.658  1002  1002 I art     : option[5]=sensitiveThread
+01-17 02:29:06.658  1002  1002 I art     : option[6]=-verbose:gc
+01-17 02:29:06.658  1002  1002 I art     : option[7]=-Xms4m
+01-17 02:29:06.658  1002  1002 I art     : option[8]=-Xmx192m
+01-17 02:29:06.658  1002  1002 I art     : option[9]=-Xusejit:true
+01-17 02:29:06.658  1002  1002 I art     : option[10]=-Xjitsaveprofilinginfo
+01-17 02:29:06.658  1002  1002 I art     : option[11]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-17 02:29:06.658  1002  1002 I art     : option[12]=-Xlockprofthreshold:500
+01-17 02:29:06.658  1002  1002 I art     : option[13]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[14]=--runtime-arg
+01-17 02:29:06.658  1002  1002 I art     : option[15]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[16]=-Xms64m
+01-17 02:29:06.658  1002  1002 I art     : option[17]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[18]=--runtime-arg
+01-17 02:29:06.658  1002  1002 I art     : option[19]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[20]=-Xmx64m
+01-17 02:29:06.658  1002  1002 I art     : option[21]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[22]=--compiler-filter=verify-at-runtime
+01-17 02:29:06.658  1002  1002 I art     : option[23]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[24]=--image-classes=/system/etc/preloaded-classes
+01-17 02:29:06.658  1002  1002 I art     : option[25]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[26]=--compiled-classes=/system/etc/compiled-classes
+01-17 02:29:06.658  1002  1002 I art     : option[27]=-Xcompiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[28]=--runtime-arg
+01-17 02:29:06.658  1002  1002 I art     : option[29]=-Xcompiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[30]=-Xms64m
+01-17 02:29:06.658  1002  1002 I art     : option[31]=-Xcompiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[32]=--runtime-arg
+01-17 02:29:06.658  1002  1002 I art     : option[33]=-Xcompiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[34]=-Xmx512m
+01-17 02:29:06.658  1002  1002 I art     : option[35]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[36]=--instruction-set-variant=x86
+01-17 02:29:06.658  1002  1002 I art     : option[37]=-Xcompiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[38]=--instruction-set-variant=x86
+01-17 02:29:06.658  1002  1002 I art     : option[39]=-Ximage-compiler-option
+01-17 02:29:06.658  1002  1002 I art     : option[40]=--instruction-set-features=default
+01-17 02:29:06.659  1002  1002 I art     : option[41]=-Xcompiler-option
+01-17 02:29:06.659  1002  1002 I art     : option[42]=--instruction-set-features=default
+01-17 02:29:06.659  1002  1002 I art     : option[43]=-Duser.locale=en-US
+01-17 02:29:06.659  1002  1002 I art     : option[44]=--cpu-abilist=x86
+01-17 02:29:06.659  1002  1002 I art     : option[45]=-Xfingerprint:x86emu_x86/x86emu_x86/x86emu:7.1.1/NMF26O/sgye01142037:eng/test-keys
+01-17 02:29:06.727   995  1026 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-17 02:29:06.727   995  1026 D         : HostConnection::get() New Host Connection established 0xa961c100, tid 1026
+01-17 02:29:06.985  1002  1002 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-17 02:29:07.060  1002  1002 I main    : type=1400 audit(0.0:32): avc: denied { mounton } for path="/" dev="tmpfs" ino=3585 scontext=u:r:zygote:s0 tcontext=u:object_r:tmpfs:s0 tclass=dir permissive=1
+01-17 02:29:07.159   995  1100 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-17 02:29:07.204  1002  1002 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-17 02:29:07.204  1002  1002 E android.os.Debug: failed to load memtrack module: -2
+01-17 02:29:07.205  1002  1002 I Radio-JNI: register_android_hardware_Radio DONE
+01-17 02:29:07.221  1002  1002 I SamplingProfilerIntegration: Profiling disabled.
+01-17 02:29:07.225  1002  1002 D Zygote  : begin preload
+01-17 02:29:07.225  1002  1002 I Zygote  : Installing ICU cache reference pinning...
+01-17 02:29:07.227  1002  1002 I Zygote  : Preloading ICU data...
+01-17 02:29:07.248  1007  1007 I ServiceManager: Waiting for service media.camera.proxy...
+01-17 02:29:07.304  1002  1002 I Zygote  : Preloading classes...
+01-17 02:29:07.312  1002  1002 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-17 02:29:07.502  1016  1016 I iptables: iptables v1.4.20: can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+01-17 02:29:07.502  1016  1016 I iptables: Perhaps iptables or your kernel needs to be upgraded.
+01-17 02:29:07.510  1016  1016 I iptables: iptables terminated by exit(3)
+01-17 02:29:07.510  1016  1016 E Netd    : exec() res=0, status=768 for /system/bin/iptables -w -t nat -N oem_nat_pre 
+01-17 02:29:07.512  1016  1016 I iptables: iptables v1.4.20: can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+01-17 02:29:07.512  1016  1016 I iptables: Perhaps iptables or your kernel needs to be upgraded.
+01-17 02:29:07.520  1016  1016 I iptables: iptables terminated by exit(3)
+01-17 02:29:07.520  1016  1016 E Netd    : exec() res=0, status=768 for /system/bin/iptables -w -t nat -A PREROUTING -j oem_nat_pre 
+01-17 02:29:07.551  1016  1016 I iptables: iptables v1.4.20: can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+01-17 02:29:07.551  1016  1016 I iptables: Perhaps iptables or your kernel needs to be upgraded.
+01-17 02:29:07.558  1016  1016 I iptables: iptables terminated by exit(3)
+01-17 02:29:07.558  1016  1016 E Netd    : exec() res=0, status=768 for /system/bin/iptables -w -t nat -N natctrl_nat_POSTROUTING 
+01-17 02:29:07.568  1016  1016 I iptables: iptables v1.4.20: can't initialize iptables table `nat': Table does not exist (do you need to insmod?)
+01-17 02:29:07.568  1016  1016 I iptables: Perhaps iptables or your kernel needs to be upgraded.
+01-17 02:29:07.569  1016  1016 I iptables: iptables terminated by exit(3)
+01-17 02:29:07.569  1016  1016 E Netd    : exec() res=0, status=768 for /system/bin/iptables -w -t nat -A POSTROUTING -j natctrl_nat_POSTROUTING 
+01-17 02:29:07.582  1002  1002 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-17 02:29:07.667  1016  1016 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-17 02:29:07.679  1016  1016 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-17 02:29:07.691  1016  1016 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-17 02:29:07.700  1016  1016 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=3
+01-17 02:29:07.729  1002  1002 I art     : Thread[1,tid=1002,Native,Thread*=0xac28b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:07.732  1002  1002 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-17 02:29:07.732  1002  1002 I art     : Thread[1,tid=1002,Native,Thread*=0xac28b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:07.732  1002  1002 I art     : Thread[1,tid=1002,Native,Thread*=0xac28b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:07.785  1016  1016 E Netd    : cannot find interface dummy0
+01-17 02:29:07.794  1016  1016 D MDnsDS  : MDnsSdListener::Hander starting up
+01-17 02:29:07.794  1016  1259 D MDnsDS  : MDnsSdListener starting to monitor
+01-17 02:29:07.794  1016  1259 D MDnsDS  : Going to poll with pollCount 1
+01-17 02:29:07.842  1002  1002 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-17 02:29:07.842  1002  1002 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-17 02:29:07.906  1002  1002 I System  : Loaded time zone names for "" in 19ms (19ms in ICU)
+01-17 02:29:07.912  1002  1002 I System  : Loaded time zone names for "en_US" in 5ms (5ms in ICU)
+01-17 02:29:07.937  1002  1002 I Zygote  : ...preloaded 4158 classes in 633ms.
+01-17 02:29:07.937  1002  1002 I art     : VMRuntime.preloadDexCaches starting
+01-17 02:29:07.971  1002  1002 I art     : VMRuntime.preloadDexCaches strings total=283709 before=39625 after=39625
+01-17 02:29:07.971  1002  1002 I art     : VMRuntime.preloadDexCaches types total=23582 before=7877 after=7904
+01-17 02:29:07.971  1002  1002 I art     : VMRuntime.preloadDexCaches fields total=111999 before=40899 after=41113
+01-17 02:29:07.971  1002  1002 I art     : VMRuntime.preloadDexCaches methods total=197525 before=82451 after=83011
+01-17 02:29:07.971  1002  1002 I art     : VMRuntime.preloadDexCaches finished
+01-17 02:29:07.972  1002  1002 I Zygote  : Preloading resources...
+01-17 02:29:08.009  1002  1002 W Resources: Preloaded drawable resource #0x108025c (android:drawable/dialog_background_material) that varies with configuration!!
+01-17 02:29:08.010  1002  1002 W Resources: Preloaded drawable resource #0x1080298 (android:drawable/editbox_dropdown_background_dark) that varies with configuration!!
+01-17 02:29:08.012  1002  1002 W Resources: Preloaded color resource #0x10600e2 (android:color/material_grey_800) that varies with configuration!!
+01-17 02:29:08.012  1002  1002 W Resources: Preloaded drawable resource #0x10802c9 (android:drawable/floating_popup_background_dark) that varies with configuration!!
+01-17 02:29:08.019  1002  1002 W Resources: Preloaded drawable resource #0x108030b (android:drawable/ic_clear_disabled) that varies with configuration!!
+01-17 02:29:08.019  1002  1002 W Resources: Preloaded drawable resource #0x1080310 (android:drawable/ic_clear_normal) that varies with configuration!!
+01-17 02:29:08.021  1002  1002 W Resources: Preloaded drawable resource #0x1080359 (android:drawable/ic_go) that varies with configuration!!
+01-17 02:29:08.022  1002  1002 W Resources: Preloaded drawable resource #0x1080038 (android:drawable/ic_menu_close_clear_cancel) that varies with configuration!!
+01-17 02:29:08.023  1002  1002 W Resources: Preloaded drawable resource #0x1080045 (android:drawable/ic_menu_more) that varies with configuration!!
+01-17 02:29:08.026  1002  1002 W Resources: Preloaded drawable resource #0x10804e8 (android:drawable/menu_background_fill_parent_width) that varies with configuration!!
+01-17 02:29:08.045  1002  1002 W Resources: Preloaded drawable resource #0x108077e (android:drawable/text_edit_paste_window) that varies with configuration!!
+01-17 02:29:08.046  1002  1002 W Resources: Preloaded drawable resource #0x1080096 (android:drawable/toast_frame) that varies with configuration!!
+01-17 02:29:08.046  1002  1002 I Zygote  : ...preloaded 114 resources in 74ms.
+01-17 02:29:08.048  1002  1002 W Resources: Preloaded color resource #0x106010b (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!
+01-17 02:29:08.048  1002  1002 W Resources: Preloaded color resource #0x1060110 (android:color/btn_default_material_dark) that varies with configuration!!
+01-17 02:29:08.048  1002  1002 I Zygote  : ...preloaded 41 resources in 2ms.
+01-17 02:29:08.048  1002  1002 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-17 02:29:08.048  1002  1002 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-17 02:29:08.049  1002  1002 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-17 02:29:08.049  1002  1002 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-17 02:29:08.054  1002  1002 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-17 02:29:08.058  1002  1002 I Zygote  : Preloading shared libraries...
+01-17 02:29:08.074  1002  1002 I Zygote  : Uninstalled ICU cache reference pinning...
+01-17 02:29:08.079  1002  1002 I Zygote  : Installed AndroidKeyStoreProvider in 5ms.
+01-17 02:29:08.088  1002  1002 I Zygote  : Warmed up JCA providers in 9ms.
+01-17 02:29:08.088  1002  1002 D Zygote  : end preload
+01-17 02:29:08.088  1002  1002 I art     : Starting a blocking GC Explicit
+01-17 02:29:08.093  1002  1002 I art     : Explicit concurrent mark sweep GC freed 7491(415KB) AllocSpace objects, 0(0B) LOS objects, 57% free, 2MB/6MB, paused 63us total 5.060ms
+01-17 02:29:08.094  1002  1002 I art     : Starting a blocking GC Explicit
+01-17 02:29:08.097  1002  1002 I art     : Explicit concurrent mark sweep GC freed 1513(61KB) AllocSpace objects, 1(24KB) LOS objects, 58% free, 2MB/6MB, paused 35us total 3.268ms
+01-17 02:29:08.098  1002  1168 I art     : Starting a blocking GC HeapTrim
+01-17 02:29:08.100  1002  1002 I art     : Starting a blocking GC Background
+01-17 02:29:08.109  1002  1002 E Zygote  : Not whitelisted : /android/sys/kernel/debug/tracing/trace_marker
+01-17 02:29:08.109  1002  1002 F art     : art/runtime/jni_internal.cc:492] JNI FatalError called: frameworks/base/core/jni/com_android_internal_os_Zygote.cpp:467: Unable to construct file descriptor table.
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] Runtime aborting...
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] Aborting thread:
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] "main" prio=5 tid=1 Runnable
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | group="" sCount=0 dsCount=0 obj=0x756eb550 self=0xac28b400
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | sysTid=1002 nice=0 cgrp=default sched=0/0 handle=0xb06b0534
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | state=R schedstat=( 0 0 0 ) utm=46 stm=8 core=0 HZ=100
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | stack=0xbf512000-0xbf514000 stackSize=8MB
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | held mutexes= "abort lock" "mutator lock"(shared held)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #00 pc 00572f1e  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #01 pc 0053f30e  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #02 pc 0053c30b  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #03 pc 00527f13  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #04 pc 00527bca  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #05 pc 0051822b  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #06 pc 0011a5b3  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #07 pc 003d8650  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #08 pc 0012c4c1  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #09 pc 001471d5  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #10 pc 00149980  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #11 pc 0014a2ba  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #12 pc 00df8c08  /android/system/framework/x86/boot-framework.oat (Java_com_android_internal_os_Zygote_nativeForkSystemServer__II_3II_3_3IJJ+228)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.nativeForkSystemServer(Native method)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.forkSystemServer(Zygote.java:139)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.startSystemServer(ZygoteInit.java:672)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:768)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] Dumping all threads without appropriate locks held: thread list lock
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] All threads:
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] DALVIK THREADS (1):
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422] "main" prio=5 tid=1 Runnable
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | group="" sCount=0 dsCount=0 obj=0x756eb550 self=0xac28b400
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | sysTid=1002 nice=0 cgrp=default sched=0/0 handle=0xb06b0534
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | state=R schedstat=( 0 0 0 ) utm=46 stm=9 core=0 HZ=100
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | stack=0xbf512000-0xbf514000 stackSize=8MB
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   | held mutexes= "abort lock" "mutator lock"(shared held)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #00 pc 00572f1e  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #01 pc 0053f30e  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #02 pc 0053c30b  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #03 pc 0055befb  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #04 pc 005521be  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #05 pc 00551d32  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #06 pc 00528168  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #07 pc 00527eb6  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #08 pc 0051822b  /android/system/lib/libart.so (???)
+01-17 02:29:08.120  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #09 pc 0011a5b3  /android/system/lib/libart.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #10 pc 003d8650  /android/system/lib/libart.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #11 pc 0012c4c1  /android/system/lib/libart.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #12 pc 001471d5  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #13 pc 00149980  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #14 pc 0014a2ba  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   native: #15 pc 00df8c08  /android/system/framework/x86/boot-framework.oat (Java_com_android_internal_os_Zygote_nativeForkSystemServer__II_3II_3_3IJJ+228)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.nativeForkSystemServer(Native method)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.forkSystemServer(Zygote.java:139)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.startSystemServer(ZygoteInit.java:672)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:768)
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422] 
+01-17 02:29:08.121  1002  1002 F art     : art/runtime/runtime.cc:422] 
+--------- beginning of crash
+01-17 02:29:08.121  1002  1002 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1002 (main)
+01-17 02:29:08.121   980   980 W         : debuggerd: handling request: pid=1002 uid=0 gid=0 tid=1002
+01-17 02:29:08.124  1265  1265 E         : debuggerd: Unable to connect to activity manager (connect failed: No such file or directory)
+01-17 02:29:08.124  1265  1265 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-17 02:29:08.124  1265  1265 F DEBUG   : Build fingerprint: 'x86emu_x86/x86emu_x86/x86emu:7.1.1/NMF26O/sgye01142037:eng/test-keys'
+01-17 02:29:08.124  1265  1265 F DEBUG   : Revision: '0'
+01-17 02:29:08.124  1265  1265 F DEBUG   : ABI: 'x86'
+01-17 02:29:08.124  1265  1265 F DEBUG   : pid: 1002, tid: 1002, name: main  >>> zygote <<<
+01-17 02:29:08.124  1265  1265 F DEBUG   : signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------
+01-17 02:29:08.124  1265  1265 F DEBUG   : Abort message: 'art/runtime/jni_internal.cc:492] JNI FatalError called: frameworks/base/core/jni/com_android_internal_os_Zygote.cpp:467: Unable to construct file descriptor table.'
+01-17 02:29:08.124  1265  1265 F DEBUG   :     eax 00000000  ebx 000003ea  ecx 000003ea  edx 00000006
+01-17 02:29:08.124  1265  1265 F DEBUG   :     esi b06b058c  edi b06b0534
+01-17 02:29:08.124  1265  1265 F DEBUG   :     xcs 00000073  xds 0000007b  xes 0000007b  xfs 0000003b  xss 0000007b
+01-17 02:29:08.124  1265  1265 F DEBUG   :     eip b05dc424  ebp bfd0dcc8  esp bfd0dc6c  flags 00000296
+01-17 02:29:08.248  1007  1007 I ServiceManager: Waiting for service media.camera.proxy...
+01-17 02:29:08.323  1265  1265 F DEBUG   : 
+01-17 02:29:08.323  1265  1265 F DEBUG   : backtrace:
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #00 pc ffffe424  [vdso:b05dc000] (__kernel_vsyscall+16)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #01 pc 0007a0dc  /system/lib/libc.so (tgkill+28)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #02 pc 00075925  /system/lib/libc.so (pthread_kill+85)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #03 pc 0002785a  /system/lib/libc.so (raise+42)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #04 pc 0001ee36  /system/lib/libc.so (abort+86)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #05 pc 005183c5  /system/lib/libart.so (_ZN3art7Runtime5AbortEPKc+565)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #06 pc 0011a5b3  /system/lib/libart.so (_ZN3art10LogMessageD1Ev+1747)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #07 pc 003d8650  /system/lib/libart.so (_ZN3art3JNI10FatalErrorEP7_JNIEnvPKc+176)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #08 pc 0012c4c1  /system/lib/libart.so (_ZN3art8CheckJNI10FatalErrorEP7_JNIEnvPKc+993)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #09 pc 001471d5  /system/lib/libandroid_runtime.so
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #10 pc 00149980  /system/lib/libandroid_runtime.so
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #11 pc 0014a2ba  /system/lib/libandroid_runtime.so
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #12 pc 0237cc08  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.Zygote.nativeForkSystemServer+228)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #13 pc 0237c8dc  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.Zygote.forkSystemServer+152)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #14 pc 02384555  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.ZygoteInit.startSystemServer+929)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #15 pc 02381554  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.ZygoteInit.main+1120)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #16 pc 00109432  /system/lib/libart.so (art_quick_invoke_static_stub+418)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #17 pc 00112de9  /system/lib/libart.so (_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc+313)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #18 pc 005105d5  /system/lib/libart.so (_ZN3artL18InvokeWithArgArrayERKNS_33ScopedObjectAccessAlreadyRunnableEPNS_9ArtMethodEPNS_8ArgArrayEPNS_6JValueEPKc+101)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #19 pc 00510299  /system/lib/libart.so (_ZN3art17InvokeWithVarArgsERKNS_33ScopedObjectAccessAlreadyRunnableEP8_jobjectP10_jmethodIDPc+393)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #20 pc 003f807e  /system/lib/libart.so (_ZN3art3JNI21CallStaticVoidMethodVEP7_JNIEnvP7_jclassP10_jmethodIDPc+958)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #21 pc 001417d1  /system/lib/libart.so (_ZN3art8CheckJNI11CallMethodVEPKcP7_JNIEnvP8_jobjectP7_jclassP10_jmethodIDPcNS_9Primitive4TypeENS_10InvokeTypeE+4513)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #22 pc 00132f8c  /system/lib/libart.so (_ZN3art8CheckJNI21CallStaticVoidMethodVEP7_JNIEnvP7_jclassP10_jmethodIDPc+108)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #23 pc 000701a1  /system/lib/libandroid_runtime.so (_ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz+41)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #24 pc 00073a5e  /system/lib/libandroid_runtime.so (_ZN7android14AndroidRuntime5startEPKcRKNS_6VectorINS_7String8EEEb+782)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #25 pc 00001b55  /system/bin/app_process32
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #26 pc 0001532c  /system/lib/libc.so (__libc_init+108)
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #27 pc 0000144c  /system/bin/app_process32
+01-17 02:29:08.323  1265  1265 F DEBUG   :     #28 pc 00000004  <unknown>
+01-17 02:29:08.376   980   980 W         : debuggerd: resuming target 1002
+01-17 02:29:08.414   994   994 I ServiceManager: service 'media.audio_flinger' died
+01-17 02:29:08.414   994   994 I ServiceManager: service 'media.audio_policy' died
+01-17 02:29:08.414   994   994 I ServiceManager: service 'media.sound_trigger_hw' died
+01-17 02:29:08.414   994   994 I ServiceManager: service 'media.radio' died
+01-17 02:29:08.415   994   994 I ServiceManager: service 'media.player' died
+01-17 02:29:08.415   994   994 I ServiceManager: service 'media.resource_manager' died
+01-17 02:29:08.415   994   994 I ServiceManager: service 'netd' died
+01-17 02:29:10.430  1272  1272 I cameraserver: type=1400 audit(0.0:33): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:10.440  1271  1271 I audioserver: type=1400 audit(0.0:34): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:10.476  1274  1274 I Netd    : Netd 1.0 starting
+01-17 02:29:10.476  1274  1274 D TetherController: Setting IP forward enable = 0
+01-17 02:29:10.535  1271  1271 I         : sMaxFastTracks = 8
+01-17 02:29:10.540  1272  1272 I cameraserver: ServiceManager: 0xb4d9afe0
+01-17 02:29:10.540  1272  1272 I CameraService: CameraService started (pid=1272)
+01-17 02:29:10.540  1272  1272 I CameraService: CameraService process starting
+01-17 02:29:10.540  1271  1271 I audioserver: ServiceManager: 0xb3d9afe0
+01-17 02:29:10.540  1272  1272 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.540  1271  1271 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.540  1271  1271 I AudioFlinger: Using default 3000 mSec as standby time.
+01-17 02:29:10.540  1272  1272 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.540  1271  1271 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-17 02:29:10.540  1271  1271 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-17 02:29:10.540  1271  1271 I AudioFlinger: loadHwModule() Loaded primary audio interface from Generic audio HW HAL (audio) handle 10
+01-17 02:29:10.540  1271  1271 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-17 02:29:10.540  1271  1271 I AudioFlinger: HAL output buffer size 1024 frames, normal sink buffer size 1024 frames
+01-17 02:29:10.540  1272  1272 D EmulatedCamera_QemuClient: Emulated camera list: 
+01-17 02:29:10.540  1272  1272 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing back
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:10.541  1272  1272 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing front
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:10.541  1272  1272 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.0', error: 'Permission denied' (13)
+01-17 02:29:10.541  1272  1272 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.1', error: 'Permission denied' (13)
+01-17 02:29:10.541  1272  1272 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:10.541  1272  1272 I CameraService: Loaded "Emulated Camera Module" camera module
+01-17 02:29:10.541  1272  1272 E CameraService: setUpVendorTags: Vendor tag operations not fully defined. Ignoring definitions.
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.541  1272  1272 I CameraFlashlight: Opening camera 0
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb56e1000, 0xb56e1050, 0xb56e1170, 0xb56e1290 (0xb4dc3140)
+01-17 02:29:10.541  1271  1271 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-17 02:29:10.541  1271  1271 I AudioFlinger: Using module 10 has the primary audio interface
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb4dc3150
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb4dc3150 -> new: 0x0
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:10.541  1272  1272 I CameraFlashlight: Destroying camera 0
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.541  1272  1272 I CameraFlashlight: Opening camera 1
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:10.541  1272  1272 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb56e1000, 0xb56e1050, 0xb56e1170, 0xb56e1290 (0xb4dc3140)
+01-17 02:29:10.542  1271  1282 I AudioFlinger: AudioFlinger's thread 0xb39033c0 ready to run
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb4dc3150
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb4dc3150 -> new: 0x0
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:10.542  1272  1272 I CameraFlashlight: Destroying camera 1
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:10.542  1271  1282 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:10.542  1272  1272 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:10.542  1271  1282 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.542  1272  1272 I ServiceManager: Waiting for service media.camera.proxy...
+01-17 02:29:10.546  1271  1282 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.546  1271  1282 W AudioFlinger: no wake lock to update, system not ready yet
+01-17 02:29:10.546  1271  1282 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:10.546  1271  1271 E audio_hw_generic: Error opening input stream format 1, channel_mask 0010, sample_rate 16000
+01-17 02:29:10.548  1271  1283 I AudioFlinger: AudioFlinger's thread 0xb3703140 ready to run
+01-17 02:29:10.548  1271  1271 E AudioFlinger: int android::load_audio_interface(const char *, audio_hw_device_t **) couldn't load audio hw module audio.r_submix (No such file or directory)
+01-17 02:29:10.548  1271  1271 E AudioFlinger: loadHwModule() error -2 loading module r_submix
+01-17 02:29:10.548  1271  1271 W APM_AudioPolicyManager: could not open HW module r_submix
+01-17 02:29:10.548  1271  1271 W APM_AudioPolicyManager: Input device 80000100 unreachable
+01-17 02:29:10.549  1271  1271 I RadioService: RadioService
+01-17 02:29:10.549  1271  1271 I RadioService: onFirstRef
+01-17 02:29:10.549  1271  1271 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-17 02:29:10.549  1271  1271 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-17 02:29:10.555  1273  1273 I mediaserver: ServiceManager: 0xae53c060
+01-17 02:29:10.555  1273  1273 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:10.687  1270  1270 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-17 02:29:10.688  1270  1270 D AndroidRuntime: CheckJNI is ON
+01-17 02:29:10.688  1270  1270 I art     : option[0]=-Xzygote
+01-17 02:29:10.688  1270  1270 I art     : option[1]=-Xcheck:jni
+01-17 02:29:10.688  1270  1270 I art     : option[2]=-Xstacktracefile:/data/anr/traces.txt
+01-17 02:29:10.688  1270  1270 I art     : option[3]=exit
+01-17 02:29:10.688  1270  1270 I art     : option[4]=vfprintf
+01-17 02:29:10.688  1270  1270 I art     : option[5]=sensitiveThread
+01-17 02:29:10.688  1270  1270 I art     : option[6]=-verbose:gc
+01-17 02:29:10.688  1270  1270 I art     : option[7]=-Xms4m
+01-17 02:29:10.688  1270  1270 I art     : option[8]=-Xmx192m
+01-17 02:29:10.688  1270  1270 I art     : option[9]=-Xusejit:true
+01-17 02:29:10.688  1270  1270 I art     : option[10]=-Xjitsaveprofilinginfo
+01-17 02:29:10.688  1270  1270 I art     : option[11]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-17 02:29:10.688  1270  1270 I art     : option[12]=-Xlockprofthreshold:500
+01-17 02:29:10.688  1270  1270 I art     : option[13]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[14]=--runtime-arg
+01-17 02:29:10.688  1270  1270 I art     : option[15]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[16]=-Xms64m
+01-17 02:29:10.688  1270  1270 I art     : option[17]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[18]=--runtime-arg
+01-17 02:29:10.688  1270  1270 I art     : option[19]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[20]=-Xmx64m
+01-17 02:29:10.688  1270  1270 I art     : option[21]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[22]=--compiler-filter=verify-at-runtime
+01-17 02:29:10.688  1270  1270 I art     : option[23]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[24]=--image-classes=/system/etc/preloaded-classes
+01-17 02:29:10.688  1270  1270 I art     : option[25]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[26]=--compiled-classes=/system/etc/compiled-classes
+01-17 02:29:10.688  1270  1270 I art     : option[27]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[28]=--runtime-arg
+01-17 02:29:10.688  1270  1270 I art     : option[29]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[30]=-Xms64m
+01-17 02:29:10.688  1270  1270 I art     : option[31]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[32]=--runtime-arg
+01-17 02:29:10.688  1270  1270 I art     : option[33]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[34]=-Xmx512m
+01-17 02:29:10.688  1270  1270 I art     : option[35]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[36]=--instruction-set-variant=x86
+01-17 02:29:10.688  1270  1270 I art     : option[37]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[38]=--instruction-set-variant=x86
+01-17 02:29:10.688  1270  1270 I art     : option[39]=-Ximage-compiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[40]=--instruction-set-features=default
+01-17 02:29:10.688  1270  1270 I art     : option[41]=-Xcompiler-option
+01-17 02:29:10.688  1270  1270 I art     : option[42]=--instruction-set-features=default
+01-17 02:29:10.688  1270  1270 I art     : option[43]=-Duser.locale=en-US
+01-17 02:29:10.688  1270  1270 I art     : option[44]=--cpu-abilist=x86
+01-17 02:29:10.688  1270  1270 I art     : option[45]=-Xfingerprint:x86emu_x86/x86emu_x86/x86emu:7.1.1/NMF26O/sgye01142037:eng/test-keys
+01-17 02:29:10.797  1270  1270 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-17 02:29:10.808  1270  1270 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-17 02:29:10.808  1270  1270 E android.os.Debug: failed to load memtrack module: -2
+01-17 02:29:10.809  1270  1270 I Radio-JNI: register_android_hardware_Radio DONE
+01-17 02:29:10.812  1270  1270 I SamplingProfilerIntegration: Profiling disabled.
+01-17 02:29:10.812  1270  1270 D Zygote  : begin preload
+01-17 02:29:10.812  1270  1270 I Zygote  : Installing ICU cache reference pinning...
+01-17 02:29:10.812  1270  1270 I Zygote  : Preloading ICU data...
+01-17 02:29:10.818  1270  1270 I Zygote  : Preloading classes...
+01-17 02:29:10.819  1270  1270 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-17 02:29:10.845  1270  1270 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-17 02:29:10.889  1270  1270 I art     : Thread[1,tid=1270,Native,Thread*=0xa510b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:10.889  1270  1270 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-17 02:29:10.889  1270  1270 I art     : Thread[1,tid=1270,Native,Thread*=0xa510b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:10.889  1270  1270 I art     : Thread[1,tid=1270,Native,Thread*=0xa510b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:10.901  1270  1270 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-17 02:29:10.901  1270  1270 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-17 02:29:10.938  1270  1270 I System  : Loaded time zone names for "" in 15ms (14ms in ICU)
+01-17 02:29:10.948  1270  1270 I System  : Loaded time zone names for "en_US" in 9ms (7ms in ICU)
+01-17 02:29:10.959  1270  1270 I Zygote  : ...preloaded 4158 classes in 141ms.
+01-17 02:29:10.959  1270  1270 I art     : VMRuntime.preloadDexCaches starting
+01-17 02:29:10.982  1270  1270 I art     : VMRuntime.preloadDexCaches strings total=283709 before=39625 after=39625
+01-17 02:29:10.982  1270  1270 I art     : VMRuntime.preloadDexCaches types total=23582 before=7877 after=7904
+01-17 02:29:10.982  1270  1270 I art     : VMRuntime.preloadDexCaches fields total=111999 before=40899 after=41113
+01-17 02:29:10.982  1270  1270 I art     : VMRuntime.preloadDexCaches methods total=197525 before=82451 after=83011
+01-17 02:29:10.982  1270  1270 I art     : VMRuntime.preloadDexCaches finished
+01-17 02:29:10.982  1270  1270 I Zygote  : Preloading resources...
+01-17 02:29:10.991  1270  1270 W Resources: Preloaded drawable resource #0x108025c (android:drawable/dialog_background_material) that varies with configuration!!
+01-17 02:29:10.991  1270  1270 W Resources: Preloaded drawable resource #0x1080298 (android:drawable/editbox_dropdown_background_dark) that varies with configuration!!
+01-17 02:29:10.993  1270  1270 W Resources: Preloaded color resource #0x10600e2 (android:color/material_grey_800) that varies with configuration!!
+01-17 02:29:10.993  1270  1270 W Resources: Preloaded drawable resource #0x10802c9 (android:drawable/floating_popup_background_dark) that varies with configuration!!
+01-17 02:29:10.995  1270  1270 W Resources: Preloaded drawable resource #0x108030b (android:drawable/ic_clear_disabled) that varies with configuration!!
+01-17 02:29:10.995  1270  1270 W Resources: Preloaded drawable resource #0x1080310 (android:drawable/ic_clear_normal) that varies with configuration!!
+01-17 02:29:10.996  1270  1270 W Resources: Preloaded drawable resource #0x1080359 (android:drawable/ic_go) that varies with configuration!!
+01-17 02:29:11.001  1270  1270 W Resources: Preloaded drawable resource #0x1080038 (android:drawable/ic_menu_close_clear_cancel) that varies with configuration!!
+01-17 02:29:11.002  1270  1270 W Resources: Preloaded drawable resource #0x1080045 (android:drawable/ic_menu_more) that varies with configuration!!
+01-17 02:29:11.004  1270  1270 W Resources: Preloaded drawable resource #0x10804e8 (android:drawable/menu_background_fill_parent_width) that varies with configuration!!
+01-17 02:29:11.039  1270  1270 W Resources: Preloaded drawable resource #0x108077e (android:drawable/text_edit_paste_window) that varies with configuration!!
+01-17 02:29:11.040  1270  1270 W Resources: Preloaded drawable resource #0x1080096 (android:drawable/toast_frame) that varies with configuration!!
+01-17 02:29:11.040  1270  1270 I Zygote  : ...preloaded 114 resources in 58ms.
+01-17 02:29:11.042  1270  1270 W Resources: Preloaded color resource #0x106010b (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!
+01-17 02:29:11.042  1270  1270 W Resources: Preloaded color resource #0x1060110 (android:color/btn_default_material_dark) that varies with configuration!!
+01-17 02:29:11.042  1270  1270 I Zygote  : ...preloaded 41 resources in 2ms.
+01-17 02:29:11.042  1270  1270 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-17 02:29:11.042  1270  1270 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-17 02:29:11.043  1270  1270 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-17 02:29:11.043  1270  1270 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-17 02:29:11.048  1270  1270 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-17 02:29:11.053  1270  1270 I Zygote  : Preloading shared libraries...
+01-17 02:29:11.057  1270  1270 I Zygote  : Uninstalled ICU cache reference pinning...
+01-17 02:29:11.057  1270  1270 I Zygote  : Installed AndroidKeyStoreProvider in 0ms.
+01-17 02:29:11.063  1270  1270 I Zygote  : Warmed up JCA providers in 6ms.
+01-17 02:29:11.063  1270  1270 D Zygote  : end preload
+01-17 02:29:11.063  1270  1270 I art     : Starting a blocking GC Explicit
+01-17 02:29:11.067  1270  1270 I art     : Explicit concurrent mark sweep GC freed 7416(411KB) AllocSpace objects, 0(0B) LOS objects, 57% free, 2MB/6MB, paused 36us total 3.452ms
+01-17 02:29:11.070  1270  1270 I art     : Starting a blocking GC Explicit
+01-17 02:29:11.073  1270  1270 I art     : Explicit concurrent mark sweep GC freed 1290(51KB) AllocSpace objects, 1(24KB) LOS objects, 58% free, 2MB/6MB, paused 34us total 3.006ms
+01-17 02:29:11.073  1270  1318 I art     : Starting a blocking GC HeapTrim
+01-17 02:29:11.080  1270  1270 I art     : Starting a blocking GC Background
+01-17 02:29:11.091  1270  1270 E Zygote  : Not whitelisted : /android/sys/kernel/debug/tracing/trace_marker
+01-17 02:29:11.091  1270  1270 F art     : art/runtime/jni_internal.cc:492] JNI FatalError called: frameworks/base/core/jni/com_android_internal_os_Zygote.cpp:467: Unable to construct file descriptor table.
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] Runtime aborting...
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] Aborting thread:
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] "main" prio=5 tid=1 Runnable
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | group="" sCount=0 dsCount=0 obj=0x756eb550 self=0xa510b400
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | sysTid=1270 nice=0 cgrp=default sched=0/0 handle=0xa9513534
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | state=R schedstat=( 0 0 0 ) utm=42 stm=2 core=0 HZ=100
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | stack=0xbf504000-0xbf506000 stackSize=8MB
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | held mutexes= "abort lock" "mutator lock"(shared held)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #00 pc 00572f1e  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #01 pc 0053f30e  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #02 pc 0053c30b  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #03 pc 00527f13  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #04 pc 00527bca  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #05 pc 0051822b  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #06 pc 0011a5b3  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #07 pc 003d8650  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #08 pc 0012c4c1  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #09 pc 001471d5  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #10 pc 00149980  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #11 pc 0014a2ba  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #12 pc 00df8c08  /android/system/framework/x86/boot-framework.oat (Java_com_android_internal_os_Zygote_nativeForkSystemServer__II_3II_3_3IJJ+228)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.nativeForkSystemServer(Native method)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.forkSystemServer(Zygote.java:139)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.startSystemServer(ZygoteInit.java:672)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:768)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] Dumping all threads without appropriate locks held: thread list lock
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] All threads:
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] DALVIK THREADS (1):
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] "main" prio=5 tid=1 Runnable
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | group="" sCount=0 dsCount=0 obj=0x756eb550 self=0xa510b400
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | sysTid=1270 nice=0 cgrp=default sched=0/0 handle=0xa9513534
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | state=R schedstat=( 0 0 0 ) utm=43 stm=2 core=0 HZ=100
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | stack=0xbf504000-0xbf506000 stackSize=8MB
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   | held mutexes= "abort lock" "mutator lock"(shared held)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #00 pc 00572f1e  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #01 pc 0053f30e  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #02 pc 0053c30b  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #03 pc 0055befb  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #04 pc 005521be  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #05 pc 00551d32  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #06 pc 00528168  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #07 pc 00527eb6  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #08 pc 0051822b  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #09 pc 0011a5b3  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #10 pc 003d8650  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #11 pc 0012c4c1  /android/system/lib/libart.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #12 pc 001471d5  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #13 pc 00149980  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #14 pc 0014a2ba  /android/system/lib/libandroid_runtime.so (???)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   native: #15 pc 00df8c08  /android/system/framework/x86/boot-framework.oat (Java_com_android_internal_os_Zygote_nativeForkSystemServer__II_3II_3_3IJJ+228)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.nativeForkSystemServer(Native method)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.Zygote.forkSystemServer(Zygote.java:139)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.startSystemServer(ZygoteInit.java:672)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422]   at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:768)
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] 
+01-17 02:29:11.104  1270  1270 F art     : art/runtime/runtime.cc:422] 
+01-17 02:29:11.104  1270  1270 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1270 (main)
+01-17 02:29:11.104   980   980 W         : debuggerd: handling request: pid=1270 uid=0 gid=0 tid=1270
+01-17 02:29:11.107  1349  1349 E         : debuggerd: Unable to connect to activity manager (connect failed: No such file or directory)
+01-17 02:29:11.107  1349  1349 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-17 02:29:11.107  1349  1349 F DEBUG   : Build fingerprint: 'x86emu_x86/x86emu_x86/x86emu:7.1.1/NMF26O/sgye01142037:eng/test-keys'
+01-17 02:29:11.107  1349  1349 F DEBUG   : Revision: '0'
+01-17 02:29:11.107  1349  1349 F DEBUG   : ABI: 'x86'
+01-17 02:29:11.107  1349  1349 F DEBUG   : pid: 1270, tid: 1270, name: main  >>> zygote <<<
+01-17 02:29:11.107  1349  1349 F DEBUG   : signal 6 (SIGABRT), code -6 (SI_TKILL), fault addr --------
+01-17 02:29:11.108  1349  1349 F DEBUG   : Abort message: 'art/runtime/jni_internal.cc:492] JNI FatalError called: frameworks/base/core/jni/com_android_internal_os_Zygote.cpp:467: Unable to construct file descriptor table.'
+01-17 02:29:11.108  1349  1349 F DEBUG   :     eax 00000000  ebx 000004f6  ecx 000004f6  edx 00000006
+01-17 02:29:11.108  1349  1349 F DEBUG   :     esi a951358c  edi a9513534
+01-17 02:29:11.108  1349  1349 F DEBUG   :     xcs 00000073  xds 0000007b  xes 0000007b  xfs 0000003b  xss 0000007b
+01-17 02:29:11.108  1349  1349 F DEBUG   :     eip a943f424  ebp bfcff3e8  esp bfcff38c  flags 00000296
+01-17 02:29:11.321  1349  1349 F DEBUG   : 
+01-17 02:29:11.321  1349  1349 F DEBUG   : backtrace:
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #00 pc ffffe424  [vdso:a943f000] (__kernel_vsyscall+16)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #01 pc 0007a0dc  /system/lib/libc.so (tgkill+28)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #02 pc 00075925  /system/lib/libc.so (pthread_kill+85)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #03 pc 0002785a  /system/lib/libc.so (raise+42)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #04 pc 0001ee36  /system/lib/libc.so (abort+86)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #05 pc 005183c5  /system/lib/libart.so (_ZN3art7Runtime5AbortEPKc+565)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #06 pc 0011a5b3  /system/lib/libart.so (_ZN3art10LogMessageD1Ev+1747)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #07 pc 003d8650  /system/lib/libart.so (_ZN3art3JNI10FatalErrorEP7_JNIEnvPKc+176)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #08 pc 0012c4c1  /system/lib/libart.so (_ZN3art8CheckJNI10FatalErrorEP7_JNIEnvPKc+993)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #09 pc 001471d5  /system/lib/libandroid_runtime.so
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #10 pc 00149980  /system/lib/libandroid_runtime.so
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #11 pc 0014a2ba  /system/lib/libandroid_runtime.so
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #12 pc 0237cc08  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.Zygote.nativeForkSystemServer+228)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #13 pc 0237c8dc  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.Zygote.forkSystemServer+152)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #14 pc 02384555  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.ZygoteInit.startSystemServer+929)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #15 pc 02381554  /system/framework/x86/boot-framework.oat (offset 0x1584000) (com.android.internal.os.ZygoteInit.main+1120)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #16 pc 00109432  /system/lib/libart.so (art_quick_invoke_static_stub+418)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #17 pc 00112de9  /system/lib/libart.so (_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc+313)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #18 pc 005105d5  /system/lib/libart.so (_ZN3artL18InvokeWithArgArrayERKNS_33ScopedObjectAccessAlreadyRunnableEPNS_9ArtMethodEPNS_8ArgArrayEPNS_6JValueEPKc+101)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #19 pc 00510299  /system/lib/libart.so (_ZN3art17InvokeWithVarArgsERKNS_33ScopedObjectAccessAlreadyRunnableEP8_jobjectP10_jmethodIDPc+393)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #20 pc 003f807e  /system/lib/libart.so (_ZN3art3JNI21CallStaticVoidMethodVEP7_JNIEnvP7_jclassP10_jmethodIDPc+958)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #21 pc 001417d1  /system/lib/libart.so (_ZN3art8CheckJNI11CallMethodVEPKcP7_JNIEnvP8_jobjectP7_jclassP10_jmethodIDPcNS_9Primitive4TypeENS_10InvokeTypeE+4513)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #22 pc 00132f8c  /system/lib/libart.so (_ZN3art8CheckJNI21CallStaticVoidMethodVEP7_JNIEnvP7_jclassP10_jmethodIDPc+108)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #23 pc 000701a1  /system/lib/libandroid_runtime.so (_ZN7_JNIEnv20CallStaticVoidMethodEP7_jclassP10_jmethodIDz+41)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #24 pc 00073a5e  /system/lib/libandroid_runtime.so (_ZN7android14AndroidRuntime5startEPKcRKNS_6VectorINS_7String8EEEb+782)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #25 pc 00001b55  /system/bin/app_process32
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #26 pc 0001532c  /system/lib/libc.so (__libc_init+108)
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #27 pc 0000144c  /system/bin/app_process32
+01-17 02:29:11.321  1349  1349 F DEBUG   :     #28 pc 00000004  <unknown>
+01-17 02:29:11.341   980   980 W         : debuggerd: resuming target 1270
+01-17 02:29:11.395   994   994 I ServiceManager: service 'media.audio_flinger' died
+01-17 02:29:11.395   994   994 I ServiceManager: service 'media.audio_policy' died
+01-17 02:29:11.395   994   994 I ServiceManager: service 'media.sound_trigger_hw' died
+01-17 02:29:11.395   994   994 I ServiceManager: service 'media.radio' died
+01-17 02:29:11.397   994   994 I ServiceManager: service 'media.player' died
+01-17 02:29:11.397   994   994 I ServiceManager: service 'media.resource_manager' died
+01-17 02:29:15.410  1390  1390 I cameraserver: type=1400 audit(0.0:35): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:15.410  1390  1390 I cameraserver: type=1400 audit(0.0:36): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:cameraserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:15.439  1392  1392 I Netd    : Netd 1.0 starting
+01-17 02:29:15.439  1392  1392 D TetherController: Setting IP forward enable = 0
+01-17 02:29:15.480  1390  1390 I cameraserver: ServiceManager: 0xb531afe0
+01-17 02:29:15.480  1390  1390 I CameraService: CameraService started (pid=1390)
+01-17 02:29:15.480  1390  1390 I CameraService: CameraService process starting
+01-17 02:29:15.488  1390  1390 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.489  1390  1390 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.490  1390  1390 D EmulatedCamera_QemuClient: Emulated camera list: 
+01-17 02:29:15.490  1390  1390 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing back
+01-17 02:29:15.490  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:15.490  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:15.490  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:15.490  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:15.490  1390  1390 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:15.491  1390  1390 D EmulatedCamera_FakeCamera: Initialize: Fake camera is facing front
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with auto, 1.000000, 1.000000
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with incandescent, 1.380000, 0.600000
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with daylight, 1.090000, 0.920000
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Device: initializeWhiteBalanceModes with twilight, 0.920000, 1.220000
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Device: setWhiteBalanceMode with white balance auto
+01-17 02:29:15.491  1390  1390 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.0', error: 'Permission denied' (13)
+01-17 02:29:15.491  1390  1390 E EmulatedCamera_HotplugThread: createFileIfNotExists: Could not create file '/data/misc/media/emulator.camera.hotplug.1', error: 'Permission denied' (13)
+01-17 02:29:15.491  1390  1390 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:15.491  1390  1390 I CameraService: Loaded "Emulated Camera Module" camera module
+01-17 02:29:15.491  1390  1390 E CameraService: setUpVendorTags: Vendor tag operations not fully defined. Ignoring definitions.
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.491  1390  1390 I CameraFlashlight: Opening camera 0
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb5824000, 0xb5824050, 0xb5824170, 0xb5824290 (0xb5343140)
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb5343150
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb5343150 -> new: 0x0
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:15.491  1390  1390 I CameraFlashlight: Destroying camera 0
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.491  1390  1390 I CameraFlashlight: Opening camera 1
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_Camera: connectCamera
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_FakeDevice: connectDevice
+01-17 02:29:15.491  1390  1390 V EmulatedCamera_CallbackNotifier: setCallbacks: 0xb5824000, 0xb5824050, 0xb5824170, 0xb5824290 (0xb5343140)
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Preview: setPreviewWindow: current: 0x0 -> new: 0xb5343150
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Preview: setPreviewWindow: current: 0xb5343150 -> new: 0x0
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Camera: releaseCamera
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_FakeDevice: disconnectDevice
+01-17 02:29:15.494  1390  1390 I CameraFlashlight: Destroying camera 1
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Camera: closeCamera
+01-17 02:29:15.494  1390  1390 V EmulatedCamera_Camera: doStopPreview
+01-17 02:29:15.495  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.495  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.495  1390  1390 V EmulatedCamera_Camera: getCameraInfo
+01-17 02:29:15.495  1390  1390 V EmulatedCamera_BaseCamera: getCameraInfo
+01-17 02:29:15.495  1390  1390 I ServiceManager: Waiting for service media.camera.proxy...
+01-17 02:29:15.502  1389  1389 I         : sMaxFastTracks = 8
+01-17 02:29:15.502  1389  1389 I audioserver: ServiceManager: 0xb341afe0
+01-17 02:29:15.502  1389  1389 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.502  1389  1389 I AudioFlinger: Using default 3000 mSec as standby time.
+01-17 02:29:15.510  1389  1389 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-17 02:29:15.510  1389  1389 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-17 02:29:15.510  1389  1389 I AudioFlinger: loadHwModule() Loaded primary audio interface from Generic audio HW HAL (audio) handle 10
+01-17 02:29:15.510  1389  1389 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 44100, Format 0x000001, Channels 3, flags 2
+01-17 02:29:15.510  1389  1389 I AudioFlinger: HAL output buffer size 1024 frames, normal sink buffer size 1024 frames
+01-17 02:29:15.511  1389  1389 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-17 02:29:15.511  1389  1389 I AudioFlinger: Using module 10 has the primary audio interface
+01-17 02:29:15.517  1389  1399 I AudioFlinger: AudioFlinger's thread 0xb2f83440 ready to run
+01-17 02:29:15.517  1389  1399 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.517  1389  1399 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.520  1389  1399 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.520  1389  1399 W AudioFlinger: no wake lock to update, system not ready yet
+01-17 02:29:15.520  1389  1399 E cutils-trace: Error opening trace file: Permission denied (13)
+01-17 02:29:15.520  1389  1389 E audio_hw_generic: Error opening input stream format 1, channel_mask 0010, sample_rate 16000
+01-17 02:29:15.521  1391  1391 I mediaserver: ServiceManager: 0xa94bc060
+01-17 02:29:15.521  1391  1391 W BatteryNotifier: batterystats service unavailable!
+01-17 02:29:15.530  1389  1400 I AudioFlinger: AudioFlinger's thread 0xb2d83740 ready to run
+01-17 02:29:15.530  1389  1389 E AudioFlinger: int android::load_audio_interface(const char *, audio_hw_device_t **) couldn't load audio hw module audio.r_submix (No such file or directory)
+01-17 02:29:15.530  1389  1389 E AudioFlinger: loadHwModule() error -2 loading module r_submix
+01-17 02:29:15.530  1389  1389 W APM_AudioPolicyManager: could not open HW module r_submix
+01-17 02:29:15.530  1389  1389 W APM_AudioPolicyManager: Input device 80000100 unreachable
+01-17 02:29:15.530  1389  1389 I RadioService: RadioService
+01-17 02:29:15.530  1389  1389 I RadioService: onFirstRef
+01-17 02:29:15.530  1389  1389 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-17 02:29:15.530  1389  1389 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-17 02:29:15.430  1389  1389 I audioserver: type=1400 audit(0.0:37): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:15.430  1389  1389 I audioserver: type=1400 audit(0.0:38): avc: denied { read } for name="vendor" dev="tmpfs" ino=2984 scontext=u:r:audioserver:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-17 02:29:15.653  1388  1388 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-17 02:29:15.654  1388  1388 D AndroidRuntime: CheckJNI is ON
+01-17 02:29:15.654  1388  1388 I art     : option[0]=-Xzygote
+01-17 02:29:15.654  1388  1388 I art     : option[1]=-Xcheck:jni
+01-17 02:29:15.654  1388  1388 I art     : option[2]=-Xstacktracefile:/data/anr/traces.txt
+01-17 02:29:15.654  1388  1388 I art     : option[3]=exit
+01-17 02:29:15.654  1388  1388 I art     : option[4]=vfprintf
+01-17 02:29:15.654  1388  1388 I art     : option[5]=sensitiveThread
+01-17 02:29:15.654  1388  1388 I art     : option[6]=-verbose:gc
+01-17 02:29:15.654  1388  1388 I art     : option[7]=-Xms4m
+01-17 02:29:15.654  1388  1388 I art     : option[8]=-Xmx192m
+01-17 02:29:15.654  1388  1388 I art     : option[9]=-Xusejit:true
+01-17 02:29:15.654  1388  1388 I art     : option[10]=-Xjitsaveprofilinginfo
+01-17 02:29:15.654  1388  1388 I art     : option[11]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-17 02:29:15.654  1388  1388 I art     : option[12]=-Xlockprofthreshold:500
+01-17 02:29:15.654  1388  1388 I art     : option[13]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[14]=--runtime-arg
+01-17 02:29:15.654  1388  1388 I art     : option[15]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[16]=-Xms64m
+01-17 02:29:15.654  1388  1388 I art     : option[17]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[18]=--runtime-arg
+01-17 02:29:15.654  1388  1388 I art     : option[19]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[20]=-Xmx64m
+01-17 02:29:15.654  1388  1388 I art     : option[21]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[22]=--compiler-filter=verify-at-runtime
+01-17 02:29:15.654  1388  1388 I art     : option[23]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[24]=--image-classes=/system/etc/preloaded-classes
+01-17 02:29:15.654  1388  1388 I art     : option[25]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[26]=--compiled-classes=/system/etc/compiled-classes
+01-17 02:29:15.654  1388  1388 I art     : option[27]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[28]=--runtime-arg
+01-17 02:29:15.654  1388  1388 I art     : option[29]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[30]=-Xms64m
+01-17 02:29:15.654  1388  1388 I art     : option[31]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[32]=--runtime-arg
+01-17 02:29:15.654  1388  1388 I art     : option[33]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[34]=-Xmx512m
+01-17 02:29:15.654  1388  1388 I art     : option[35]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[36]=--instruction-set-variant=x86
+01-17 02:29:15.654  1388  1388 I art     : option[37]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[38]=--instruction-set-variant=x86
+01-17 02:29:15.654  1388  1388 I art     : option[39]=-Ximage-compiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[40]=--instruction-set-features=default
+01-17 02:29:15.654  1388  1388 I art     : option[41]=-Xcompiler-option
+01-17 02:29:15.654  1388  1388 I art     : option[42]=--instruction-set-features=default
+01-17 02:29:15.655  1388  1388 I art     : option[43]=-Duser.locale=en-US
+01-17 02:29:15.655  1388  1388 I art     : option[44]=--cpu-abilist=x86
+01-17 02:29:15.655  1388  1388 I art     : option[45]=-Xfingerprint:x86emu_x86/x86emu_x86/x86emu:7.1.1/NMF26O/sgye01142037:eng/test-keys
+01-17 02:29:15.695  1388  1388 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-17 02:29:15.703  1388  1388 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-17 02:29:15.703  1388  1388 E android.os.Debug: failed to load memtrack module: -2
+01-17 02:29:15.704  1388  1388 I Radio-JNI: register_android_hardware_Radio DONE
+01-17 02:29:15.705  1388  1388 I SamplingProfilerIntegration: Profiling disabled.
+01-17 02:29:15.705  1388  1388 D Zygote  : begin preload
+01-17 02:29:15.705  1388  1388 I Zygote  : Installing ICU cache reference pinning...
+01-17 02:29:15.705  1388  1388 I Zygote  : Preloading ICU data...
+01-17 02:29:15.710  1388  1388 I Zygote  : Preloading classes...
+01-17 02:29:15.711  1388  1388 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-17 02:29:15.736  1388  1388 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-17 02:29:16.032  1388  1388 I art     : Thread[1,tid=1388,Native,Thread*=0xa658b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:16.032  1388  1388 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-17 02:29:16.032  1388  1388 I art     : Thread[1,tid=1388,Native,Thread*=0xa658b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:16.032  1388  1388 I art     : Thread[1,tid=1388,Native,Thread*=0xa658b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-17 02:29:16.050  1388  1388 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-17 02:29:16.050  1388  1388 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-17 02:29:16.052  1054  1098 E EGL_emulation: tid 1098: swapBuffers(487): error 0x300d (EGL_BAD_SURFACE)
+01-17 02:29:16.052  1054  1054 W SurfaceComposerClient: ComposerService remote (surfaceflinger) died [0xb2a9b680]
+01-17 02:29:16.052  1054  1054 D BootAnimation: SurfaceFlinger died, exiting...
+01-17 02:29:16.052   994   994 I ServiceManager: service 'gpu' died
+01-17 02:29:16.052   994   994 I ServiceManager: service 'SurfaceFlinger' died
+01-17 02:29:16.495  1390  1390 I ServiceManager: Waiting for service media.camera.proxy...
