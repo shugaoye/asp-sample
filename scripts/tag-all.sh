@@ -147,6 +147,17 @@ case $1 in
 			exit
 		fi
 		;;
+	android-7.1.0_r7_x86emu_ch07_r*|android-7.1.1_r4_x86emu_ch07_r*)
+		if [ -d device/generic/x86emu ]; then
+			echo "Tagging $1..."
+			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
+			cd bootable/newinstaller; git tag $1; git push ${REPO_T} $1; croot
+			tag_goldfish $1
+		else
+			echo "Cannot find x86emu."
+			exit
+		fi
+		;;
 	android-x86-6.0.1_r*)
 		tag_android_x86 $1
 		cd external/libpciaccess; git tag $1; git push ${REPO_T} $1; croot
