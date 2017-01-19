@@ -1,0 +1,179 @@
+--------- beginning of main
+01-19 02:52:57.250   966   966 W auditd  : type=2000 audit(0.0:1): initialized
+01-19 02:53:02.470   966   966 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-19 02:53:02.470     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4405 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:02.470     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=4386 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:02.470     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=4397 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:02.480   957   957 I ueventd : type=1400 audit(0.0:6): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=4413 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:02.830     1     1 I init    : type=1400 audit(0.0:7): avc: denied { write } for name="tracing_on" dev="debugfs" ino=28 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+01-19 02:53:02.883   974   974 I         : debuggerd: starting
+01-19 02:53:02.920   975   975 I vold    : type=1400 audit(0.0:8): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4405 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+--------- beginning of system
+01-19 02:53:02.922   975   975 I vold    : Vold 3.0 (the awakening) firing up
+01-19 02:53:02.922   975   975 V vold    : Detected support for: ext4 vfat
+01-19 02:53:03.180   975   978 D vold    : Recognized experimental block major ID 253 as virtio-blk (emulator's virtual SD card device)
+01-19 02:53:03.180   975   978 V vold    : /system/bin/sgdisk
+01-19 02:53:03.180   975   978 V vold    :     --android-dump
+01-19 02:53:03.180   975   978 V vold    :     /dev/block/vold/disk:253,48
+01-19 02:53:03.182   975   981 D vold    : e4crypt_init_user0
+01-19 02:53:03.182   975   981 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-19 02:53:03.182   975   981 D vold    : Preparing: /data/system/users/0
+01-19 02:53:03.183   975   981 D vold    : Preparing: /data/misc/profiles/cur/0
+01-19 02:53:03.185   975   981 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-19 02:53:03.185   975   981 D vold    : Preparing: /data/system_de/0
+01-19 02:53:03.185   975   981 D vold    : Preparing: /data/misc_de/0
+01-19 02:53:03.186   975   981 D vold    : Preparing: /data/user_de/0
+01-19 02:53:03.186   975   981 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-19 02:53:03.188     1     1 I vdc     : 200 977 Command succeeded
+01-19 02:53:03.191   975   978 V vold    : DISK mbr
+01-19 02:53:03.191   975   978 V vold    : 
+01-19 02:53:03.191   975   978 W vold    : disk:253,48 has unknown partition table; trying entire device
+01-19 02:53:03.191   975   978 V vold    : /system/bin/blkid
+01-19 02:53:03.191   975   978 V vold    :     -c
+01-19 02:53:03.191   975   978 V vold    :     /dev/null
+01-19 02:53:03.191   975   978 V vold    :     -s
+01-19 02:53:03.191   975   978 V vold    :     TYPE
+01-19 02:53:03.191   975   978 V vold    :     -s
+01-19 02:53:03.191   975   978 V vold    :     UUID
+01-19 02:53:03.191   975   978 V vold    :     -s
+01-19 02:53:03.191   975   978 V vold    :     LABEL
+01-19 02:53:03.191   975   978 V vold    :     /dev/block/vold/disk:253,48
+01-19 02:53:03.197   975   978 V vold    : /dev/block/vold/disk:253,48: LABEL="SDCARD" UUID="09EA-370E" TYPE="vfat" 
+01-19 02:53:03.197   975   978 V vold    : 
+01-19 02:53:03.203   983   983 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-19 02:53:03.370   985   985 I init    : type=1400 audit(0.0:9): avc: denied { execute } for name="healthd" dev="tmpfs" ino=4400 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:03.370   988   988 I servicemanager: type=1400 audit(0.0:10): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4405 scontext=u:r:servicemanager:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:03.377   986   986 I qemu-props: connected to 'boot-properties' qemud service.
+01-19 02:53:03.377   986   986 I qemu-props: receiving..
+01-19 02:53:03.377   986   986 I qemu-props: received: qemu.sf.fake_camera=both
+01-19 02:53:03.380   993   993 I init    : type=1400 audit(0.0:11): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=4399 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:03.380   993   993 I adbd    : type=1400 audit(0.0:12): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=4399 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:03.390   985   985 I init    : type=1400 audit(0.0:13): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=4400 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-19 02:53:03.399   986   986 I qemu-props: receiving..
+01-19 02:53:03.399   986   986 I qemu-props: received: ro.opengles.version=131072
+01-19 02:53:03.399   986   986 I qemu-props: receiving..
+01-19 02:53:03.399   986   986 I qemu-props: received: dalvik.vm.heapsize=192m
+01-19 02:53:03.401   986   986 I qemu-props: receiving..
+01-19 02:53:03.401   986   986 I qemu-props: received: qemu.hw.mainkeys=1
+01-19 02:53:03.402   986   986 I qemu-props: receiving..
+01-19 02:53:03.403   986   986 I qemu-props: received: qemu.sf.lcd_density=240
+01-19 02:53:03.403   986   986 I qemu-props: receiving..
+01-19 02:53:03.403   986   986 I qemu-props: exiting (5 properties set).
+01-19 02:53:03.420   991   991 I init.goldfish.s: type=1400 audit(0.0:14): avc: denied { getattr } for path="/system/bin/dhcpcd-6.8.2" dev="vda" ino=160 scontext=u:r:goldfish_setup:s0 tcontext=u:object_r:dhcp_exec:s0 tclass=file permissive=1
+01-19 02:53:03.420   991   991 I init.goldfish.s: type=1400 audit(0.0:15): avc: denied { execute } for name="dhcpcd-6.8.2" dev="vda" ino=160 scontext=u:r:goldfish_setup:s0 tcontext=u:object_r:dhcp_exec:s0 tclass=file permissive=1
+01-19 02:53:03.420  1001  1001 I init.goldfish.s: type=1400 audit(0.0:16): avc: denied { read open } for path="/system/bin/dhcpcd-6.8.2" dev="vda" ino=160 scontext=u:r:goldfish_setup:s0 tcontext=u:object_r:dhcp_exec:s0 tclass=file permissive=1
+01-19 02:53:03.420  1001  1001 I init.goldfish.s: type=1400 audit(0.0:17): avc: denied { execute_no_trans } for path="/system/bin/dhcpcd-6.8.2" dev="vda" ino=160 scontext=u:r:goldfish_setup:s0 tcontext=u:object_r:dhcp_exec:s0 tclass=file permissive=1
+01-19 02:53:03.423   987   987 I lowmemorykiller: Using in-kernel low memory killer interface
+01-19 02:53:03.454   989   989 I SurfaceFlinger: SurfaceFlinger is starting
+01-19 02:53:03.454   989   989 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-19 02:53:03.454   989   989 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-19 02:53:03.455   989   989 D libEGL  : setEmulatorGlesValue: qemu.gles=1
+01-19 02:53:03.455   989   989 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:03.455   989   989 D libEGL  : qemu.gles=1
+01-19 02:53:03.455   989   989 D libEGL  : emulationStatus=1
+01-19 02:53:03.455   989   989 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-19 02:53:03.455   989   989 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:03.455   989   989 D libEGL  : qemu.gles=1
+01-19 02:53:03.455   989   989 D libEGL  : emulationStatus=1
+01-19 02:53:03.462   989   989 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-19 02:53:03.462   989   989 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:03.462   989   989 D libEGL  : qemu.gles=1
+01-19 02:53:03.462   989   989 D libEGL  : emulationStatus=1
+01-19 02:53:03.463   989   989 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-19 02:53:03.466   989   989 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:03.466   989   989 D libEGL  : qemu.gles=1
+01-19 02:53:03.466   989   989 D libEGL  : emulationStatus=1
+01-19 02:53:03.467   989   989 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-19 02:53:03.470  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:18): avc: denied { setgid } for capability=6 scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=capability permissive=1
+01-19 02:53:03.470  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:19): avc: denied { setuid } for capability=7 scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=capability permissive=1
+01-19 02:53:03.470  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:20): avc: denied { write } for name="promote_secondaries" dev="proc" ino=3753 scontext=u:r:goldfish_setup:s0 tcontext=u:object_r:proc_net:s0 tclass=file permissive=1
+01-19 02:53:03.473   989   989 D         : HostConnection::get() New Host Connection established 0xa9c9b100, tid 989
+01-19 02:53:03.473   989   989 W         : Process pipe failed
+01-19 02:53:03.476  1001  1001 I dhcpcd  : dhcpcd is running with reduced privileges
+01-19 02:53:03.476  1001  1001 E dhcpcd  : open `/data/misc/dhcp-6.8.2/dhcpcd-eth1.pid': No such file or directory
+01-19 02:53:03.476  1001  1001 D dhcpcd  : dhcpcd-6.8.2 starting
+01-19 02:53:03.476  1001  1001 D dhcpcd  : eth1: delaying IPv4 for 0.2 seconds
+01-19 02:53:03.482   989   989 E SurfaceFlinger: hwcomposer module not found
+01-19 02:53:03.482   989   989 W SurfaceFlinger: no suitable EGLConfig found, trying a simpler query
+01-19 02:53:03.483   989   989 I SurfaceFlinger: EGL information:
+01-19 02:53:03.483   989   989 I SurfaceFlinger: vendor    : Android
+01-19 02:53:03.483   989   989 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-19 02:53:03.483   989   989 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_fence_sync EGL_ANDROID_image_native_buffer EGL_ANDROID_recordable 
+01-19 02:53:03.483   989   989 I SurfaceFlinger: Client API: OpenGL_ES
+01-19 02:53:03.483   989   989 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0xb
+01-19 02:53:03.584   989   989 I SurfaceFlinger: OpenGL ES informations:
+01-19 02:53:03.584   989   989 I SurfaceFlinger: vendor    : Google (Intel Open Source Technology Center)
+01-19 02:53:03.584   989   989 I SurfaceFlinger: renderer  : Android Emulator OpenGL ES Translator (Mesa DRI Intel(R) Haswell Mobile )
+01-19 02:53:03.584   989   989 I SurfaceFlinger: version   : OpenGL ES 2.0 (3.0 Mesa 11.0.2)
+01-19 02:53:03.584   989   989 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_texture_npot GL_OES_rgb8_rgba8 ANDROID_EMU_CHECKSUM_HELPER_v1 
+01-19 02:53:03.584   989   989 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-19 02:53:03.584   989   989 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 16384
+01-19 02:53:03.587   989   989 E cutils-trace: Error opening trace file: Permission denied (13)
+01-19 02:53:03.588   989   989 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-19 02:53:03.660  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:21): avc: denied { net_bind_service } for capability=10 scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=capability permissive=1
+01-19 02:53:03.660  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:22): avc: denied { create } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=packet_socket permissive=1
+01-19 02:53:03.660  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:23): avc: denied { setopt } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=packet_socket permissive=1
+01-19 02:53:03.660  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:24): avc: denied { bind } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=packet_socket permissive=1
+01-19 02:53:03.661  1001  1001 D dhcpcd  : eth1: using hwaddr 52:54:00:12:34:57
+01-19 02:53:03.700  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:25): avc: denied { write } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=packet_socket permissive=1
+01-19 02:53:03.700  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:26): avc: denied { read } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=packet_socket permissive=1
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: soliciting a DHCP lease
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: sending DISCOVER (xid 0x4a41806d), next in 3.5 seconds
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: received OFFER with xid 0x4a41806d
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: offered 10.0.2.50 from 10.0.2.2
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: requesting lease of 10.0.2.50
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: sending REQUEST (xid 0x4a41806d), next in 3.1 seconds
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: received ACK with xid 0x4a41806d
+01-19 02:53:03.700  1001  1001 I dhcpcd  : eth1: acknowledged 10.0.2.50 from 10.0.2.2
+01-19 02:53:03.730  1001  1001 D dhcpcd  : eth1: probing for 10.0.2.50
+01-19 02:53:03.730  1001  1001 I dhcpcd  : eth1: ARP probing 10.0.2.50 (1 of 3), next in 2.0 seconds
+01-19 02:53:03.738   989   989 D SurfaceFlinger: shader cache generated - 24 shaders in 68.875748 ms
+01-19 02:53:03.739   989   989 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xa9cb0000
+01-19 02:53:03.740  1011  1011 I bootanimation: type=1400 audit(0.0:27): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=4414 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-19 02:53:03.740  1011  1011 I bootanimation: type=1400 audit(0.0:28): avc: denied { read } for name="vendor" dev="tmpfs" ino=4414 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-19 02:53:03.757   989   989 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-19 02:53:04.086   989  1002 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+01-19 02:53:04.086  1011  1014 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-19 02:53:04.086  1011  1014 D libEGL  : setEmulatorGlesValue: qemu.gles=1
+01-19 02:53:04.086  1011  1014 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:04.086  1011  1014 D libEGL  : qemu.gles=1
+01-19 02:53:04.086  1011  1014 D libEGL  : emulationStatus=1
+01-19 02:53:04.086  1011  1014 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-19 02:53:04.086  1011  1014 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:04.086  1011  1014 D libEGL  : qemu.gles=1
+01-19 02:53:04.086  1011  1014 D libEGL  : emulationStatus=1
+01-19 02:53:04.087  1011  1014 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-19 02:53:04.087  1011  1014 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:04.087  1011  1014 D libEGL  : qemu.gles=1
+01-19 02:53:04.087  1011  1014 D libEGL  : emulationStatus=1
+01-19 02:53:04.087  1011  1014 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-19 02:53:04.091  1011  1014 D libEGL  : ro.kernel.qemu=1
+01-19 02:53:04.091  1011  1014 D libEGL  : qemu.gles=1
+01-19 02:53:04.091  1011  1014 D libEGL  : emulationStatus=1
+01-19 02:53:04.091  1011  1014 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-19 02:53:04.095  1011  1014 D         : HostConnection::get() New Host Connection established 0xa788c100, tid 1014
+01-19 02:53:04.096  1011  1014 W         : Process pipe failed
+01-19 02:53:04.097  1011  1014 E cutils-trace: Error opening trace file: Permission denied (13)
+01-19 02:53:04.097   989  1002 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-19 02:53:04.097   989  1002 D         : HostConnection::get() New Host Connection established 0xa9a1c100, tid 1002
+01-19 02:53:04.173   989  1003 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-19 02:53:04.173   989  1003 D         : HostConnection::get() New Host Connection established 0xa9c9bac0, tid 1003
+01-19 02:53:04.187   989  1002 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-19 02:53:05.709  1001  1001 I dhcpcd  : eth1: ARP probing 10.0.2.50 (2 of 3), next in 1.4 seconds
+01-19 02:53:07.105  1001  1001 I dhcpcd  : eth1: ARP probing 10.0.2.50 (3 of 3), next in 2.0 seconds
+01-19 02:53:09.150  1001  1001 I dhcpcd  : eth1: leased 10.0.2.50 for 86400 seconds
+01-19 02:53:09.150  1001  1001 D dhcpcd  : eth1: renew in 43200 seconds, rebind in 75600 seconds
+01-19 02:53:09.150  1001  1001 D dhcpcd  : eth1: writing lease `/data/misc/dhcp-6.8.2/dhcpcd-eth1.lease'
+01-19 02:53:09.150  1001  1001 E dhcpcd  : dhcp_bind: write_lease: No such file or directory
+01-19 02:53:09.150  1001  1001 D dhcpcd  : eth1: adding IP address 10.0.2.50/24
+01-19 02:53:09.150  1001  1001 I dhcpcd  : eth1: adding route to 10.0.2.0/24
+01-19 02:53:09.150  1001  1001 I dhcpcd  : eth1: adding default route via 10.0.2.2
+01-19 02:53:09.150  1001  1001 D dhcpcd  : forking to background
+01-19 02:53:09.150  1001  1001 I dhcpcd  : forked to background, child pid 1018
+01-19 02:53:09.150  1018  1018 D dhcpcd  : eth1: ARP announcing 10.0.2.50 (1 of 2), next in 2.0 seconds
+01-19 02:53:09.150  1001  1001 I dhcpcd-6.8.2: type=1400 audit(0.0:29): avc: denied { nlmsg_write } for scontext=u:r:goldfish_setup:s0 tcontext=u:r:goldfish_setup:s0 tclass=netlink_route_socket permissive=1
+01-19 02:53:11.153  1018  1018 D dhcpcd  : eth1: ARP announcing 10.0.2.50 (2 of 2)
+01-19 02:54:48.670  1011  1012 W SurfaceComposerClient: ComposerService remote (surfaceflinger) died [0xab81b6c0]
+01-19 02:54:48.670  1011  1012 D BootAnimation: SurfaceFlinger died, exiting...
+01-19 02:54:48.674   988   988 I ServiceManager: service 'SurfaceFlinger' died
+01-19 02:54:48.674   988   988 I ServiceManager: service 'gpu' died

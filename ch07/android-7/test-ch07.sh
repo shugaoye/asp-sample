@@ -2,7 +2,7 @@
 #******************************************************************************
 #
 # Android System Programming
-# Script to test Android images in chapter 6
+# Script to test Android images in chapter 7
 #
 # Copyright (c) 2017 Roger Ye.  All rights reserved.
 # Software License Agreement
@@ -16,8 +16,6 @@
 # DAMAGES, FOR ANY REASON WHATSOEVER.
 #
 #******************************************************************************
-
-. ~/bin/setup.sh
 
 case $0 in
         *vgl)
@@ -46,8 +44,7 @@ else
   IMG_ROOT=$OUT
 fi
 
-IMG_TYPE=-qcow2
+CMD_LINE="qemu=1 androidboot.hardware=ranchu clocksource=pit console=ttyS0,38400 android.qemud=1 android.checkjni=1 qemu.gles=1 androidboot.selinux=permissive"
 
-$EMULATOR1 @${AVD_NAME} -ranchu -verbose -show-kernel -shell -system $IMG_ROOT/system${IMG_TYPE}.img -ramdisk $IMG_ROOT/${RAMDISK_NAME} -initdata $IMG_ROOT/userdata${IMG_TYPE}.img -kernel $IMG_ROOT/kernel -qemu 
-
+$EMULATOR1 @${AVD_NAME} -ranchu -verbose -show-kernel -selinux disabled -system $IMG_ROOT/system-qcow2.img -ramdisk $IMG_ROOT/${RAMDISK_NAME} -initdata $IMG_ROOT/userdata-qcow2.img -kernel $IMG_ROOT/kernel -qemu -netdev user,id=mynet1,net=10.0.2.0/24,dhcpstart=10.0.2.50 -device virtio-net,netdev=mynet1 -append "${CMD_LINE} DEBUG=2 root=/dev/sda SRC=x86emu_ch07"
 

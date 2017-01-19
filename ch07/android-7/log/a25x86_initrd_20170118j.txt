@@ -1,0 +1,133 @@
+--------- beginning of main
+01-18 08:16:24.320   967   967 W auditd  : type=2000 audit(0.0:1): initialized
+01-18 08:16:29.870   967   967 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-18 08:16:29.870     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=3557 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:29.870     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=3538 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:29.870     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=3549 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:29.880   958   958 I ueventd : type=1400 audit(0.0:6): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=3565 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.210     1     1 I init    : type=1400 audit(0.0:7): avc: denied { write } for name="tracing_on" dev="debugfs" ino=28 scontext=u:r:init:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+01-18 08:16:30.273   975   975 I         : debuggerd: starting
+01-18 08:16:30.320   976   976 I vold    : type=1400 audit(0.0:8): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=3557 scontext=u:r:vold:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+--------- beginning of system
+01-18 08:16:30.321   976   976 I vold    : Vold 3.0 (the awakening) firing up
+01-18 08:16:30.321   976   976 V vold    : Detected support for: ext4 vfat
+01-18 08:16:30.577   976   979 D vold    : Recognized experimental block major ID 253 as virtio-blk (emulator's virtual SD card device)
+01-18 08:16:30.577   976   979 V vold    : /system/bin/sgdisk
+01-18 08:16:30.577   976   979 V vold    :     --android-dump
+01-18 08:16:30.577   976   979 V vold    :     /dev/block/vold/disk:253,48
+01-18 08:16:30.583   976   982 D vold    : e4crypt_init_user0
+01-18 08:16:30.583   976   982 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-18 08:16:30.583   976   982 D vold    : Preparing: /data/system/users/0
+01-18 08:16:30.583   976   982 D vold    : Preparing: /data/misc/profiles/cur/0
+01-18 08:16:30.583   976   982 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-18 08:16:30.584   976   982 D vold    : Preparing: /data/system_de/0
+01-18 08:16:30.584   976   982 D vold    : Preparing: /data/misc_de/0
+01-18 08:16:30.584   976   982 D vold    : Preparing: /data/user_de/0
+01-18 08:16:30.585   976   982 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-18 08:16:30.586     1     1 I vdc     : 200 977 Command succeeded
+01-18 08:16:30.586   976   979 V vold    : DISK mbr
+01-18 08:16:30.587   976   979 V vold    : 
+01-18 08:16:30.587   976   979 W vold    : disk:253,48 has unknown partition table; trying entire device
+01-18 08:16:30.587   976   979 V vold    : /system/bin/blkid
+01-18 08:16:30.587   976   979 V vold    :     -c
+01-18 08:16:30.587   976   979 V vold    :     /dev/null
+01-18 08:16:30.587   976   979 V vold    :     -s
+01-18 08:16:30.587   976   979 V vold    :     TYPE
+01-18 08:16:30.587   976   979 V vold    :     -s
+01-18 08:16:30.587   976   979 V vold    :     UUID
+01-18 08:16:30.587   976   979 V vold    :     -s
+01-18 08:16:30.587   976   979 V vold    :     LABEL
+01-18 08:16:30.587   976   979 V vold    :     /dev/block/vold/disk:253,48
+01-18 08:16:30.592   976   979 V vold    : /dev/block/vold/disk:253,48: LABEL="SDCARD" UUID="09EA-370E" TYPE="vfat" 
+01-18 08:16:30.592   976   979 V vold    : 
+01-18 08:16:30.596   984   984 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-18 08:16:30.777   987   987 I qemu-props: connected to 'boot-properties' qemud service.
+01-18 08:16:30.777   987   987 I qemu-props: receiving..
+01-18 08:16:30.777   987   987 I qemu-props: received: qemu.sf.fake_camera=both
+01-18 08:16:30.780   986   986 I init    : type=1400 audit(0.0:9): avc: denied { execute } for name="healthd" dev="tmpfs" ino=3552 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.780   986   986 I init    : type=1400 audit(0.0:10): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=3552 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.780   987   987 I qemu-props: receiving..
+01-18 08:16:30.780   987   987 I qemu-props: received: ro.opengles.version=131072
+01-18 08:16:30.788   987   987 I qemu-props: receiving..
+01-18 08:16:30.789   987   987 I qemu-props: received: dalvik.vm.heapsize=192m
+01-18 08:16:30.790   994   994 I init    : type=1400 audit(0.0:11): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=3551 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.790   994   994 I adbd    : type=1400 audit(0.0:12): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=3551 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.793   988   988 I lowmemorykiller: Using in-kernel low memory killer interface
+01-18 08:16:30.795   987   987 I qemu-props: receiving..
+01-18 08:16:30.795   987   987 I qemu-props: received: qemu.hw.mainkeys=1
+01-18 08:16:30.795   987   987 I qemu-props: receiving..
+01-18 08:16:30.795   987   987 I qemu-props: received: qemu.sf.lcd_density=240
+01-18 08:16:30.796   987   987 I qemu-props: receiving..
+01-18 08:16:30.796   987   987 I qemu-props: exiting (5 properties set).
+01-18 08:16:30.820   989   989 I servicemanager: type=1400 audit(0.0:13): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=3557 scontext=u:r:servicemanager:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-18 08:16:30.849   990   990 I SurfaceFlinger: SurfaceFlinger is starting
+01-18 08:16:30.849   990   990 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-18 08:16:30.849   990   990 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-18 08:16:30.849   990   990 D libEGL  : setEmulatorGlesValue: qemu.gles=1
+01-18 08:16:30.849   990   990 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:30.849   990   990 D libEGL  : qemu.gles=1
+01-18 08:16:30.849   990   990 D libEGL  : emulationStatus=1
+01-18 08:16:30.850   990   990 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-18 08:16:30.850   990   990 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:30.850   990   990 D libEGL  : qemu.gles=1
+01-18 08:16:30.850   990   990 D libEGL  : emulationStatus=1
+01-18 08:16:30.856   990   990 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-18 08:16:30.857   990   990 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:30.857   990   990 D libEGL  : qemu.gles=1
+01-18 08:16:30.857   990   990 D libEGL  : emulationStatus=1
+01-18 08:16:30.858   990   990 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-18 08:16:30.861   990   990 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:30.861   990   990 D libEGL  : qemu.gles=1
+01-18 08:16:30.861   990   990 D libEGL  : emulationStatus=1
+01-18 08:16:30.862   990   990 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-18 08:16:30.866   990   990 D         : HostConnection::get() New Host Connection established 0xaf09b100, tid 990
+01-18 08:16:30.867   990   990 W         : Process pipe failed
+01-18 08:16:30.870   990   990 E SurfaceFlinger: hwcomposer module not found
+01-18 08:16:30.870   990   990 W SurfaceFlinger: no suitable EGLConfig found, trying a simpler query
+01-18 08:16:30.871   990   990 I SurfaceFlinger: EGL information:
+01-18 08:16:30.871   990   990 I SurfaceFlinger: vendor    : Android
+01-18 08:16:30.871   990   990 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-18 08:16:30.871   990   990 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_fence_sync EGL_ANDROID_image_native_buffer EGL_ANDROID_recordable 
+01-18 08:16:30.871   990   990 I SurfaceFlinger: Client API: OpenGL_ES
+01-18 08:16:30.871   990   990 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0xb
+01-18 08:16:30.919   990   990 I SurfaceFlinger: OpenGL ES informations:
+01-18 08:16:30.919   990   990 I SurfaceFlinger: vendor    : Google (Intel Open Source Technology Center)
+01-18 08:16:30.919   990   990 I SurfaceFlinger: renderer  : Android Emulator OpenGL ES Translator (Mesa DRI Intel(R) Haswell Mobile )
+01-18 08:16:30.919   990   990 I SurfaceFlinger: version   : OpenGL ES 2.0 (3.0 Mesa 11.0.2)
+01-18 08:16:30.919   990   990 I SurfaceFlinger: extensions: GL_EXT_debug_marker GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_texture_npot GL_OES_rgb8_rgba8 ANDROID_EMU_CHECKSUM_HELPER_v1 
+01-18 08:16:30.919   990   990 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-18 08:16:30.919   990   990 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 16384
+01-18 08:16:30.922   990   990 E cutils-trace: Error opening trace file: Permission denied (13)
+01-18 08:16:30.923   990   990 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-18 08:16:31.008   990   990 D SurfaceFlinger: shader cache generated - 24 shaders in 72.662453 ms
+01-18 08:16:31.009   990   990 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xaf0b0000
+01-18 08:16:31.010  1015  1015 I bootanimation: type=1400 audit(0.0:14): avc: denied { getattr } for path="/vendor" dev="tmpfs" ino=3566 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-18 08:16:31.010  1015  1015 I bootanimation: type=1400 audit(0.0:15): avc: denied { read } for name="vendor" dev="tmpfs" ino=3566 scontext=u:r:bootanim:s0 tcontext=u:object_r:tmpfs:s0 tclass=lnk_file permissive=1
+01-18 08:16:31.039   990   990 D gralloc_ranchu: gralloc_alloc: format 1 and usage 0x1a00 imply creation of host color buffer
+01-18 08:16:31.361   990  1006 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+01-18 08:16:31.362  1015  1018 D libEGL  : Emulator has host GPU support, qemu.gles is set to 1.
+01-18 08:16:31.362  1015  1018 D libEGL  : setEmulatorGlesValue: qemu.gles=1
+01-18 08:16:31.362  1015  1018 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:31.362  1015  1018 D libEGL  : qemu.gles=1
+01-18 08:16:31.362  1015  1018 D libEGL  : emulationStatus=1
+01-18 08:16:31.362  1015  1018 E libEGL  : load_driver(/system/lib/egl/libGLES_emulation.so): dlopen failed: library "/system/lib/egl/libGLES_emulation.so" not found
+01-18 08:16:31.362  1015  1018 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:31.362  1015  1018 D libEGL  : qemu.gles=1
+01-18 08:16:31.362  1015  1018 D libEGL  : emulationStatus=1
+01-18 08:16:31.363  1015  1018 D libEGL  : loaded /system/lib/egl/libEGL_emulation.so
+01-18 08:16:31.363  1015  1018 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:31.363  1015  1018 D libEGL  : qemu.gles=1
+01-18 08:16:31.363  1015  1018 D libEGL  : emulationStatus=1
+01-18 08:16:31.363  1015  1018 D libEGL  : loaded /system/lib/egl/libGLESv1_CM_emulation.so
+01-18 08:16:31.367  1015  1018 D libEGL  : ro.kernel.qemu=1
+01-18 08:16:31.367  1015  1018 D libEGL  : qemu.gles=1
+01-18 08:16:31.367  1015  1018 D libEGL  : emulationStatus=1
+01-18 08:16:31.367  1015  1018 D libEGL  : loaded /system/lib/egl/libGLESv2_emulation.so
+01-18 08:16:31.372  1015  1018 D         : HostConnection::get() New Host Connection established 0xafb8c100, tid 1018
+01-18 08:16:31.373  1015  1018 W         : Process pipe failed
+01-18 08:16:31.374  1015  1018 E cutils-trace: Error opening trace file: Permission denied (13)
+01-18 08:16:31.374   990  1006 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-18 08:16:31.374   990  1006 D         : HostConnection::get() New Host Connection established 0xaee1c100, tid 1006
+01-18 08:16:31.425   990  1007 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
+01-18 08:16:31.425   990  1007 D         : HostConnection::get() New Host Connection established 0xaf09bac0, tid 1007
+01-18 08:16:31.437   990  1006 D gralloc_ranchu: gralloc_alloc: format 2 and usage 0x900 imply creation of host color buffer
