@@ -1,0 +1,1034 @@
+--------- beginning of main
+01-21 01:57:47.652  1094  1094 W auditd  : type=2000 audit(0.0:1): initialized
+01-21 01:58:04.735  1094  1094 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-21 01:58:04.770     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4758 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:04.780     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=4726 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:04.791     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=4742 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:04.841  1076  1076 I ueventd : type=1400 audit(0.0:6): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=4766 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:04.844  1076  1076 I ueventd : type=1400 audit(0.0:7): avc: denied { read } for name="modules.alias" dev="sda1" ino=25301 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:04.846  1076  1076 I ueventd : type=1400 audit(0.0:8): avc: denied { open } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=25301 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:04.901  1076  1076 I ueventd : type=1400 audit(0.0:9): avc: denied { getattr } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=25301 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:04.921  1076  1076 I ueventd : type=1400 audit(0.0:10): avc: denied { sys_module } for capability=16 scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+01-21 01:58:05.010  1076  1076 I ueventd : type=1400 audit(0.0:11): avc: denied { module_load } for path="/system/lib/modules/4.4.34-android-x86/kernel/sound/ac97_bus.ko" dev="sda1" ino=34740 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=system permissive=1
+01-21 01:58:05.886  1094  1094 I logd    : type=1400 audit(0.0:30): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-21 01:58:05.927  1101  1101 I sh      : type=1400 audit(0.0:31): avc: denied { ioctl } for path="/dev/pts/0" dev="devpts" ino=3 ioctlcmd=5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-21 01:58:05.946  1105  1105 I setprop : type=1400 audit(0.0:32): avc: denied { write } for name="property_service" dev="tmpfs" ino=5195 scontext=u:r:init:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+01-21 01:58:05.957  1100  1100 I sh      : + '[' -e /vendor/etc/init.sh ']'
+01-21 01:58:05.957  1100  1100 I sh      : + do_init
+01-21 01:58:05.957  1100  1100 I sh      : + init_misc
+01-21 01:58:05.957  1100  1100 I sh      : + cat /sys/class/dmi/id/sys_vendor
+01-21 01:58:05.957  1100  1100 I sh      : + setprop ro.product.manufacturer 'innotek GmbH'
+01-21 01:58:05.966  1100  1100 I sh      : + setprop ro.product.model VirtualBox
+01-21 01:58:05.986  1100  1100 I sh      : + grep 1a8d:1000
+01-21 01:58:05.988  1101  1101 I sh      : type=1400 audit(0.0:33): avc: denied { execute } for name="busybox" dev="tmpfs" ino=4957 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:05.988  1100  1100 I sh      : + lsusb
+01-21 01:58:05.991  1100  1100 I sh      : + '[' -d /sys/devices/system/cpu/cpu0/cpufreq ']'
+01-21 01:58:05.991  1100  1100 I sh      : + modprobe acpi-cpufreq
+01-21 01:58:05.996  1111  1111 I sh      : type=1400 audit(0.0:34): avc: denied { execute_no_trans } for path="/bin/busybox" dev="tmpfs" ino=4957 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:05.997  1111  1111 I modprobe: type=1400 audit(0.0:35): avc: denied { sys_module } for capability=16 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-21 01:58:05.997  1111  1111 I modprobe: type=1400 audit(0.0:36): avc: denied { module_load } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=system permissive=1
+01-21 01:58:05.998  1100  1100 I sh      : + init_hal_audio
+01-21 01:58:05.998  1100  1100 I sh      : + '[' -d /proc/asound/card0 ']'
+01-21 01:58:06.006  1100  1100 I sh      : + cat /proc/asound/card0/id
+01-21 01:58:06.006  1100  1100 I sh      : + '[' I82801AAICH '=' IntelHDMI ']'
+01-21 01:58:06.006  1100  1100 I sh      : + init_hal_bluetooth
+01-21 01:58:06.006  1100  1100 I sh      : + cat '/sys/class/rfkill/*/type'
+01-21 01:58:06.006  1100  1100 I sh      : /system/etc/init.sh[454]: cat: /sys/class/rfkill/*/type: No such file or directory
+01-21 01:58:06.007  1100  1100 I sh      : + type= 
+01-21 01:58:06.007  1100  1100 I sh      : + '['  '=' wlan -o  '=' bluetooth ']'
+01-21 01:58:06.007  1100  1100 I sh      : + awk ' /Class:.E0/ { print $9 } '
+01-21 01:58:06.008  1100  1100 I sh      : + busybox lsusb -v
+01-21 01:58:06.011  1100  1100 I sh      : + '[' -n  ']'
+01-21 01:58:06.011  1100  1100 I sh      : + init_hal_camera
+01-21 01:58:06.011  1100  1100 I sh      : + return
+01-21 01:58:06.011  1100  1100 I sh      : + init_hal_gps
+01-21 01:58:06.011  1100  1100 I sh      : + return
+01-21 01:58:06.011  1100  1100 I sh      : + init_hal_gralloc
+01-21 01:58:06.016  1100  1100 I sh      : + head -1
+01-21 01:58:06.019  1100  1100 I sh      : + cat /proc/fb
+01-21 01:58:06.019  1100  1100 I sh      : + init_uvesafb
+01-21 01:58:06.019  1100  1100 I sh      : + '['  '=' 0 ']'
+01-21 01:58:06.019  1100  1100 I sh      : + bpp=32 
+01-21 01:58:06.019  1100  1100 I sh      : + modprobe uvesafb 'mode_option=1024x768-32' 'mtrr=3' 'scroll=redraw'
+01-21 01:58:06.035  1119  1119 I kworker/u2:0: type=1400 audit(0.0:37): avc: denied { execute } for name="linker" dev="sda1" ino=8376 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:06.035  1119  1119 I v86d    : type=1400 audit(0.0:38): avc: denied { getattr } for path="/system" dev="sda1" ino=8152 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-21 01:58:06.036  1119  1119 I v86d    : type=1400 audit(0.0:39): avc: denied { create } for scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=netlink_connector_socket permissive=1
+01-21 01:58:06.036  1119  1119 I v86d    : type=1400 audit(0.0:40): avc: denied { net_admin } for capability=12 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:41): avc: denied { execute } for path="/dev/zero" dev="tmpfs" ino=5272 scontext=u:r:kernel:s0 tcontext=u:object_r:zero_device:s0 tclass=chr_file permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:42): avc: denied { mmap_zero } for scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=memprotect permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:43): avc: denied { read write } for name="mem" dev="tmpfs" ino=5267 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:44): avc: denied { open } for path="/dev/mem" dev="tmpfs" ino=5267 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:45): avc: denied { sys_rawio } for capability=17 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+01-21 01:58:06.036  1120  1120 I v86d    : type=1400 audit(0.0:46): avc: denied { execute } for path="/dev/mem" dev="tmpfs" ino=5267 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-21 01:58:06.946  1094  1094 I logd    : type=1400 audit(0.0:47): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-21 01:58:06.947  1100  1100 I sh      : + '[' -n 2 ']'
+01-21 01:58:06.947  1100  1100 I sh      : + set_property debug.egl.trace error
+01-21 01:58:06.947  1100  1100 I sh      : + setprop debug.egl.trace error
+01-21 01:58:06.962  1100  1100 I sh      : + '[' -n 2 ']'
+01-21 01:58:06.962  1100  1100 I sh      : + >>/dev/x86.prop 
+01-21 01:58:06.962  1100  1100 I sh      : + echo 'debug.egl.trace=error'
+01-21 01:58:06.962  1100  1100 I sh      : + init_hal_hwcomposer
+01-21 01:58:06.962  1100  1100 I sh      : + return
+01-21 01:58:06.962  1100  1100 I sh      : + init_hal_lights
+01-21 01:58:06.962  1100  1100 I sh      : + chown 1000.1000 '/sys/class/backlight/*/brightness'
+01-21 01:58:06.976  1100  1100 I sh      : chown: /sys/class/backlight/*/brightness: No such file or directory
+01-21 01:58:06.977  1100  1100 I sh      : + init_hal_power
+01-21 01:58:06.977  1100  1100 I sh      : + >/sys/class/rtc/rtc0/device/power/wakeup 
+01-21 01:58:06.977  1100  1100 I sh      : + echo disabled
+01-21 01:58:06.986  1100  1100 I sh      : + init_hal_sensors
+01-21 01:58:06.996  1100  1100 I sh      : + getprop ro.hardware
+01-21 01:58:06.999  1100  1100 I sh      : + ro_hardware=x86vbox 
+01-21 01:58:06.999  1100  1100 I sh      : + '[' -f /system/lib/hw/sensors.x86vbox.so ']'
+01-21 01:58:06.999  1100  1100 I sh      : + typeset 'hal_sensors=kbd'
+01-21 01:58:06.999  1100  1100 I sh      : + typeset 'has_sensors=true'
+01-21 01:58:06.999  1100  1100 I sh      : + cat /sys/class/dmi/id/uevent
+01-21 01:58:07.000  1100  1100 I sh      : + has_sensors=false 
+01-21 01:58:07.000  1100  1100 I sh      : + 2>/dev/null 
+01-21 01:58:07.000  1100  1100 I sh      : + ls '/sys/bus/iio/devices/iio:device*'
+01-21 01:58:07.006  1100  1100 I sh      : + '[' -n  ']'
+01-21 01:58:07.008  1100  1100 I sh      : + grep -q lis3lv02d_i2c
+01-21 01:58:07.008  1100  1100 I sh      : + lsmod
+01-21 01:58:07.010  1100  1100 I sh      : + set_property ro.hardware.sensors kbd
+01-21 01:58:07.010  1100  1100 I sh      : + setprop ro.hardware.sensors kbd
+01-21 01:58:07.020  1100  1100 I sh      : + '[' -n 2 ']'
+01-21 01:58:07.020  1100  1100 I sh      : + >>/dev/x86.prop 
+01-21 01:58:07.020  1100  1100 I sh      : + echo 'ro.hardware.sensors=kbd'
+01-21 01:58:07.020  1100  1100 I sh      : + '[' kbd '!=' kbd ']'
+01-21 01:58:07.020  1100  1100 I sh      : + set_property config.override_forced_orient false
+01-21 01:58:07.020  1100  1100 I sh      : + setprop config.override_forced_orient false
+01-21 01:58:07.107  1100  1100 I sh      : + '[' -n 2 ']'
+01-21 01:58:07.107  1100  1100 I sh      : + >>/dev/x86.prop 
+01-21 01:58:07.107  1100  1100 I sh      : + echo 'config.override_forced_orient=false'
+01-21 01:58:07.107  1100  1100 I sh      : + init_tscal
+01-21 01:58:07.107  1100  1100 I sh      : + awk '{ print $6 }'
+01-21 01:58:07.109  1100  1100 I sh      : + lsusb
+01-21 01:58:07.112  1100  1100 I sh      : + init_ril
+01-21 01:58:07.112  1100  1100 I sh      : + cat /sys/class/dmi/id/uevent
+01-21 01:58:07.113  1100  1100 I sh      : + set_property ro.radio.noril yes
+01-21 01:58:07.113  1100  1100 I sh      : + setprop ro.radio.noril yes
+01-21 01:58:07.127  1100  1100 I sh      : + '[' -n 2 ']'
+01-21 01:58:07.127  1100  1100 I sh      : + >>/dev/x86.prop 
+01-21 01:58:07.127  1100  1100 I sh      : + echo 'ro.radio.noril=yes'
+01-21 01:58:07.127  1100  1100 I sh      : + post_init
+01-21 01:58:07.127  1100  1100 I sh      : /system/etc/init.sh: post_init: not found
+01-21 01:58:07.127  1100  1100 I sh      : + return 0
+01-21 01:58:07.254  1136  1136 I         : debuggerd: starting
+--------- beginning of system
+01-21 01:58:07.318  1137  1137 I vold    : Vold 3.0 (the awakening) firing up
+01-21 01:58:07.318  1137  1137 V vold    : Detected support for: ext4 f2fs vfat
+01-21 01:58:07.569  1137  1137 I vold    : type=1400 audit(0.0:48): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-21 01:58:07.569  1137  1137 I vold    : type=1400 audit(0.0:49): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-21 01:58:07.569  1137  1137 I vold    : type=1400 audit(0.0:50): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-21 01:58:07.569  1137  1137 I vold    : type=1400 audit(0.0:51): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-21 01:58:07.618  1139  1139 I vdc     : type=1400 audit(0.0:52): avc: denied { getattr } for path="/dev/pts/0" dev="devpts" ino=3 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-21 01:58:07.618  1137  1142 D vold    : e4crypt_init_user0
+01-21 01:58:07.618  1137  1142 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-21 01:58:07.618  1137  1142 D vold    : Preparing: /data/system/users/0
+01-21 01:58:07.618  1137  1142 E cutils  : Failed to mkdir(/data/system/users/0): No such file or directory
+01-21 01:58:07.618  1137  1142 E vold    : Failed to prepare /data/system/users/0: No such file or directory
+01-21 01:58:07.618  1137  1142 E vold    : Failed to prepare user 0 storage
+01-21 01:58:07.618     1     1 I vdc     : 400 1139 Command failed
+01-21 01:58:07.618     1     1 I vdc     : vdc terminated by exit(144)
+01-21 01:58:07.626  1137  1137 I vold    : type=1400 audit(0.0:53): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-21 01:58:07.636  1143  1143 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-21 01:58:07.736  1144  1144 I logd    : type=1400 audit(0.0:54): avc: denied { write } for name="logd" dev="tmpfs" ino=5549 scontext=u:r:init:s0 tcontext=u:object_r:logd_socket:s0 tclass=sock_file permissive=1
+01-21 01:58:07.736  1145  1145 I init    : type=1400 audit(0.0:55): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=4751 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:07.859  1146  1146 I lmkd    : type=1400 audit(0.0:56): avc: denied { ipc_lock } for capability=14 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-21 01:58:07.860  1146  1146 I lowmemorykiller: Using in-kernel low memory killer interface
+01-21 01:58:07.937  1147  1147 I servicemanager: type=1400 audit(0.0:57): avc: denied { set_context_mgr } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-21 01:58:08.036  1149  1149 I init    : type=1400 audit(0.0:58): avc: denied { entrypoint } for path="/system/bin/sh" dev="sda1" ino=8478 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.036  1149  1149 I sh      : type=1400 audit(0.0:59): avc: denied { read } for path="/system/bin/linker" dev="sda1" ino=8376 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.036  1149  1149 I sh      : type=1400 audit(0.0:60): avc: denied { getattr } for path="/system/bin/sh" dev="sda1" ino=8478 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.036  1149  1149 I sh      : type=1400 audit(0.0:61): avc: denied { getattr } for path="/system" dev="sda1" ino=8152 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-21 01:58:08.036  1149  1149 I sh      : type=1400 audit(0.0:62): avc: denied { open } for path="/system/lib/libc++.so" dev="sda1" ino=17481 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.036  1149  1149 I sh      : type=1400 audit(0.0:63): avc: denied { execute } for path="/system/lib/libm.so" dev="sda1" ino=17567 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.040  1150  1150 I sh      : type=1400 audit(0.0:64): avc: denied { read } for name="getprop" dev="sda1" ino=8341 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=lnk_file permissive=1
+01-21 01:58:08.040  1150  1150 I sh      : type=1400 audit(0.0:65): avc: denied { execute_no_trans } for path="/system/bin/toybox" dev="sda1" ino=8509 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-21 01:58:08.045  1148  1148 I SurfaceFlinger: SurfaceFlinger is starting
+01-21 01:58:08.045  1148  1148 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-21 01:58:08.058  1148  1148 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-21 01:58:08.298  1154  1154 I init    : type=1400 audit(0.0:66): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=4744 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:08.327  1154  1154 I adbd    : type=1400 audit(0.0:67): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=4744 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-21 01:58:08.789  1161  1161 I         : installd firing up
+01-21 01:58:08.790  1161  1161 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:08.790  1161  1161 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:08.790  1161  1161 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:08.790  1161  1161 E         : Failed to setup misc for user 0
+01-21 01:58:08.790  1161  1161 E         : Could not create directories; exiting.
+01-21 01:58:08.798  1162  1162 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:08.825  1148  1148 I EGL-DRI2: found extension DRI_Core version 1
+01-21 01:58:08.825  1148  1148 I EGL-DRI2: found extension DRI_SWRast version 5
+01-21 01:58:08.830  1148  1148 I surfaceflinger: type=1400 audit(0.0:68): avc: denied { write } for name="fb0" dev="tmpfs" ino=5702 scontext=u:r:init:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+01-21 01:58:08.830  1148  1148 I surfaceflinger: type=1400 audit(0.0:69): avc: denied { ioctl } for path="/dev/graphics/fb0" dev="tmpfs" ino=5702 ioctlcmd=4602 scontext=u:r:init:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+01-21 01:58:08.830  1148  1148 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-21 01:58:08.830  1148  1148 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-21 01:58:08.830  1148  1148 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-21 01:58:08.830  1148  1148 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-21 01:58:08.830  1148  1148 I EGL-DRI2: found extension DRI2_Fence version 1
+01-21 01:58:08.835  1148  1148 W gralloc : page flipping not supported (yres_virtual=768, requested=1536)
+01-21 01:58:08.836  1148  1148 I gralloc : using (fd=11)
+01-21 01:58:08.836  1148  1148 I gralloc : id           = VESA VGA
+01-21 01:58:08.836  1148  1148 I gralloc : xres         = 1024 px
+01-21 01:58:08.836  1148  1148 I gralloc : yres         = 768 px
+01-21 01:58:08.836  1148  1148 I gralloc : xres_virtual = 1024 px
+01-21 01:58:08.836  1148  1148 I gralloc : yres_virtual = 768 px
+01-21 01:58:08.836  1148  1148 I gralloc : bpp          = 32
+01-21 01:58:08.836  1148  1148 I gralloc : r            = 16:8
+01-21 01:58:08.836  1148  1148 I gralloc : g            =  8:8
+01-21 01:58:08.836  1148  1148 I gralloc : b            =  0:8
+01-21 01:58:08.836  1148  1148 I gralloc : width        = 163 mm (159.568100 dpi)
+01-21 01:58:08.836  1148  1148 I gralloc : height       = 122 mm (159.895081 dpi)
+01-21 01:58:08.836  1148  1148 I gralloc : refresh rate = 65.46 Hz
+01-21 01:58:08.836  1148  1148 E SurfaceFlinger: hwcomposer module not found
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: EGL information:
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: vendor    : Android
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_reusable_sync EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable 
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: Client API: OpenGL_ES
+01-21 01:58:08.836  1148  1148 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0xad324680
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: OpenGL ES informations:
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: vendor    : VMware, Inc.
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: renderer  : Gallium 0.4 on llvmpipe (LLVM 3.8, 256 bits)
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: version   : OpenGL ES 3.0 Mesa 13.0.2
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: extensions: GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_compression_dxt1 GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_EXT_draw_buffers GL_EXT_map_buffer_ra
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-21 01:58:08.855  1148  1148 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-21 01:58:08.855  1148  1148 D DisplayDevice: Open /dev/tty0 OK
+01-21 01:58:08.937  1148  1148 D SurfaceFlinger: shader cache generated - 24 shaders in 58.878357 ms
+01-21 01:58:08.939  1145  1145 I healthd : type=1400 audit(0.0:70): avc: denied { call } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-21 01:58:08.939  1145  1145 I healthd : type=1400 audit(0.0:71): avc: denied { transfer } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-21 01:58:08.939  1147  1147 I servicemanager: type=1400 audit(0.0:72): avc: denied { getattr } for scontext=u:r:init:s0 tcontext=u:r:healthd:s0 tclass=process permissive=1
+01-21 01:58:09.028  1159  1159 I cameraserver: type=1400 audit(0.0:73): avc: denied { call } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-21 01:58:09.029  1163  1163 I mediacodec: @@@ mediacodecservice starting
+01-21 01:58:09.030  1159  1159 I cameraserver: ServiceManager: 0xb319afe0
+01-21 01:58:09.030  1163  1163 W         : No seccomp filter defined for this architecture.
+01-21 01:58:09.031  1163  1163 I mediacodec: type=1400 audit(0.0:74): avc: denied { transfer } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-21 01:58:09.031  1159  1159 I CameraService: CameraService started (pid=1159)
+01-21 01:58:09.031  1159  1159 I CameraService: CameraService process starting
+01-21 01:58:09.031  1159  1159 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.031  1159  1159 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.031  1147  1147 E SELinux : avc:  denied  { add } for service=media.codec pid=1163 uid=1046 scontext=u:r:init:s0 tcontext=u:object_r:mediacodec_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:09.032  1159  1159 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:09.032  1159  1159 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:09.032  1159  1159 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:09.032  1159  1159 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:09.032  1159  1159 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:09.043  1158  1158 I audioserver: type=1400 audit(0.0:75): avc: denied { write } for name="pcmC0D0c" dev="tmpfs" ino=5248 scontext=u:r:init:s0 tcontext=u:object_r:audio_device:s0 tclass=chr_file permissive=1
+01-21 01:58:09.043  1158  1158 I audioserver: type=1400 audit(0.0:76): avc: denied { ioctl } for path="/dev/snd/pcmC0D0c" dev="tmpfs" ino=5248 ioctlcmd=4101 scontext=u:r:init:s0 tcontext=u:object_r:audio_device:s0 tclass=chr_file permissive=1
+01-21 01:58:09.043  1158  1158 I         : sMaxFastTracks = 8
+01-21 01:58:09.043  1158  1158 I audioserver: ServiceManager: 0xb559afe0
+01-21 01:58:09.043  1158  1158 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.043  1158  1158 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:09.043  1147  1147 E SELinux : avc:  denied  { add } for service=media.audio_flinger pid=1158 uid=1041 scontext=u:r:init:s0 tcontext=u:object_r:audioserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.043  1158  1158 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:09.043  1158  1158 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:09.043  1147  1147 E SELinux : avc:  denied  { find } for service=media.audio_flinger pid=1158 uid=1041 scontext=u:r:init:s0 tcontext=u:object_r:audioserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.044  1158  1158 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:09.044  1158  1158 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:09.044  1158  1158 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:09.044  1158  1158 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:09.044  1158  1158 D audio_hw_primary: stream: 0
+01-21 01:58:09.044  1158  1158 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:09.045  1158  1158 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:09.045  1158  1158 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:09.045  1158  1158 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:09.045  1158  1158 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:09.045  1158  1158 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:09.048  1158  1158 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:09.048  1158  1158 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:09.056  1158  1177 I AudioFlinger: AudioFlinger's thread 0xb5118800 ready to run
+01-21 01:58:09.067  1147  1147 E SELinux : avc:  denied  { add } for service=drm.drmManager pid=1160 uid=1019 scontext=u:r:init:s0 tcontext=u:object_r:drmserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.067  1158  1177 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.067  1158  1177 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.067  1158  1177 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.067  1158  1177 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:09.067  1158  1177 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:09.067  1158  1179 I AudioFlinger: AudioFlinger's thread 0xb4d835c0 ready to run
+01-21 01:58:09.068  1158  1158 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:09.068  1158  1158 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:09.068  1158  1158 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:09.068  1158  1158 I RadioService: RadioService
+01-21 01:58:09.068  1158  1158 I RadioService: onFirstRef
+01-21 01:58:09.068  1158  1158 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:09.069  1158  1158 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:09.126  1164  1164 I mediaserver: ServiceManager: 0xac43c060
+01-21 01:58:09.126  1147  1147 E SELinux : avc:  denied  { add } for service=media.drm pid=1164 uid=1013 scontext=u:r:init:s0 tcontext=u:object_r:mediadrmserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.357  1184  1184 I Netd    : Netd 1.0 starting
+01-21 01:58:09.357  1184  1184 D TetherController: Setting IP forward enable = 0
+01-21 01:58:09.367  1185  1185 I iptables: type=1400 audit(0.0:77): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-21 01:58:09.367  1185  1185 I iptables: type=1400 audit(0.0:78): avc: denied { getopt } for lport=255 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-21 01:58:09.406  1182  1182 V MediaUtils: physMem: 2118553600
+01-21 01:58:09.406  1182  1182 V MediaUtils: requested limit: 423710720
+01-21 01:58:09.406  1182  1182 V MediaUtils: actual limit: 423710720
+01-21 01:58:09.406  1182  1182 V MediaUtils: original limits: 4294967295/4294967295
+01-21 01:58:09.406  1182  1182 V MediaUtils: new limits: 423710720/4294967295
+01-21 01:58:09.406  1182  1182 W /system/bin/mediaextractor: libminijail: allowing syscall: socketcall
+01-21 01:58:09.406  1182  1182 W /system/bin/mediaextractor: libminijail: allowing syscall: writev
+01-21 01:58:09.406  1182  1182 W /system/bin/mediaextractor: libminijail: allowing syscall: fcntl64
+01-21 01:58:09.406  1182  1182 W /system/bin/mediaextractor: libminijail: allowing syscall: clock_gettime
+01-21 01:58:09.406  1182  1182 W /system/bin/mediaextractor: libminijail: logging seccomp filter failures
+01-21 01:58:09.409  1147  1147 E SELinux : avc:  denied  { add } for service=media.extractor pid=1182 uid=1040 scontext=u:r:init:s0 tcontext=u:object_r:mediaextractor_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.426  1183  1183 I mediaserver: ServiceManager: 0xacdbc060
+01-21 01:58:09.426  1183  1183 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:09.426  1147  1147 E SELinux : avc:  denied  { add } for service=media.player pid=1183 uid=1013 scontext=u:r:init:s0 tcontext=u:object_r:mediaserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.446  1147  1147 E SELinux : avc:  denied  { add } for service=SurfaceFlinger pid=1148 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.446  1147  1147 E SELinux : avc:  denied  { add } for service=gpu pid=1148 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:gpu_service:s0 tclass=service_manager permissive=1
+01-21 01:58:09.446  1148  1148 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xad8b0000
+01-21 01:58:09.489  1148  1148 I surfaceflinger: type=1400 audit(0.0:79): avc: denied { execmem } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=process permissive=1
+01-21 01:58:09.606  1193  1193 I iptables: type=1400 audit(0.0:80): avc: denied { setopt } for lport=255 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-21 01:58:09.862  1157  1157 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+--------- beginning of crash
+01-21 01:58:09.862  1157  1157 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1157 (app_process)
+01-21 01:58:09.862  1136  1136 W         : debuggerd: handling request: pid=1157 uid=0 gid=0 tid=1157
+01-21 01:58:09.876  1201  1201 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:09.876  1201  1201 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:09.876  1201  1201 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:09.876  1136  1136 W         : debuggerd: resuming target 1157
+01-21 01:58:10.066  1159  1159 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:10.346  1227  1227 I powerbtnd: type=1400 audit(0.0:81): avc: denied { write } for name="event1" dev="tmpfs" ino=5464 scontext=u:r:init:s0 tcontext=u:object_r:input_device:s0 tclass=chr_file permissive=1
+01-21 01:58:10.346  1227  1227 I powerbtnd: type=1400 audit(0.0:82): avc: denied { ioctl } for path="/dev/input/event1" dev="tmpfs" ino=5464 ioctlcmd=4506 scontext=u:r:init:s0 tcontext=u:object_r:input_device:s0 tclass=chr_file permissive=1
+01-21 01:58:10.873  1254  1254 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:10.873  1254  1254 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:11.097  1159  1159 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:11.169  1279  1279 I perfprofd: starting Android Wide Profiling daemon
+01-21 01:58:11.169  1279  1279 E perfprofd: unable to open configuration file /data/data/com.google.android.gms/files/perfprofd.conf
+01-21 01:58:11.169  1279  1279 I perfprofd: random seed set to 1986159308
+01-21 01:58:11.169  1279  1279 W perfprofd: unable to open destination dir /data/misc/perfprofd for cleanup
+01-21 01:58:11.556  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:11.556  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:11.556  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:11.556  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:11.606  1227  1227 I powerbtn: open event0(Power Button) ok fd=4
+01-21 01:58:11.807  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:11.807  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:11.895  1227  1227 I powerbtnd: type=1400 audit(0.0:83): avc: denied { write } for name="uinput" dev="tmpfs" ino=5421 scontext=u:r:init:s0 tcontext=u:object_r:uhid_device:s0 tclass=chr_file permissive=1
+01-21 01:58:11.895  1227  1227 I powerbtnd: type=1400 audit(0.0:84): avc: denied { ioctl } for path="/dev/uinput" dev="tmpfs" ino=5421 ioctlcmd=5564 scontext=u:r:init:s0 tcontext=u:object_r:uhid_device:s0 tclass=chr_file permissive=1
+01-21 01:58:12.651  1147  1147 E SELinux : avc:  denied  { find } for service=SurfaceFlinger pid=1318 uid=1003 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-21 01:58:12.687  1148  1151 I SurfaceFlinger: auto set density to 160
+01-21 01:58:12.688  1318  1320 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_Core version 1
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_SWRast version 5
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-21 01:58:12.703  1318  1320 I EGL-DRI2: found extension DRI2_Fence version 1
+01-21 01:58:12.703  1318  1320 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:14.204  1321  1321 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:14.204  1321  1321 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1321 (app_process)
+01-21 01:58:14.249  1136  1136 W         : debuggerd: handling request: pid=1321 uid=0 gid=0 tid=1321
+01-21 01:58:14.256  1323  1323 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:14.256  1323  1323 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:14.256  1323  1323 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:14.256  1136  1136 W         : debuggerd: resuming target 1321
+01-21 01:58:14.258  1322  1322 I         : sMaxFastTracks = 8
+01-21 01:58:14.258  1322  1322 I audioserver: ServiceManager: 0xb591afe0
+01-21 01:58:14.258  1322  1322 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.258  1322  1322 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:14.258  1322  1322 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:14.259  1322  1322 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:14.259  1322  1322 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:14.259  1322  1322 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:14.259  1322  1322 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:14.259  1322  1322 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:14.259  1322  1322 D audio_hw_primary: stream: 0
+01-21 01:58:14.259  1322  1322 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:14.259  1322  1322 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:14.259  1322  1322 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:14.259  1322  1322 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:14.259  1322  1322 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:14.259  1322  1322 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:14.259  1322  1322 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:14.259  1322  1322 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:14.259  1322  1328 I AudioFlinger: AudioFlinger's thread 0xb5498ec0 ready to run
+01-21 01:58:14.259  1322  1328 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.259  1322  1328 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.259  1322  1328 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.259  1322  1328 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:14.259  1322  1328 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:14.260  1322  1329 I AudioFlinger: AudioFlinger's thread 0xb5103400 ready to run
+01-21 01:58:14.260  1322  1322 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:14.260  1322  1322 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:14.260  1322  1322 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:14.260  1322  1322 I RadioService: RadioService
+01-21 01:58:14.260  1322  1322 I RadioService: onFirstRef
+01-21 01:58:14.260  1322  1322 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:14.260  1322  1322 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:14.481  1331  1331 I cameraserver: ServiceManager: 0xaab1afe0
+01-21 01:58:14.481  1331  1331 I CameraService: CameraService started (pid=1331)
+01-21 01:58:14.481  1331  1331 I CameraService: CameraService process starting
+01-21 01:58:14.481  1331  1331 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.481  1331  1331 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:14.481  1331  1331 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:14.481  1331  1331 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:14.481  1331  1331 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:14.481  1331  1331 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:14.481  1331  1331 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:14.645  1332  1332 I         : installd firing up
+01-21 01:58:14.645  1332  1332 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:14.645  1332  1332 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:14.645  1332  1332 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:14.645  1332  1332 E         : Failed to setup misc for user 0
+01-21 01:58:14.645  1332  1332 E         : Could not create directories; exiting.
+01-21 01:58:14.836  1333  1333 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:15.126  1334  1334 I mediaserver: ServiceManager: 0xad23c060
+01-21 01:58:15.126  1334  1334 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:15.263  1336  1336 I Netd    : Netd 1.0 starting
+01-21 01:58:15.263  1336  1336 D TetherController: Setting IP forward enable = 0
+01-21 01:58:15.486  1331  1331 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:16.267  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:16.267  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:16.267  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:16.267  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:16.539  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:16.539  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:17.238  1393  1393 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:17.238  1393  1393 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:18.798  1396  1396 I         : sMaxFastTracks = 8
+01-21 01:58:18.798  1396  1396 I audioserver: ServiceManager: 0xb4e9afe0
+01-21 01:58:18.798  1396  1396 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:18.798  1396  1396 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:18.798  1396  1396 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:18.798  1396  1396 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:18.798  1396  1396 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:18.798  1396  1396 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:18.798  1396  1396 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:18.798  1396  1396 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:18.798  1396  1396 D audio_hw_primary: stream: 0
+01-21 01:58:18.799  1396  1396 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:18.799  1396  1396 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:18.799  1396  1396 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:18.799  1396  1396 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:18.799  1396  1396 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:18.799  1396  1396 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:18.799  1396  1396 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:18.799  1396  1396 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:18.819  1396  1401 I AudioFlinger: AudioFlinger's thread 0xb4a18ac0 ready to run
+01-21 01:58:18.819  1396  1401 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:18.819  1396  1401 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:18.819  1396  1401 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:18.819  1396  1401 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:18.819  1396  1401 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:18.819  1396  1402 I AudioFlinger: AudioFlinger's thread 0xb4683980 ready to run
+01-21 01:58:18.819  1396  1396 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:18.819  1396  1396 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:18.819  1396  1396 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:18.819  1396  1396 I RadioService: RadioService
+01-21 01:58:18.819  1396  1396 I RadioService: onFirstRef
+01-21 01:58:18.819  1396  1396 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:18.819  1396  1396 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:18.851  1395  1395 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:18.851  1395  1395 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1395 (app_process)
+01-21 01:58:18.851  1136  1136 W         : debuggerd: handling request: pid=1395 uid=0 gid=0 tid=1395
+01-21 01:58:18.851  1404  1404 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:18.851  1404  1404 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:18.851  1404  1404 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:18.851  1136  1136 W         : debuggerd: resuming target 1395
+01-21 01:58:19.076  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:19.076  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:19.076  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:19.076  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:20.192  1406  1406 I         : installd firing up
+01-21 01:58:20.192  1406  1406 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:20.192  1406  1406 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:20.192  1406  1406 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:20.192  1406  1406 E         : Failed to setup misc for user 0
+01-21 01:58:20.192  1406  1406 E         : Could not create directories; exiting.
+01-21 01:58:20.321  1405  1405 I cameraserver: ServiceManager: 0xaeb1afe0
+01-21 01:58:20.321  1405  1405 I CameraService: CameraService started (pid=1405)
+01-21 01:58:20.321  1405  1405 I CameraService: CameraService process starting
+01-21 01:58:20.321  1405  1405 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:20.321  1405  1405 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:20.321  1405  1405 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:20.321  1405  1405 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:20.321  1405  1405 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:20.321  1405  1405 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:20.321  1405  1405 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:20.468  1407  1407 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:20.485  1409  1409 I Netd    : Netd 1.0 starting
+01-21 01:58:20.485  1409  1409 D TetherController: Setting IP forward enable = 0
+01-21 01:58:20.614  1408  1408 I mediaserver: ServiceManager: 0xab93c060
+01-21 01:58:20.615  1408  1408 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:21.326  1405  1405 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:21.726  1488  1488 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:21.726  1488  1488 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:22.329  1405  1405 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:23.336  1405  1405 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:23.600  1409  1409 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-21 01:58:23.616  1409  1409 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-21 01:58:23.628  1409  1409 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-21 01:58:23.657  1409  1409 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-21 01:58:23.736  1409  1409 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-21 01:58:23.759  1409  1409 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=1
+01-21 01:58:23.780  1409  1409 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=1
+01-21 01:58:23.796  1409  1409 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=1
+01-21 01:58:23.806  1409  1409 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=1
+01-21 01:58:23.818  1409  1409 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-21 01:58:23.826  1409  1409 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-21 01:58:23.967  1409  1409 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-21 01:58:24.337  1405  1405 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:24.385  1615  1615 I         : sMaxFastTracks = 8
+01-21 01:58:24.398  1615  1615 I audioserver: ServiceManager: 0xad21afe0
+01-21 01:58:24.398  1615  1615 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:24.398  1615  1615 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:24.399  1615  1615 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:24.399  1615  1615 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:24.399  1615  1615 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:24.399  1615  1615 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:24.399  1615  1615 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:24.399  1615  1615 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:24.399  1615  1615 D audio_hw_primary: stream: 0
+01-21 01:58:24.399  1615  1615 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:24.399  1615  1615 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:24.399  1615  1615 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:24.399  1615  1615 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:24.399  1615  1615 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:24.399  1615  1615 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:24.400  1615  1615 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:24.400  1615  1615 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:24.400  1615  1620 I AudioFlinger: AudioFlinger's thread 0xacd98ac0 ready to run
+01-21 01:58:24.400  1615  1620 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:24.400  1615  1620 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:24.401  1615  1620 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:24.401  1615  1620 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:24.401  1615  1620 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:24.401  1615  1621 I AudioFlinger: AudioFlinger's thread 0xaca03600 ready to run
+01-21 01:58:24.401  1615  1615 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:24.401  1615  1615 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:24.401  1615  1615 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:24.401  1615  1615 I RadioService: RadioService
+01-21 01:58:24.401  1615  1615 I RadioService: onFirstRef
+01-21 01:58:24.401  1615  1615 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:24.401  1615  1615 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:24.434  1409  1409 E Netd    : /system/bin/iptables-restore failed with res=0, status=256
+01-21 01:58:24.633  1607  1607 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:24.633  1607  1607 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1607 (app_process)
+01-21 01:58:24.633  1136  1136 W         : debuggerd: handling request: pid=1607 uid=0 gid=0 tid=1607
+01-21 01:58:24.633  1624  1624 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:24.633  1624  1624 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:24.633  1624  1624 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:24.633  1136  1136 W         : debuggerd: resuming target 1607
+01-21 01:58:24.670  1625  1625 I         : installd firing up
+01-21 01:58:24.670  1625  1625 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:24.670  1625  1625 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:24.670  1625  1625 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:24.670  1625  1625 E         : Failed to setup misc for user 0
+01-21 01:58:24.670  1625  1625 E         : Could not create directories; exiting.
+01-21 01:58:24.679  1409  1409 E Netd    : /system/bin/ip6tables-restore failed with res=0, status=256
+01-21 01:58:24.863  1626  1626 I ip      : type=1400 audit(0.0:85): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:86): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:87): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:88): avc: denied { getattr } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:89): avc: denied { write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:90): avc: denied { nlmsg_read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:91): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.866  1626  1626 I ip      : type=1400 audit(0.0:92): avc: denied { nlmsg_write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.970  1409  1409 I netd    : type=1400 audit(0.0:93): avc: denied { connect } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:94): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:95): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:96): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-21 01:58:25.000  1409  1409 E Netd    : cannot find interface dummy0
+01-21 01:58:25.000  1409  1409 E base.file: android::WriteStringToFile open failed: No such file or directory
+01-21 01:58:25.000  1409  1409 E Netd    : failed to write to /data/misc/net/rt_tables (No such file or directory)
+01-21 01:58:25.000  1409  1409 D MDnsDS  : MDnsSdListener::Hander starting up
+01-21 01:58:25.000  1147  1147 E SELinux : avc:  denied  { add } for service=netd pid=1409 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:netd_service:s0 tclass=service_manager permissive=1
+01-21 01:58:25.000  1409  1409 E Netd    : Unable to create pid file (No such file or directory)
+01-21 01:58:25.001  1409  1635 D MDnsDS  : MDnsSdListener starting to monitor
+01-21 01:58:25.001  1409  1635 D MDnsDS  : Going to poll with pollCount 1
+01-21 01:58:25.217  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:25.217  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:25.217  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:25.217  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:25.376  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:25.376  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:25.387  1147  1147 I ServiceManager: service 'netd' died
+01-21 01:58:25.679  1641  1641 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:25.743  1643  1643 I Netd    : Netd 1.0 starting
+01-21 01:58:25.743  1643  1643 D TetherController: Setting IP forward enable = 0
+01-21 01:58:25.879  1642  1642 I mediaserver: ServiceManager: 0xb3c3c060
+01-21 01:58:25.879  1642  1642 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:25.881  1640  1640 I cameraserver: ServiceManager: 0xaa79afe0
+01-21 01:58:25.881  1640  1640 I CameraService: CameraService started (pid=1640)
+01-21 01:58:25.881  1640  1640 I CameraService: CameraService process starting
+01-21 01:58:25.881  1640  1640 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:25.881  1640  1640 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:25.882  1640  1640 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:25.882  1640  1640 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:25.882  1640  1640 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:25.882  1640  1640 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:25.882  1640  1640 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:26.888  1640  1640 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:27.107  1731  1731 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:27.107  1731  1731 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:27.898  1640  1640 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:28.788  1643  1643 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-21 01:58:28.796  1643  1643 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-21 01:58:28.908  1640  1640 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:28.929  1643  1643 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-21 01:58:28.960  1643  1643 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-21 01:58:29.020  1643  1643 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-21 01:58:29.049  1643  1643 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=0
+01-21 01:58:29.070  1643  1643 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=0
+01-21 01:58:29.086  1643  1643 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=0
+01-21 01:58:29.201  1643  1643 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=0
+01-21 01:58:29.209  1643  1643 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-21 01:58:29.233  1643  1643 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-21 01:58:29.245  1643  1643 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-21 01:58:29.666  1643  1643 E Netd    : /system/bin/iptables-restore failed with res=0, status=256
+01-21 01:58:29.776  1643  1643 E Netd    : /system/bin/ip6tables-restore failed with res=0, status=256
+01-21 01:58:29.874  1643  1643 E Netd    : cannot find interface dummy0
+01-21 01:58:29.874  1643  1643 E base.file: android::WriteStringToFile open failed: No such file or directory
+01-21 01:58:29.874  1643  1643 E Netd    : failed to write to /data/misc/net/rt_tables (No such file or directory)
+01-21 01:58:29.874  1643  1643 D MDnsDS  : MDnsSdListener::Hander starting up
+01-21 01:58:29.874  1643  1643 E Netd    : Unable to create pid file (No such file or directory)
+01-21 01:58:29.880  1643  1860 D MDnsDS  : MDnsSdListener starting to monitor
+01-21 01:58:29.880  1643  1860 D MDnsDS  : Going to poll with pollCount 1
+01-21 01:58:29.918  1640  1640 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:30.117  1854  1854 I         : sMaxFastTracks = 8
+01-21 01:58:30.118  1854  1854 I audioserver: ServiceManager: 0xb471afe0
+01-21 01:58:30.118  1854  1854 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:30.118  1854  1854 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:30.118  1854  1854 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:30.118  1854  1854 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:30.118  1854  1854 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:30.118  1854  1854 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:30.118  1854  1854 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:30.118  1854  1854 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:30.118  1854  1854 D audio_hw_primary: stream: 0
+01-21 01:58:30.118  1854  1854 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:30.118  1854  1854 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:30.118  1854  1854 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:30.118  1854  1854 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:30.118  1854  1854 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:30.118  1854  1854 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:30.119  1854  1854 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:30.119  1854  1854 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:30.119  1854  1869 I AudioFlinger: AudioFlinger's thread 0xb4298380 ready to run
+01-21 01:58:30.119  1854  1869 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:30.119  1854  1869 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:30.119  1854  1869 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:30.119  1854  1869 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:30.119  1854  1869 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:30.120  1854  1870 I AudioFlinger: AudioFlinger's thread 0xb3f03000 ready to run
+01-21 01:58:30.120  1854  1854 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:30.120  1854  1854 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:30.120  1854  1854 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:30.120  1854  1854 I RadioService: RadioService
+01-21 01:58:30.120  1854  1854 I RadioService: onFirstRef
+01-21 01:58:30.120  1854  1854 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:30.120  1854  1854 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:30.122  1848  1848 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:30.122  1848  1848 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 1848 (app_process)
+01-21 01:58:30.122  1136  1136 W         : debuggerd: handling request: pid=1848 uid=0 gid=0 tid=1848
+01-21 01:58:30.122  1872  1872 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:30.122  1872  1872 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:30.122  1872  1872 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:30.122  1136  1136 W         : debuggerd: resuming target 1848
+01-21 01:58:30.243  1873  1873 I         : installd firing up
+01-21 01:58:30.243  1873  1873 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:30.243  1873  1873 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:30.243  1873  1873 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:30.243  1873  1873 E         : Failed to setup misc for user 0
+01-21 01:58:30.243  1873  1873 E         : Could not create directories; exiting.
+01-21 01:58:30.989  1147  1147 E SELinux : avc:  denied  { add } for service=media.camera pid=1640 uid=1047 scontext=u:r:init:s0 tcontext=u:object_r:cameraserver_service:s0 tclass=service_manager permissive=1
+01-21 01:58:30.992  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:30.992  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:30.992  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:30.992  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:31.131  1147  1147 I ServiceManager: service 'media.camera' died
+01-21 01:58:31.168  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:31.168  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:31.216  1147  1147 I ServiceManager: service 'netd' died
+01-21 01:58:32.224  1876  1876 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:32.224  1876  1876 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:32.408  1877  1877 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:32.453  1875  1875 I cameraserver: ServiceManager: 0xae91afe0
+01-21 01:58:32.453  1875  1875 I CameraService: CameraService started (pid=1875)
+01-21 01:58:32.453  1875  1875 I CameraService: CameraService process starting
+01-21 01:58:32.453  1875  1875 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:32.453  1875  1875 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:32.454  1875  1875 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:32.454  1875  1875 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:32.454  1875  1875 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:32.454  1875  1875 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:32.454  1875  1875 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:32.667  1878  1878 I mediaserver: ServiceManager: 0xae43c060
+01-21 01:58:32.667  1878  1878 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:32.794  1880  1880 I Netd    : Netd 1.0 starting
+01-21 01:58:32.794  1880  1880 D TetherController: Setting IP forward enable = 0
+01-21 01:58:33.517  1875  1875 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:34.526  1875  1875 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:35.519  2008  2008 I         : installd firing up
+01-21 01:58:35.520  2008  2008 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:35.520  2008  2008 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:35.520  2008  2008 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:35.520  2008  2008 E         : Failed to setup misc for user 0
+01-21 01:58:35.520  2008  2008 E         : Could not create directories; exiting.
+01-21 01:58:35.559  1875  1875 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:35.581  2004  2004 I         : sMaxFastTracks = 8
+01-21 01:58:35.607  2004  2004 I audioserver: ServiceManager: 0xaed9afe0
+01-21 01:58:35.607  2004  2004 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:35.607  2004  2004 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:35.608  2004  2004 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:35.608  2004  2004 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:35.608  2004  2004 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:35.608  2004  2004 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:35.608  2004  2004 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:35.608  2004  2004 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:35.608  2004  2004 D audio_hw_primary: stream: 0
+01-21 01:58:35.608  2004  2004 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:35.608  2004  2004 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:35.608  2004  2004 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:35.608  2004  2004 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:35.608  2004  2004 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:35.608  2004  2004 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:35.609  2004  2004 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:35.609  2004  2004 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:35.620  2004  2015 I AudioFlinger: AudioFlinger's thread 0xae9185c0 ready to run
+01-21 01:58:35.620  2004  2015 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:35.620  2004  2015 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:35.621  2004  2015 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:35.621  2004  2015 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:35.621  2004  2015 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:35.621  2004  2016 I AudioFlinger: AudioFlinger's thread 0xae583940 ready to run
+01-21 01:58:35.621  2004  2004 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:35.621  2004  2004 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:35.621  2004  2004 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:35.621  2004  2004 I RadioService: RadioService
+01-21 01:58:35.621  2004  2004 I RadioService: onFirstRef
+01-21 01:58:35.621  2004  2004 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:35.621  2004  2004 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:35.970  2000  2000 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:35.970  2000  2000 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 2000 (app_process)
+01-21 01:58:35.971  1136  1136 W         : debuggerd: handling request: pid=2000 uid=0 gid=0 tid=2000
+01-21 01:58:35.979  2031  2031 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:35.979  2031  2031 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:35.979  2031  2031 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:35.979  1136  1136 W         : debuggerd: resuming target 2000
+01-21 01:58:36.568  1875  1875 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:37.066  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:37.066  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:37.066  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:37.066  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:37.159  1880  1880 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-21 01:58:37.176  1880  1880 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-21 01:58:37.269  1880  1880 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-21 01:58:37.298  1880  1880 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-21 01:58:37.309  1880  1880 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-21 01:58:37.326  1880  1880 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=0
+01-21 01:58:37.336  1880  1880 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=0
+01-21 01:58:37.346  1880  1880 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=0
+01-21 01:58:37.418  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:37.419  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:37.419  1880  1880 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=0
+01-21 01:58:37.434  1880  1880 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-21 01:58:37.456  1880  1880 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-21 01:58:37.477  1880  1880 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-21 01:58:38.335  2091  2091 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:38.371  2090  2090 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:38.371  2090  2090 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:38.481  2089  2089 I cameraserver: ServiceManager: 0xb441afe0
+01-21 01:58:38.481  2089  2089 I CameraService: CameraService started (pid=2089)
+01-21 01:58:38.481  2089  2089 I CameraService: CameraService process starting
+01-21 01:58:38.481  2089  2089 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:38.481  2089  2089 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:38.481  2089  2089 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:38.481  2089  2089 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:38.481  2089  2089 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:38.481  2089  2089 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:38.481  2089  2089 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:38.509  2092  2092 I mediaserver: ServiceManager: 0xa73bc060
+01-21 01:58:38.509  2092  2092 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:38.526  2094  2094 I Netd    : Netd 1.0 starting
+01-21 01:58:38.527  2094  2094 D TetherController: Setting IP forward enable = 0
+01-21 01:58:39.486  2089  2089 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:40.470  2210  2210 I         : installd firing up
+01-21 01:58:40.470  2210  2210 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:40.470  2210  2210 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:40.470  2210  2210 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:40.470  2210  2210 E         : Failed to setup misc for user 0
+01-21 01:58:40.470  2210  2210 E         : Could not create directories; exiting.
+01-21 01:58:40.529  2089  2089 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:40.666  2209  2209 I         : sMaxFastTracks = 8
+01-21 01:58:40.666  2209  2209 I audioserver: ServiceManager: 0xab61afe0
+01-21 01:58:40.666  2209  2209 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:40.666  2209  2209 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:40.667  2209  2209 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:40.667  2209  2209 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:40.667  2209  2209 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:40.667  2209  2209 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:40.667  2209  2209 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:40.667  2209  2209 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:40.667  2209  2209 D audio_hw_primary: stream: 0
+01-21 01:58:40.667  2209  2209 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:40.669  2209  2209 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:40.669  2209  2209 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:40.669  2209  2209 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:40.669  2209  2209 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:40.669  2209  2209 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:40.676  2209  2209 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:40.676  2209  2209 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:40.689  2209  2220 I AudioFlinger: AudioFlinger's thread 0xab1985c0 ready to run
+01-21 01:58:40.689  2209  2220 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:40.689  2209  2220 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:40.690  2209  2220 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:40.690  2209  2220 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:40.690  2209  2220 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:40.690  2209  2221 I AudioFlinger: AudioFlinger's thread 0xaae03500 ready to run
+01-21 01:58:40.690  2209  2209 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:40.690  2209  2209 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:40.690  2209  2209 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:40.690  2209  2209 I RadioService: RadioService
+01-21 01:58:40.690  2209  2209 I RadioService: onFirstRef
+01-21 01:58:40.690  2209  2209 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:40.690  2209  2209 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:41.274  2208  2208 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:41.274  2208  2208 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 2208 (app_process)
+01-21 01:58:41.300  1136  1136 W         : debuggerd: handling request: pid=2208 uid=0 gid=0 tid=2208
+01-21 01:58:41.306  2238  2238 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:41.306  2238  2238 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:41.306  2238  2238 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:41.306  1136  1136 W         : debuggerd: resuming target 2208
+01-21 01:58:41.539  2089  2089 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:42.416  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:42.416  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:42.416  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:42.416  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:42.556  2094  2094 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-21 01:58:42.726  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:42.726  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:42.748  2094  2094 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-21 01:58:42.761  2094  2094 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-21 01:58:42.776  2094  2094 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-21 01:58:42.786  2094  2094 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-21 01:58:42.796  2094  2094 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=0
+01-21 01:58:42.806  2094  2094 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=0
+01-21 01:58:42.819  2094  2094 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=0
+01-21 01:58:42.826  2094  2094 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=0
+01-21 01:58:42.848  2094  2094 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-21 01:58:42.870  2094  2094 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-21 01:58:42.886  2094  2094 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-21 01:58:44.156  2308  2308 I cameraserver: ServiceManager: 0xab61afe0
+01-21 01:58:44.156  2308  2308 I CameraService: CameraService started (pid=2308)
+01-21 01:58:44.156  2308  2308 I CameraService: CameraService process starting
+01-21 01:58:44.156  2308  2308 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:44.156  2308  2308 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:44.156  2308  2308 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:44.156  2308  2308 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:44.156  2308  2308 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:44.156  2308  2308 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:44.156  2308  2308 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:44.306  2309  2309 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:44.306  2309  2309 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:44.463  2310  2310 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:44.699  2311  2311 I mediaserver: ServiceManager: 0xababc060
+01-21 01:58:44.699  2311  2311 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:44.745  2313  2313 I Netd    : Netd 1.0 starting
+01-21 01:58:44.745  2313  2313 D TetherController: Setting IP forward enable = 0
+01-21 01:58:45.224  2308  2308 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:46.233  2308  2308 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:46.251  2373  2373 I         : installd firing up
+01-21 01:58:46.251  2373  2373 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:46.251  2373  2373 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:46.251  2373  2373 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:46.251  2373  2373 E         : Failed to setup misc for user 0
+01-21 01:58:46.251  2373  2373 E         : Could not create directories; exiting.
+01-21 01:58:46.467  2372  2372 I         : sMaxFastTracks = 8
+01-21 01:58:46.467  2372  2372 I audioserver: ServiceManager: 0xab11afe0
+01-21 01:58:46.467  2372  2372 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:46.467  2372  2372 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:46.468  2372  2372 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:46.468  2372  2372 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:46.468  2372  2372 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:46.468  2372  2372 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:46.468  2372  2372 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:46.468  2372  2372 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:46.468  2372  2372 D audio_hw_primary: stream: 0
+01-21 01:58:46.468  2372  2372 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:46.468  2372  2372 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:46.468  2372  2372 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:46.468  2372  2372 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:46.468  2372  2372 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:46.468  2372  2372 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:46.469  2372  2372 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:46.469  2372  2372 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:46.470  2372  2381 I AudioFlinger: AudioFlinger's thread 0xaac98100 ready to run
+01-21 01:58:46.470  2372  2381 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:46.470  2372  2381 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:46.470  2372  2381 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:46.470  2372  2381 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:46.470  2372  2381 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:46.476  2372  2383 I AudioFlinger: AudioFlinger's thread 0xaa903e80 ready to run
+01-21 01:58:46.476  2372  2372 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:46.476  2372  2372 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:46.476  2372  2372 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:46.476  2372  2372 I RadioService: RadioService
+01-21 01:58:46.476  2372  2372 I RadioService: onFirstRef
+01-21 01:58:46.477  2372  2372 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:46.477  2372  2372 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:46.752  2363  2363 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:46.752  2363  2363 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 2363 (app_process)
+01-21 01:58:46.766  1136  1136 W         : debuggerd: handling request: pid=2363 uid=0 gid=0 tid=2363
+01-21 01:58:46.766  2393  2393 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:46.766  2393  2393 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:46.766  2393  2393 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:46.766  1136  1136 W         : debuggerd: resuming target 2363
+01-21 01:58:47.236  2308  2308 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:47.358  1147  1147 I ServiceManager: service 'media.audio_flinger' died
+01-21 01:58:47.358  1147  1147 I ServiceManager: service 'media.audio_policy' died
+01-21 01:58:47.358  1147  1147 I ServiceManager: service 'media.sound_trigger_hw' died
+01-21 01:58:47.358  1147  1147 I ServiceManager: service 'media.radio' died
+01-21 01:58:47.656  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:47.656  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:48.591  2437  2437 I cameraserver: ServiceManager: 0xb569afe0
+01-21 01:58:48.591  2437  2437 I CameraService: CameraService started (pid=2437)
+01-21 01:58:48.591  2437  2437 I CameraService: CameraService process starting
+01-21 01:58:48.591  2437  2437 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:48.591  2437  2437 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:48.591  2437  2437 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:48.591  2437  2437 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:48.591  2437  2437 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:48.591  2437  2437 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:48.591  2437  2437 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:97): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:98): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:99): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:100): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:101): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:102): avc: denied { write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:103): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:24.996  1409  1409 I netd    : type=1400 audit(0.0:104): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-21 01:58:49.592  2437  2437 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:49.806  2441  2441 I gatekeeperd: Starting gatekeeperd...
+01-21 01:58:49.807  2441  2441 E gatekeeperd: chdir: /data/misc/gatekeeper: No such file or directory
+01-21 01:58:50.046  2442  2442 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:50.358  2443  2443 I mediaserver: ServiceManager: 0xaa13c060
+01-21 01:58:50.359  2443  2443 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:50.512  2445  2445 I Netd    : Netd 1.0 starting
+01-21 01:58:50.512  2445  2445 D TetherController: Setting IP forward enable = 0
+01-21 01:58:50.651  2437  2437 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:51.428  2460  2460 F appproc : Error creating cache dir /data/dalvik-cache/x86 : No such file or directory
+01-21 01:58:51.428  2460  2460 F libc    : Fatal signal 6 (SIGABRT), code -6 in tid 2460 (app_process)
+01-21 01:58:51.429  1136  1136 W         : debuggerd: handling request: pid=2460 uid=0 gid=0 tid=2460
+01-21 01:58:51.430  2481  2481 E DEBUG   : debuggerd: failed to find a valid tombstone, default to using tombstone 0.
+01-21 01:58:51.430  2481  2481 E DEBUG   : debuggerd: failed to open tombstone file '/data/tombstones/tombstone_00': No such file or directory
+01-21 01:58:51.430  2481  2481 E         : debuggerd: failed to open tombstone file: No such file or directory
+01-21 01:58:51.430  1136  1136 W         : debuggerd: resuming target 2460
+01-21 01:58:51.658  2437  2437 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:52.557  1147  1147 I ServiceManager: service 'media.player' died
+01-21 01:58:52.557  1147  1147 I ServiceManager: service 'media.resource_manager' died
+01-21 01:58:53.812  2538  2538 I         : sMaxFastTracks = 8
+01-21 01:58:53.813  2538  2538 I audioserver: ServiceManager: 0xa699afe0
+01-21 01:58:53.813  2538  2538 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:53.813  2538  2538 I AudioFlinger: Using default 3000 mSec as standby time.
+01-21 01:58:53.813  2538  2538 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-21 01:58:53.813  2538  2538 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-21 01:58:53.814  2538  2538 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-21 01:58:53.814  2538  2538 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-21 01:58:53.814  2538  2538 D audio_hw_primary: name: Intel 82801AA-ICH
+01-21 01:58:53.814  2538  2538 D audio_hw_primary: subname: subdevice #0
+01-21 01:58:53.814  2538  2538 D audio_hw_primary: stream: 0
+01-21 01:58:53.814  2538  2538 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:53.814  2538  2538 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-21 01:58:53.814  2538  2538 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-21 01:58:53.814  2538  2538 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-21 01:58:53.814  2538  2538 I audio_hw_primary: choose pcmC0D0p for 0
+01-21 01:58:53.814  2538  2538 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-21 01:58:53.820  2538  2538 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-21 01:58:53.820  2538  2538 I AudioFlinger: Using module 10 has the primary audio interface
+01-21 01:58:53.820  2538  2543 I AudioFlinger: AudioFlinger's thread 0xa6518e40 ready to run
+01-21 01:58:53.820  2538  2543 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:53.820  2538  2543 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:53.821  2538  2543 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:53.821  2538  2543 W AudioFlinger: no wake lock to update, system not ready yet
+01-21 01:58:53.821  2538  2543 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:53.821  2538  2544 I AudioFlinger: AudioFlinger's thread 0xa6183c00 ready to run
+01-21 01:58:53.821  2538  2538 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-21 01:58:53.821  2538  2538 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-21 01:58:53.822  2538  2538 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-21 01:58:53.822  2538  2538 I RadioService: RadioService
+01-21 01:58:53.822  2538  2538 I RadioService: onFirstRef
+01-21 01:58:53.822  2538  2538 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-21 01:58:53.822  2538  2538 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-21 01:58:54.214  2546  2546 I cameraserver: ServiceManager: 0xb4e9afe0
+01-21 01:58:54.214  2546  2546 I CameraService: CameraService started (pid=2546)
+01-21 01:58:54.214  2546  2546 I CameraService: CameraService process starting
+01-21 01:58:54.226  2546  2546 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:54.226  2546  2546 W BatteryNotifier: batterystats service unavailable!
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::CameraFactory
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-21 01:58:54.226  2546  2546 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-21 01:58:54.226  2546  2546 E cutils-trace: Error opening trace file: Permission denied (13)
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:54.226  2546  2546 I CameraService: Loaded "Camera Module" camera module
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-21 01:58:54.226  2546  2546 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-21 01:58:54.227  2546  2546 I ServiceManager: Waiting for service media.camera.proxy...
+01-21 01:58:54.372  2547  2547 I         : installd firing up
+01-21 01:58:54.372  2547  2547 E cutils  : Failed to read /data/.layout_version: No such file or directory
+01-21 01:58:54.372  2547  2547 D         : Assuming that device has multi-user storage layout; upgrade no longer supported
+01-21 01:58:54.372  2547  2547 E cutils  : Failed to mkdir(/data/misc/user/0): No such file or directory
+01-21 01:58:54.372  2547  2547 E         : Failed to setup misc for user 0
+01-21 01:58:54.372  2547  2547 E         : Could not create directories; exiting.
+01-21 01:58:54.569  2548  2548 E keystore: chdir: /data/misc/keystore: No such file or directory
+01-21 01:58:54.779  2549  2549 I mediaserver: ServiceManager: 0xa67bc060
+01-21 01:58:54.779  2549  2549 W BatteryNotifier: batterystats service unavailable!

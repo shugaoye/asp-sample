@@ -65,6 +65,9 @@ case $1 in
 	external/drm_gralloc)
 		git_remote_add github ssh://mygit/media/aosp-mirror/github/platform_external_drm_gralloc
 	;;
+	external/drm_hwcomposer)
+		git_remote_add github ssh://mygit/media/aosp-mirror/github/platform_external_drm_hwcomposer
+	;;
 	external/e2fsprogs)
 		git_remote_add github ssh://mygit/media/aosp-mirror/github/platform_external_e2fsprogs
 	;;
@@ -181,6 +184,9 @@ case $1 in
 		;;
 	external/drm_gralloc)
 		git_remote_add x86 ssh://mygit/mnt/mirror/android-x86/platform/external/drm_gralloc
+		;;
+	external/drm_hwcomposer)
+		git_remote_add x86 ssh://mygit/mnt/mirror/android-x86/platform/external/drm_hwcomposer
 		;;
 	external/e2fsprogs)
 		git_remote_add x86 ssh://mygit/mnt/mirror/android-x86/platform/external/e2fsprogs

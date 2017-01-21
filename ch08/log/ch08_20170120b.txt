@@ -1,0 +1,555 @@
+--------- beginning of main
+01-20 14:32:20.373  1086  1086 W auditd  : type=2000 audit(0.0:1): initialized
+01-20 14:32:38.103  1086  1086 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-20 14:32:38.109     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4741 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:32:38.110     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=4719 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:32:38.153     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=4731 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:32:38.368  1069  1069 I ueventd : type=1400 audit(0.0:6): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=4749 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:32:38.489  1069  1069 I ueventd : type=1400 audit(0.0:7): avc: denied { read } for name="modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:32:38.529  1069  1069 I ueventd : type=1400 audit(0.0:8): avc: denied { open } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:32:38.534  1069  1069 I ueventd : type=1400 audit(0.0:9): avc: denied { getattr } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:32:38.658  1069  1069 I ueventd : type=1400 audit(0.0:10): avc: denied { sys_module } for capability=16 scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+01-20 14:32:38.670  1069  1069 I ueventd : type=1400 audit(0.0:11): avc: denied { module_load } for path="/system/lib/modules/4.4.34-android-x86/kernel/sound/ac97_bus.ko" dev="sda1" ino=40794 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=system permissive=1
+01-20 14:32:59.668  1086  1086 I init    : type=1400 audit(0.0:22): avc: denied { execute } for name="logd" dev="sda1" ino=8382 scontext=u:r:init:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:32:59.707  1087  1087 I init    : type=1400 audit(0.0:23): avc: denied { execute_no_trans } for path="/system/bin/logwrapper" dev="sda1" ino=8387 scontext=u:r:init:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:32:59.743  1086  1086 I logd    : type=1400 audit(0.0:24): avc: denied { write } for name="kmsg" dev="tmpfs" ino=5241 scontext=u:r:init:s0 tcontext=u:object_r:kmsg_device:s0 tclass=chr_file permissive=1
+01-20 14:32:59.988  1088  1088 I sh      : type=1400 audit(0.0:25): avc: denied { ioctl } for path="/dev/pts/0" dev="devpts" ino=3 ioctlcmd=5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-20 14:33:00.227  1092  1092 I setprop : type=1400 audit(0.0:26): avc: denied { write } for name="property_service" dev="tmpfs" ino=5188 scontext=u:r:init:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+01-20 14:33:00.328     0  1087 I sh      : + '[' -e /vendor/etc/init.sh ']'
+01-20 14:33:00.328     0  1087 I sh      : + do_init
+01-20 14:33:00.328     0  1087 I sh      : + init_misc
+01-20 14:33:00.337     0  1087 I sh      : + cat /sys/class/dmi/id/sys_vendor
+01-20 14:33:00.338     0  1087 I sh      : + setprop ro.product.manufacturer 'innotek GmbH'
+01-20 14:33:00.341     0  1087 I sh      : + setprop ro.product.model VirtualBox
+01-20 14:33:00.358     0  1087 I sh      : + grep 1a8d:1000
+01-20 14:33:00.360  1088  1088 I sh      : type=1400 audit(0.0:27): avc: denied { execute } for name="busybox" dev="tmpfs" ino=4940 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:00.360     0  1087 I sh      : + lsusb
+01-20 14:33:00.390     0  1087 I sh      : + '[' -d /sys/devices/system/cpu/cpu0/cpufreq ']'
+01-20 14:33:00.390     0  1087 I sh      : + modprobe acpi-cpufreq
+01-20 14:33:00.407  1086  1086 I logd    : type=1400 audit(0.0:28): avc: denied { sys_nice } for capability=23 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-20 14:33:00.607  1099  1099 I sh      : type=1400 audit(0.0:29): avc: denied { execute_no_trans } for path="/bin/busybox" dev="tmpfs" ino=4940 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:00.689  1099  1099 I modprobe: type=1400 audit(0.0:30): avc: denied { sys_module } for capability=16 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-20 14:33:00.691  1099  1099 I modprobe: type=1400 audit(0.0:31): avc: denied { module_load } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=system permissive=1
+01-20 14:33:00.697     0  1087 I sh      : + init_hal_audio
+01-20 14:33:00.697     0  1087 I sh      : + '[' -d /proc/asound/card0 ']'
+01-20 14:33:00.697     0  1087 I sh      : + cat /proc/asound/card0/id
+01-20 14:33:00.698     0  1087 I sh      : + '[' I82801AAICH '=' IntelHDMI ']'
+01-20 14:33:00.698     0  1087 I sh      : + init_hal_bluetooth
+01-20 14:33:00.708     0  1087 I sh      : + cat '/sys/class/rfkill/*/type'
+01-20 14:33:00.708     0  1087 I sh      : /system/etc/init.sh[454]: cat: /sys/class/rfkill/*/type: No such file or directory
+01-20 14:33:00.708     0  1087 I sh      : + type= 
+01-20 14:33:00.708     0  1087 I sh      : + '['  '=' wlan -o  '=' bluetooth ']'
+01-20 14:33:00.708     0  1087 I sh      : + awk ' /Class:.E0/ { print $9 } '
+01-20 14:33:00.710     0  1087 I sh      : + busybox lsusb -v
+01-20 14:33:00.713     0  1087 I sh      : + '[' -n  ']'
+01-20 14:33:00.713     0  1087 I sh      : + init_hal_camera
+01-20 14:33:00.713     0  1087 I sh      : + return
+01-20 14:33:00.713     0  1087 I sh      : + init_hal_gps
+01-20 14:33:00.713     0  1087 I sh      : + return
+01-20 14:33:00.713     0  1087 I sh      : + init_hal_gralloc
+01-20 14:33:00.713     0  1087 I sh      : + head -1
+01-20 14:33:00.717     0  1087 I sh      : + cat /proc/fb
+01-20 14:33:00.728     0  1087 I sh      : + init_uvesafb
+01-20 14:33:00.728     0  1087 I sh      : + '['  '=' 0 ']'
+01-20 14:33:00.728     0  1087 I sh      : + bpp=32 
+01-20 14:33:00.728     0  1087 I sh      : + modprobe uvesafb 'mode_option=1024x768-32' 'mtrr=3' 'scroll=redraw'
+01-20 14:33:00.971  1086  1086 I logd    : type=1400 audit(0.0:46): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-20 14:33:01.688  1087  1087 I sh      : + '[' -n 2 ']'
+01-20 14:33:01.688  1087  1087 I sh      : + set_property debug.egl.trace error
+01-20 14:33:01.688  1087  1087 I sh      : + setprop debug.egl.trace error
+01-20 14:33:01.701  1087  1087 I sh      : + '[' -n 2 ']'
+01-20 14:33:01.701  1087  1087 I sh      : + >>/dev/x86.prop 
+01-20 14:33:01.701  1087  1087 I sh      : + echo 'debug.egl.trace=error'
+01-20 14:33:01.701  1087  1087 I sh      : + init_hal_hwcomposer
+01-20 14:33:01.701  1087  1087 I sh      : + return
+01-20 14:33:01.701  1087  1087 I sh      : + init_hal_lights
+01-20 14:33:01.701  1087  1087 I sh      : + chown 1000.1000 '/sys/class/backlight/*/brightness'
+01-20 14:33:01.710  1087  1087 I sh      : chown: /sys/class/backlight/*/brightness: No such file or directory
+01-20 14:33:01.711  1087  1087 I sh      : + init_hal_power
+01-20 14:33:01.711  1087  1087 I sh      : + >/sys/class/rtc/rtc0/device/power/wakeup 
+01-20 14:33:01.711  1087  1087 I sh      : + echo disabled
+01-20 14:33:01.728  1087  1087 I sh      : + init_hal_sensors
+01-20 14:33:01.737  1087  1087 I sh      : + getprop ro.hardware
+01-20 14:33:01.741  1087  1087 I sh      : + ro_hardware=x86vbox 
+01-20 14:33:01.741  1087  1087 I sh      : + '[' -f /system/lib/hw/sensors.x86vbox.so ']'
+01-20 14:33:01.741  1087  1087 I sh      : + typeset 'hal_sensors=kbd'
+01-20 14:33:01.741  1087  1087 I sh      : + typeset 'has_sensors=true'
+01-20 14:33:01.742  1087  1087 I sh      : + cat /sys/class/dmi/id/uevent
+01-20 14:33:01.747  1087  1087 I sh      : + has_sensors=false 
+01-20 14:33:01.747  1087  1087 I sh      : + 2>/dev/null 
+01-20 14:33:01.747  1087  1087 I sh      : + ls '/sys/bus/iio/devices/iio:device*'
+01-20 14:33:01.751  1087  1087 I sh      : + '[' -n  ']'
+01-20 14:33:01.757  1087  1087 I sh      : + grep -q lis3lv02d_i2c
+01-20 14:33:01.758  1087  1087 I sh      : + lsmod
+01-20 14:33:01.760  1087  1087 I sh      : + set_property ro.hardware.sensors kbd
+01-20 14:33:01.760  1087  1087 I sh      : + setprop ro.hardware.sensors kbd
+01-20 14:33:01.769  1087  1087 I sh      : + '[' -n 2 ']'
+01-20 14:33:01.769  1087  1087 I sh      : + >>/dev/x86.prop 
+01-20 14:33:01.769  1087  1087 I sh      : + echo 'ro.hardware.sensors=kbd'
+01-20 14:33:01.769  1087  1087 I sh      : + '[' kbd '!=' kbd ']'
+01-20 14:33:01.769  1087  1087 I sh      : + set_property config.override_forced_orient false
+01-20 14:33:01.769  1087  1087 I sh      : + setprop config.override_forced_orient false
+01-20 14:33:01.778  1087  1087 I sh      : + '[' -n 2 ']'
+01-20 14:33:01.778  1087  1087 I sh      : + >>/dev/x86.prop 
+01-20 14:33:01.778  1087  1087 I sh      : + echo 'config.override_forced_orient=false'
+01-20 14:33:01.778  1087  1087 I sh      : + init_tscal
+01-20 14:33:01.787  1087  1087 I sh      : + awk '{ print $6 }'
+01-20 14:33:01.788  1087  1087 I sh      : + lsusb
+01-20 14:33:01.792  1087  1087 I sh      : + init_ril
+01-20 14:33:01.792  1087  1087 I sh      : + cat /sys/class/dmi/id/uevent
+01-20 14:33:01.792  1087  1087 I sh      : + set_property ro.radio.noril yes
+01-20 14:33:01.792  1087  1087 I sh      : + setprop ro.radio.noril yes
+01-20 14:33:01.798  1087  1087 I sh      : + '[' -n 2 ']'
+01-20 14:33:01.798  1087  1087 I sh      : + >>/dev/x86.prop 
+01-20 14:33:01.798  1087  1087 I sh      : + echo 'ro.radio.noril=yes'
+01-20 14:33:01.798  1087  1087 I sh      : + post_init
+01-20 14:33:01.798  1087  1087 I sh      : /system/etc/init.sh: post_init: not found
+01-20 14:33:01.798  1087  1087 I sh      : + return 0
+01-20 14:33:01.929  1086  1086 I logd    : type=1400 audit(0.0:47): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-20 14:33:01.944  1126  1126 I         : debuggerd: starting
+--------- beginning of system
+01-20 14:33:02.042  1127  1127 I vold    : Vold 3.0 (the awakening) firing up
+01-20 14:33:02.042  1127  1127 V vold    : Detected support for: ext4 f2fs vfat
+01-20 14:33:02.293  1127  1127 I vold    : type=1400 audit(0.0:48): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-20 14:33:02.296  1127  1127 I vold    : type=1400 audit(0.0:49): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-20 14:33:02.296  1127  1127 I vold    : type=1400 audit(0.0:50): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-20 14:33:02.296  1127  1127 I vold    : type=1400 audit(0.0:51): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-20 14:33:02.300  1127  1127 I vold    : type=1400 audit(0.0:52): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-20 14:33:02.319  1127  1134 D vold    : e4crypt_init_user0
+01-20 14:33:02.319  1127  1134 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-20 14:33:02.319  1127  1134 D vold    : Preparing: /data/system/users/0
+01-20 14:33:02.319  1127  1134 D vold    : Preparing: /data/misc/profiles/cur/0
+01-20 14:33:02.319  1127  1134 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-20 14:33:02.319  1127  1134 D vold    : Preparing: /data/system_de/0
+01-20 14:33:02.320  1128  1128 I vdc     : type=1400 audit(0.0:53): avc: denied { getattr } for path="/dev/pts/0" dev="devpts" ino=3 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-20 14:33:02.320  1127  1134 D vold    : Preparing: /data/misc_de/0
+01-20 14:33:02.320  1127  1134 D vold    : Preparing: /data/user_de/0
+01-20 14:33:02.320  1127  1134 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-20 14:33:02.320  1127  1134 E vold    : Failed to chmod /data/system_ce/0: No such file or directory
+01-20 14:33:02.320  1127  1134 E vold    : Failed to chmod /data/misc_ce/0: No such file or directory
+01-20 14:33:02.320  1127  1134 E vold    : Failed to chmod /data/media/0: No such file or directory
+01-20 14:33:02.321     1     1 I vdc     : 200 1128 Command succeeded
+01-20 14:33:02.470  1135  1135 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-20 14:33:02.533  1136  1136 I logd    : type=1400 audit(0.0:54): avc: denied { write } for name="logd" dev="tmpfs" ino=5521 scontext=u:r:init:s0 tcontext=u:object_r:logd_socket:s0 tclass=sock_file permissive=1
+01-20 14:33:02.540  1137  1137 I init    : type=1400 audit(0.0:55): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=4734 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:02.547  1138  1138 I lmkd    : type=1400 audit(0.0:56): avc: denied { ipc_lock } for capability=14 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-20 14:33:02.548  1138  1138 I lowmemorykiller: Using in-kernel low memory killer interface
+01-20 14:33:02.610  1139  1139 I servicemanager: type=1400 audit(0.0:57): avc: denied { set_context_mgr } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-20 14:33:02.749  1140  1140 I SurfaceFlinger: SurfaceFlinger is starting
+01-20 14:33:02.749  1140  1140 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-20 14:33:02.752  1140  1140 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-20 14:33:03.178  1140  1140 I EGL-DRI2: found extension DRI_Core version 1
+01-20 14:33:03.178  1140  1140 I EGL-DRI2: found extension DRI_SWRast version 5
+01-20 14:33:03.182  1140  1140 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-20 14:33:03.182  1140  1140 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-20 14:33:03.182  1140  1140 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-20 14:33:03.182  1140  1140 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-20 14:33:03.182  1140  1140 I EGL-DRI2: found extension DRI2_Fence version 1
+01-20 14:33:03.188  1140  1140 W gralloc : page flipping not supported (yres_virtual=768, requested=1536)
+01-20 14:33:03.188  1140  1140 I gralloc : using (fd=11)
+01-20 14:33:03.188  1140  1140 I gralloc : id           = VESA VGA
+01-20 14:33:03.188  1140  1140 I gralloc : xres         = 1024 px
+01-20 14:33:03.188  1140  1140 I gralloc : yres         = 768 px
+01-20 14:33:03.188  1140  1140 I gralloc : xres_virtual = 1024 px
+01-20 14:33:03.188  1140  1140 I gralloc : yres_virtual = 768 px
+01-20 14:33:03.188  1140  1140 I gralloc : bpp          = 32
+01-20 14:33:03.188  1140  1140 I gralloc : r            = 16:8
+01-20 14:33:03.188  1140  1140 I gralloc : g            =  8:8
+01-20 14:33:03.188  1140  1140 I gralloc : b            =  0:8
+01-20 14:33:03.188  1140  1140 I gralloc : width        = 163 mm (159.568100 dpi)
+01-20 14:33:03.188  1140  1140 I gralloc : height       = 122 mm (159.895081 dpi)
+01-20 14:33:03.188  1140  1140 I gralloc : refresh rate = 65.46 Hz
+01-20 14:33:03.188  1140  1140 E SurfaceFlinger: hwcomposer module not found
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: EGL information:
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: vendor    : Android
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_reusable_sync EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable 
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: Client API: OpenGL_ES
+01-20 14:33:03.188  1140  1140 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0xa9fa4680
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: OpenGL ES informations:
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: vendor    : VMware, Inc.
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: renderer  : Gallium 0.4 on llvmpipe (LLVM 3.8, 256 bits)
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: version   : OpenGL ES 3.0 Mesa 13.0.2
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: extensions: GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_compression_dxt1 GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_EXT_draw_buffers GL_EXT_map_buffer_ra
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-20 14:33:03.690  1140  1140 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-20 14:33:03.690  1140  1140 D DisplayDevice: Open /dev/tty0 OK
+01-20 14:33:03.726  1140  1140 D SurfaceFlinger: shader cache generated - 24 shaders in 29.772808 ms
+01-20 14:33:03.779  1139  1139 E SELinux : avc:  denied  { add } for service=SurfaceFlinger pid=1140 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-20 14:33:03.779  1139  1139 E SELinux : avc:  denied  { add } for service=gpu pid=1140 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:gpu_service:s0 tclass=service_manager permissive=1
+01-20 14:33:03.779  1140  1140 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xaa530000
+01-20 14:33:03.158  1144  1144 I init    : type=1400 audit(0.0:58): avc: denied { entrypoint } for path="/system/bin/sh" dev="sda1" ino=8478 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.161  1144  1144 I sh      : type=1400 audit(0.0:59): avc: denied { read } for path="/system/bin/linker" dev="sda1" ino=8376 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.164  1144  1144 I sh      : type=1400 audit(0.0:60): avc: denied { getattr } for path="/system/bin/sh" dev="sda1" ino=8478 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.164  1144  1144 I sh      : type=1400 audit(0.0:61): avc: denied { getattr } for path="/system" dev="sda1" ino=8152 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-20 14:33:03.165  1144  1144 I sh      : type=1400 audit(0.0:62): avc: denied { open } for path="/system/lib/libc++.so" dev="sda1" ino=17380 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.165  1144  1144 I sh      : type=1400 audit(0.0:63): avc: denied { execute } for path="/system/lib/libm.so" dev="sda1" ino=17466 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.180  1145  1145 I sh      : type=1400 audit(0.0:64): avc: denied { read } for name="getprop" dev="sda1" ino=8341 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=lnk_file permissive=1
+01-20 14:33:03.180  1145  1145 I sh      : type=1400 audit(0.0:65): avc: denied { execute_no_trans } for path="/system/bin/toybox" dev="sda1" ino=8509 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-20 14:33:03.183  1140  1140 I surfaceflinger: type=1400 audit(0.0:66): avc: denied { write } for name="fb0" dev="tmpfs" ino=5676 scontext=u:r:init:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+01-20 14:33:03.183  1140  1140 I surfaceflinger: type=1400 audit(0.0:67): avc: denied { ioctl } for path="/dev/graphics/fb0" dev="tmpfs" ino=5676 ioctlcmd=4602 scontext=u:r:init:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+01-20 14:33:03.491  1151  1151 I init    : type=1400 audit(0.0:68): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=4733 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:03.491  1151  1151 I adbd    : type=1400 audit(0.0:69): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=4733 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:03.588  1137  1137 I healthd : type=1400 audit(0.0:70): avc: denied { call } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-20 14:33:03.589  1137  1137 I healthd : type=1400 audit(0.0:71): avc: denied { transfer } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-20 14:33:03.589  1139  1139 I servicemanager: type=1400 audit(0.0:72): avc: denied { getattr } for scontext=u:r:init:s0 tcontext=u:r:healthd:s0 tclass=process permissive=1
+01-20 14:33:03.778  1140  1140 I surfaceflinger: type=1400 audit(0.0:73): avc: denied { call } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-20 14:33:03.778  1140  1140 I surfaceflinger: type=1400 audit(0.0:74): avc: denied { transfer } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-20 14:33:03.788  1152  1152 I logcat  : type=1400 audit(0.0:75): avc: denied { append } for name="log.txt" dev="sda1" ino=42016 scontext=u:r:init:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1
+01-20 14:33:03.788  1152  1152 I logcat  : type=1400 audit(0.0:76): avc: denied { write } for name="logdr" dev="tmpfs" ino=5525 scontext=u:r:init:s0 tcontext=u:object_r:logdr_socket:s0 tclass=sock_file permissive=1
+01-20 14:33:04.271  1140  1140 I surfaceflinger: type=1400 audit(0.0:77): avc: denied { execmem } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=process permissive=1
+01-20 14:33:04.868  1139  1139 E SELinux : avc:  denied  { find } for service=SurfaceFlinger pid=1156 uid=1003 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-20 14:33:04.868  1140  1141 I SurfaceFlinger: auto set density to 160
+01-20 14:33:04.869  1156  1161 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-20 14:33:04.878  1156  1161 I EGL-DRI2: found extension DRI_Core version 1
+01-20 14:33:04.878  1156  1161 I EGL-DRI2: found extension DRI_SWRast version 5
+01-20 14:33:04.879  1156  1161 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-20 14:33:04.879  1156  1161 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-20 14:33:04.879  1156  1161 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-20 14:33:04.879  1156  1161 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-20 14:33:04.879  1156  1161 I EGL-DRI2: found extension DRI2_Fence version 1
+01-20 14:33:04.879  1156  1161 E cutils-trace: Error opening trace file: Permission denied (13)
+01-20 14:33:52.485  1172  1172 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-20 14:33:52.494  1172  1172 D AndroidRuntime: CheckJNI is ON
+01-20 14:33:52.497  1172  1172 I art     : option[0]=-Xzygote
+01-20 14:33:52.497  1172  1172 I art     : option[1]=-Xcheck:jni
+01-20 14:33:52.497  1172  1172 I art     : option[2]=-Xstacktracefile:/data/anr/traces.txt
+01-20 14:33:52.497  1172  1172 I art     : option[3]=exit
+01-20 14:33:52.497  1172  1172 I art     : option[4]=vfprintf
+01-20 14:33:52.497  1172  1172 I art     : option[5]=sensitiveThread
+01-20 14:33:52.497  1172  1172 I art     : option[6]=-verbose:gc
+01-20 14:33:52.497  1172  1172 I art     : option[7]=-Xms16m
+01-20 14:33:52.497  1172  1172 I art     : option[8]=-Xmx512m
+01-20 14:33:52.497  1172  1172 I art     : option[9]=-XX:HeapGrowthLimit=192m
+01-20 14:33:52.497  1172  1172 I art     : option[10]=-XX:HeapMinFree=512k
+01-20 14:33:52.497  1172  1172 I art     : option[11]=-XX:HeapMaxFree=8m
+01-20 14:33:52.497  1172  1172 I art     : option[12]=-XX:HeapTargetUtilization=0.75
+01-20 14:33:52.497  1172  1172 I art     : option[13]=-Xusejit:true
+01-20 14:33:52.497  1172  1172 I art     : option[14]=-Xjitsaveprofilinginfo
+01-20 14:33:52.497  1172  1172 I art     : option[15]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-20 14:33:52.497  1172  1172 I art     : option[16]=-Xlockprofthreshold:500
+01-20 14:33:52.497  1172  1172 I art     : option[17]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[18]=--runtime-arg
+01-20 14:33:52.497  1172  1172 I art     : option[19]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[20]=-Xms64m
+01-20 14:33:52.497  1172  1172 I art     : option[21]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[22]=--runtime-arg
+01-20 14:33:52.497  1172  1172 I art     : option[23]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[24]=-Xmx64m
+01-20 14:33:52.497  1172  1172 I art     : option[25]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[26]=--compiler-filter=verify-at-runtime
+01-20 14:33:52.497  1172  1172 I art     : option[27]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[28]=--image-classes=/system/etc/preloaded-classes
+01-20 14:33:52.497  1172  1172 I art     : option[29]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[30]=--compiled-classes=/system/etc/compiled-classes
+01-20 14:33:52.497  1172  1172 I art     : option[31]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[32]=--runtime-arg
+01-20 14:33:52.497  1172  1172 I art     : option[33]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[34]=-Xms64m
+01-20 14:33:52.497  1172  1172 I art     : option[35]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[36]=--runtime-arg
+01-20 14:33:52.497  1172  1172 I art     : option[37]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[38]=-Xmx512m
+01-20 14:33:52.497  1172  1172 I art     : option[39]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[40]=--instruction-set-variant=x86
+01-20 14:33:52.497  1172  1172 I art     : option[41]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[42]=--instruction-set-variant=x86
+01-20 14:33:52.497  1172  1172 I art     : option[43]=-Ximage-compiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[44]=--instruction-set-features=default
+01-20 14:33:52.497  1172  1172 I art     : option[45]=-Xcompiler-option
+01-20 14:33:52.497  1172  1172 I art     : option[46]=--instruction-set-features=default
+01-20 14:33:52.497  1172  1172 I art     : option[47]=-Duser.locale=en-US
+01-20 14:33:52.497  1172  1172 I art     : option[48]=-XX:NativeBridge=libnb.so
+01-20 14:33:52.497  1172  1172 I art     : option[49]=--cpu-abilist=x86,armeabi-v7a,armeabi
+01-20 14:33:52.497  1172  1172 I art     : option[50]=-Xfingerprint:Android-x86/x86vbox/x86vbox:7.1.1/NMF26O/sgye01200953:eng/test-keys
+01-20 14:33:52.512  1172  1172 I zygote  : type=1400 audit(0.0:78): avc: denied { read } for name="system@framework@boot.oat" dev="sda1" ino=42018 scontext=u:r:init:s0 tcontext=u:object_r:dalvikcache_data_file:s0 tclass=lnk_file permissive=1
+01-20 14:33:52.664  1172  1172 E art     : Cannot patch secondary image '/system/framework/boot-framework.art', clearing dalvik_cache and restarting zygote.
+01-20 14:33:53.241  1174  1174 I cameraserver: ServiceManager: 0xac59afe0
+01-20 14:33:53.242  1174  1174 I CameraService: CameraService started (pid=1174)
+01-20 14:33:53.242  1174  1174 I CameraService: CameraService process starting
+01-20 14:33:53.242  1174  1174 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.242  1174  1174 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::CameraFactory
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::parseConfig: configFile = /etc/camera.cfg
+01-20 14:33:53.243  1174  1174 D Camera_Factory: /etc/camera.cfg not found, using camera configuration defaults
+01-20 14:33:53.243  1174  1174 E cutils-trace: Error opening trace file: Permission denied (13)
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-20 14:33:53.243  1174  1174 I CameraService: Loaded "Camera Module" camera module
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::get_number_of_cameras
+01-20 14:33:53.243  1174  1174 D Camera_Factory: CameraFactory::getCameraNum: 0
+01-20 14:33:53.243  1174  1174 I ServiceManager: Waiting for service media.camera.proxy...
+01-20 14:33:53.244  1173  1173 I         : sMaxFastTracks = 8
+01-20 14:33:53.244  1173  1173 I audioserver: ServiceManager: 0xb4d9afe0
+01-20 14:33:53.245  1173  1173 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.245  1173  1173 I AudioFlinger: Using default 3000 mSec as standby time.
+01-20 14:33:53.245  1139  1139 E SELinux : avc:  denied  { add } for service=media.audio_flinger pid=1173 uid=1041 scontext=u:r:init:s0 tcontext=u:object_r:audioserver_service:s0 tclass=service_manager permissive=1
+01-20 14:33:53.258  1173  1173 I AudioPolicyService: AudioPolicyService CSTOR in new mode
+01-20 14:33:53.259  1173  1173 I APM::ConfigParsingUtils: loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+01-20 14:33:53.259  1139  1139 E SELinux : avc:  denied  { find } for service=media.audio_flinger pid=1173 uid=1041 scontext=u:r:init:s0 tcontext=u:object_r:audioserver_service:s0 tclass=service_manager permissive=1
+01-20 14:33:53.259  1173  1173 D audio_hw_primary: found audio out at /dev/snd/pcmC0D0p
+01-20 14:33:53.259  1173  1173 D audio_hw_primary: card: 0/0 id: Intel ICH
+01-20 14:33:53.259  1173  1173 D audio_hw_primary: name: Intel 82801AA-ICH
+01-20 14:33:53.259  1173  1173 D audio_hw_primary: subname: subdevice #0
+01-20 14:33:53.259  1173  1173 D audio_hw_primary: stream: 0
+01-20 14:33:53.259  1173  1173 I audio_hw_primary: choose pcmC0D0p for 0
+01-20 14:33:53.259  1173  1173 E audio_hw_primary: Failed to open /system/etc/mixer_paths.xml
+01-20 14:33:53.260  1173  1173 I AudioFlinger: loadHwModule() Loaded primary audio interface from Grouper audio HW HAL (audio) handle 10
+01-20 14:33:53.260  1173  1173 I AudioFlinger: openOutput(), module 10 Device 2, SamplingRate 48000, Format 0x000001, Channels 3, flags 2
+01-20 14:33:53.260  1173  1173 I audio_hw_primary: choose pcmC0D0p for 0
+01-20 14:33:53.260  1173  1173 I AudioFlinger: HAL output buffer size 512 frames, normal sink buffer size 1024 frames
+01-20 14:33:53.262  1173  1173 I BufferProvider: found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+01-20 14:33:53.262  1173  1173 I AudioFlinger: Using module 10 has the primary audio interface
+01-20 14:33:53.262  1173  1180 I AudioFlinger: AudioFlinger's thread 0xb49186c0 ready to run
+01-20 14:33:53.262  1173  1180 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.262  1173  1180 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.262  1173  1180 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.262  1173  1180 W AudioFlinger: no wake lock to update, system not ready yet
+01-20 14:33:53.262  1173  1180 E cutils-trace: Error opening trace file: Permission denied (13)
+01-20 14:33:53.262  1173  1181 I AudioFlinger: AudioFlinger's thread 0xb4583ec0 ready to run
+01-20 14:33:53.263  1173  1173 I bt_a2dp_hw: adev_open:  adev_open in A2dp_hw module
+01-20 14:33:53.263  1173  1173 I AudioFlinger: loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 18
+01-20 14:33:53.264  1173  1173 I AudioFlinger: loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 26
+01-20 14:33:53.264  1173  1173 I RadioService: RadioService
+01-20 14:33:53.264  1173  1173 I RadioService: onFirstRef
+01-20 14:33:53.264  1173  1173 E RadioService: couldn't load radio module radio.primary (No such file or directory)
+01-20 14:33:53.264  1173  1173 E SoundTriggerHwService: couldn't load sound trigger module sound_trigger.primary (No such file or directory)
+01-20 14:33:53.259  1173  1173 I audioserver: type=1400 audit(0.0:79): avc: denied { write } for name="pcmC0D0c" dev="tmpfs" ino=5220 scontext=u:r:init:s0 tcontext=u:object_r:audio_device:s0 tclass=chr_file permissive=1
+01-20 14:33:53.259  1173  1173 I audioserver: type=1400 audit(0.0:80): avc: denied { ioctl } for path="/dev/snd/pcmC0D0c" dev="tmpfs" ino=5220 ioctlcmd=4101 scontext=u:r:init:s0 tcontext=u:object_r:audio_device:s0 tclass=chr_file permissive=1
+01-20 14:33:53.513  1183  1183 I Netd    : Netd 1.0 starting
+01-20 14:33:53.528  1183  1183 D TetherController: Setting IP forward enable = 0
+01-20 14:33:53.606  1175  1175 I mediaserver: ServiceManager: 0xae13c060
+01-20 14:33:53.619  1175  1175 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:53.619  1139  1139 E SELinux : avc:  denied  { add } for service=media.player pid=1175 uid=1013 scontext=u:r:init:s0 tcontext=u:object_r:mediaserver_service:s0 tclass=service_manager permissive=1
+01-20 14:33:53.539  1184  1184 I iptables: type=1400 audit(0.0:81): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-20 14:33:53.539  1184  1184 I iptables: type=1400 audit(0.0:82): avc: denied { getopt } for lport=255 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-20 14:33:54.247  1174  1174 I ServiceManager: Waiting for service media.camera.proxy...
+01-20 14:33:55.248  1174  1174 I ServiceManager: Waiting for service media.camera.proxy...
+01-20 14:33:53.638  1191  1191 I iptables: type=1400 audit(0.0:83): avc: denied { setopt } for lport=255 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=rawip_socket permissive=1
+01-20 14:33:56.107  1183  1183 V NatController: runCmd(/system/bin/iptables -w -F natctrl_FORWARD) res=0
+01-20 14:33:56.120  1183  1183 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_FORWARD) res=0
+01-20 14:33:56.128  1183  1183 V NatController: runCmd(/system/bin/iptables -w -A natctrl_FORWARD -j DROP) res=0
+01-20 14:33:56.149  1183  1183 V NatController: runCmd(/system/bin/iptables -w -t nat -F natctrl_nat_POSTROUTING) res=0
+01-20 14:33:56.162  1183  1183 V NatController: runCmd(/system/bin/ip6tables -w -t raw -F natctrl_raw_PREROUTING) res=0
+01-20 14:33:56.177  1183  1183 V NatController: runCmd(/system/bin/iptables -w -F natctrl_tether_counters) res=1
+01-20 14:33:56.187  1183  1183 V NatController: runCmd(/system/bin/ip6tables -w -F natctrl_tether_counters) res=1
+01-20 14:33:56.197  1183  1183 V NatController: runCmd(/system/bin/iptables -w -X natctrl_tether_counters) res=1
+01-20 14:33:56.210  1183  1183 V NatController: runCmd(/system/bin/ip6tables -w -X natctrl_tether_counters) res=1
+01-20 14:33:56.217  1183  1183 V NatController: runCmd(/system/bin/iptables -w -N natctrl_tether_counters) res=0
+01-20 14:33:56.239  1183  1183 V NatController: runCmd(/system/bin/ip6tables -w -N natctrl_tether_counters) res=0
+01-20 14:33:56.251  1174  1174 I ServiceManager: Waiting for service media.camera.proxy...
+01-20 14:33:56.251  1183  1183 V NatController: runCmd(/system/bin/iptables -w -t mangle -A natctrl_mangle_FORWARD -p tcp --tcp-flags SYN SYN -j TCPMSS --clamp-mss-to-pmtu) res=0
+01-20 14:33:56.267  1173  1180 W BatteryNotifier: batterystats service unavailable!
+01-20 14:33:56.367  1183  1183 E Netd    : /system/bin/iptables-restore failed with res=0, status=256
+01-20 14:33:55.937  1357  1357 I iptables-restor: type=1400 audit(0.0:84): avc: denied { getattr } for path="/dev/pts/1" dev="devpts" ino=4 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-20 14:33:56.654  1183  1183 E Netd    : /system/bin/ip6tables-restore failed with res=0, status=256
+01-20 14:33:55.971  1357  1357 I iptables-restor: type=1400 audit(0.0:85): avc: denied { ioctl } for path="/dev/pts/1" dev="devpts" ino=4 ioctlcmd=5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-20 14:33:56.777  1183  1183 E Netd    : cannot find interface dummy0
+01-20 14:33:57.079  1183  1183 D MDnsDS  : MDnsSdListener::Hander starting up
+01-20 14:33:57.079  1139  1139 E SELinux : avc:  denied  { add } for service=netd pid=1183 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:netd_service:s0 tclass=service_manager permissive=1
+01-20 14:33:57.079  1183  1396 D MDnsDS  : MDnsSdListener starting to monitor
+01-20 14:33:57.079  1183  1396 D MDnsDS  : Going to poll with pollCount 1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:86): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:87): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:88): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:57.348  1174  1174 I ServiceManager: Waiting for service media.camera.proxy...
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:89): avc: denied { getattr } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:90): avc: denied { write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:91): avc: denied { nlmsg_read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:92): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:58.163  1401  1401 D AndroidRuntime: >>>>>> START com.android.internal.os.ZygoteInit uid 0 <<<<<<
+01-20 14:33:58.164  1401  1401 D AndroidRuntime: CheckJNI is ON
+01-20 14:33:58.164  1401  1401 I art     : option[0]=-Xzygote
+01-20 14:33:58.164  1401  1401 I art     : option[1]=-Xcheck:jni
+01-20 14:33:58.164  1401  1401 I art     : option[2]=-Xstacktracefile:/data/anr/traces.txt
+01-20 14:33:58.164  1401  1401 I art     : option[3]=exit
+01-20 14:33:58.164  1401  1401 I art     : option[4]=vfprintf
+01-20 14:33:58.164  1401  1401 I art     : option[5]=sensitiveThread
+01-20 14:33:58.164  1401  1401 I art     : option[6]=-verbose:gc
+01-20 14:33:58.164  1401  1401 I art     : option[7]=-Xms16m
+01-20 14:33:58.164  1401  1401 I art     : option[8]=-Xmx512m
+01-20 14:33:58.164  1401  1401 I art     : option[9]=-XX:HeapGrowthLimit=192m
+01-20 14:33:58.164  1401  1401 I art     : option[10]=-XX:HeapMinFree=512k
+01-20 14:33:58.164  1401  1401 I art     : option[11]=-XX:HeapMaxFree=8m
+01-20 14:33:58.164  1401  1401 I art     : option[12]=-XX:HeapTargetUtilization=0.75
+01-20 14:33:58.165  1401  1401 I art     : option[13]=-Xusejit:true
+01-20 14:33:58.165  1401  1401 I art     : option[14]=-Xjitsaveprofilinginfo
+01-20 14:33:58.165  1401  1401 I art     : option[15]=-agentlib:jdwp=transport=dt_android_adb,suspend=n,server=y
+01-20 14:33:58.165  1401  1401 I art     : option[16]=-Xlockprofthreshold:500
+01-20 14:33:58.165  1401  1401 I art     : option[17]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[18]=--runtime-arg
+01-20 14:33:58.165  1401  1401 I art     : option[19]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[20]=-Xms64m
+01-20 14:33:58.165  1401  1401 I art     : option[21]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[22]=--runtime-arg
+01-20 14:33:58.165  1401  1401 I art     : option[23]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[24]=-Xmx64m
+01-20 14:33:58.165  1401  1401 I art     : option[25]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[26]=--compiler-filter=verify-at-runtime
+01-20 14:33:58.165  1401  1401 I art     : option[27]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[28]=--image-classes=/system/etc/preloaded-classes
+01-20 14:33:58.165  1401  1401 I art     : option[29]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[30]=--compiled-classes=/system/etc/compiled-classes
+01-20 14:33:58.165  1401  1401 I art     : option[31]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[32]=--runtime-arg
+01-20 14:33:58.165  1401  1401 I art     : option[33]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[34]=-Xms64m
+01-20 14:33:58.165  1401  1401 I art     : option[35]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[36]=--runtime-arg
+01-20 14:33:58.165  1401  1401 I art     : option[37]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[38]=-Xmx512m
+01-20 14:33:58.165  1401  1401 I art     : option[39]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[40]=--instruction-set-variant=x86
+01-20 14:33:58.165  1401  1401 I art     : option[41]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[42]=--instruction-set-variant=x86
+01-20 14:33:58.165  1401  1401 I art     : option[43]=-Ximage-compiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[44]=--instruction-set-features=default
+01-20 14:33:58.165  1401  1401 I art     : option[45]=-Xcompiler-option
+01-20 14:33:58.165  1401  1401 I art     : option[46]=--instruction-set-features=default
+01-20 14:33:58.165  1401  1401 I art     : option[47]=-Duser.locale=en-US
+01-20 14:33:58.165  1401  1401 I art     : option[48]=-XX:NativeBridge=libnb.so
+01-20 14:33:58.165  1401  1401 I art     : option[49]=--cpu-abilist=x86,armeabi-v7a,armeabi
+01-20 14:33:58.165  1401  1401 I art     : option[50]=-Xfingerprint:Android-x86/x86vbox/x86vbox:7.1.1/NMF26O/sgye01200953:eng/test-keys
+01-20 14:33:58.178  1401  1401 I art     : Pruning dalvik-cache since we are relocating an image and will need to recompile
+01-20 14:33:58.178  1401  1401 I art     : RelocateImage: /system/bin/patchoat --input-image-location=/system/framework/boot.art --output-image-file=/data/dalvik-cache/x86/system@framework@boot.art --instruction-set=x86 --base-offset-delta=-13111296
+01-20 14:33:56.658  1387  1387 I ip      : type=1400 audit(0.0:93): avc: denied { nlmsg_write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:58.360  1139  1139 E SELinux : avc:  denied  { add } for service=media.camera pid=1174 uid=1047 scontext=u:r:init:s0 tcontext=u:object_r:cameraserver_service:s0 tclass=service_manager permissive=1
+01-20 14:33:56.760  1183  1183 I netd    : type=1400 audit(0.0:94): avc: denied { connect } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.760  1389  1389 I kworker/u2:2: type=1400 audit(0.0:95): avc: denied { execute } for name="busybox" dev="tmpfs" ino=4940 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:56.760  1389  1389 I kworker/u2:2: type=1400 audit(0.0:96): avc: denied { open } for path="/bin/busybox" dev="tmpfs" ino=4940 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:56.760  1389  1389 I kworker/u2:2: type=1400 audit(0.0:97): avc: denied { execute_no_trans } for path="/bin/busybox" dev="tmpfs" ino=4940 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:98): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_route_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:99): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:100): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:101): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:102): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_nflog_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:103): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-20 14:33:56.781  1183  1183 I netd    : type=1400 audit(0.0:104): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-20 14:33:57.077  1183  1183 I netd    : type=1400 audit(0.0:106): avc: denied { write } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-20 14:33:57.077  1183  1183 I netd    : type=1400 audit(0.0:107): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-20 14:33:57.077  1183  1183 I netd    : type=1400 audit(0.0:108): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_netfilter_socket permissive=1
+01-20 14:33:59.351  1401  1401 I zygote  : type=1400 audit(0.0:109): avc: denied { read } for name="system@framework@boot.oat" dev="sda1" ino=42018 scontext=u:r:init:s0 tcontext=u:object_r:dalvikcache_data_file:s0 tclass=lnk_file permissive=1
+01-20 14:33:59.412  1401  1401 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+01-20 14:33:59.477  1401  1401 E memtrack: Couldn't load memtrack module (No such file or directory)
+01-20 14:33:59.477  1401  1401 E android.os.Debug: failed to load memtrack module: -2
+01-20 14:33:59.478  1401  1401 I Radio-JNI: register_android_hardware_Radio DONE
+01-20 14:33:59.487  1401  1401 I SamplingProfilerIntegration: Profiling disabled.
+01-20 14:33:59.488  1401  1401 D Zygote  : begin preload
+01-20 14:33:59.488  1401  1401 I Zygote  : Installing ICU cache reference pinning...
+01-20 14:33:59.488  1401  1401 I Zygote  : Preloading ICU data...
+01-20 14:33:59.507  1401  1401 I Zygote  : Preloading classes...
+01-20 14:33:59.510  1401  1401 W Zygote  : Class not found for preloading: [Landroid.view.Display$ColorTransform;
+01-20 14:33:59.615  1401  1401 E Typeface: Error mapping font file /system/fonts/DroidSansFallback.ttf
+01-20 14:33:59.718  1401  1401 I art     : Thread[1,tid=1401,Native,Thread*=0xb030b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-20 14:33:59.719  1401  1401 D MtpDeviceJNI: register_android_mtp_MtpDevice
+01-20 14:33:59.719  1401  1401 I art     : Thread[1,tid=1401,Native,Thread*=0xb030b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-20 14:33:59.719  1401  1401 I art     : Thread[1,tid=1401,Native,Thread*=0xb030b400,peer=0x12c060d0,"main"] recursive attempt to load library "/system/lib/libmedia_jni.so"
+01-20 14:34:00.065  1401  1401 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform
+01-20 14:34:00.065  1401  1401 W Zygote  : Class not found for preloading: android.view.Display$ColorTransform$1
+01-20 14:34:00.124  1401  1401 I System  : Loaded time zone names for "" in 15ms (14ms in ICU)
+01-20 14:34:00.129  1401  1401 I System  : Loaded time zone names for "en_US" in 5ms (5ms in ICU)
+01-20 14:34:00.139  1401  1401 I Zygote  : ...preloaded 4158 classes in 632ms.
+01-20 14:34:00.139  1401  1401 I art     : VMRuntime.preloadDexCaches starting
+01-20 14:34:00.179  1401  1401 I art     : VMRuntime.preloadDexCaches strings total=283734 before=39639 after=39639
+01-20 14:34:00.179  1401  1401 I art     : VMRuntime.preloadDexCaches types total=23582 before=7877 after=7904
+01-20 14:34:00.179  1401  1401 I art     : VMRuntime.preloadDexCaches fields total=112010 before=40900 after=41114
+01-20 14:34:00.179  1401  1401 I art     : VMRuntime.preloadDexCaches methods total=197525 before=82451 after=83011
+01-20 14:34:00.179  1401  1401 I art     : VMRuntime.preloadDexCaches finished
+01-20 14:34:00.179  1401  1401 I Zygote  : Preloading resources...
+01-20 14:34:00.198  1401  1401 W Resources: Preloaded drawable resource #0x108025c (android:drawable/dialog_background_material) that varies with configuration!!
+01-20 14:34:00.201  1401  1401 W Resources: Preloaded color resource #0x10600e2 (android:color/material_grey_800) that varies with configuration!!
+01-20 14:34:00.201  1401  1401 W Resources: Preloaded drawable resource #0x10802c9 (android:drawable/floating_popup_background_dark) that varies with configuration!!
+01-20 14:34:00.230  1401  1401 I Zygote  : ...preloaded 114 resources in 51ms.
+01-20 14:34:00.231  1401  1401 W Resources: Preloaded color resource #0x106010b (android:color/background_cache_hint_selector_material_dark) that varies with configuration!!
+01-20 14:34:00.232  1401  1401 W Resources: Preloaded color resource #0x1060110 (android:color/btn_default_material_dark) that varies with configuration!!
+01-20 14:34:00.232  1401  1401 I Zygote  : ...preloaded 41 resources in 2ms.
+01-20 14:34:00.233  1401  1401 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-20 14:34:00.242  1401  1401 I Zygote  : Preloading shared libraries...
+01-20 14:34:00.252  1401  1401 I Zygote  : Uninstalled ICU cache reference pinning...
+01-20 14:34:00.254  1401  1401 I Zygote  : Installed AndroidKeyStoreProvider in 2ms.
+01-20 14:34:00.272  1401  1401 I Zygote  : Warmed up JCA providers in 18ms.
+01-20 14:34:00.272  1401  1401 D Zygote  : end preload
+01-20 14:34:00.272  1401  1401 I art     : Starting a blocking GC Explicit
+01-20 14:34:00.286  1401  1401 I art     : Explicit concurrent mark sweep GC freed 55425(6MB) AllocSpace objects, 133(2MB) LOS objects, 39% free, 2MB/4MB, paused 49us total 12.995ms
+01-20 14:34:00.289  1401  1401 I art     : Starting a blocking GC Explicit
+01-20 14:34:00.293  1401  1401 I art     : Explicit concurrent mark sweep GC freed 4822(178KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 2MB/3MB, paused 33us total 3.605ms
+01-20 14:34:00.295  1401  1408 I art     : Starting a blocking GC HeapTrim
+01-20 14:34:00.305  1401  1401 I art     : Starting a blocking GC Background
+01-20 14:34:00.321  1401  1401 I Zygote  : System server process 1410 has been created
+01-20 14:34:00.321  1401  1401 I Zygote  : Accepting command socket connections
+01-20 14:34:00.334  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:00.322  1410  1410 I main    : type=1400 audit(0.0:110): avc: denied { setpcap } for capability=8 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-20 14:34:00.390  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:00.390  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:00.329  1410  1410 I main    : type=1400 audit(0.0:111): avc: denied { check_context } for scontext=u:r:init:s0 tcontext=u:object_r:kernel:s0 tclass=security permissive=1
+01-20 14:34:00.608  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:00.329  1410  1410 I main    : type=1400 audit(0.0:112): avc: denied { setcurrent } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=process permissive=1
+01-20 14:34:00.329  1410  1410 I main    : type=1400 audit(0.0:113): avc: denied { dyntransition } for scontext=u:r:init:s0 tcontext=u:r:system_server:s0 tclass=process permissive=1
+01-20 14:34:00.329  1410  1410 I main    : type=1400 audit(0.0:114): avc: denied { read } for path=2F6465762F6173686D656D2F64616C76696B2D6D61696E207370616365202864656C6574656429 dev="tmpfs" ino=8571 scontext=u:r:system_server:s0 tcontext=u:object_r:init_tmpfs:s0 tclass=file permissive=1
+01-20 14:34:00.329  1410  1410 I system_server: type=1400 audit(0.0:115): avc: denied { sendto } for path="/dev/socket/logdw" scontext=u:r:system_server:s0 tcontext=u:r:init:s0 tclass=unix_dgram_socket permissive=1
+01-20 14:34:01.608  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:01.608  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:01.608  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:01.608  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:02.608  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:02.608  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:02.609  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:02.609  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:03.658  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:03.658  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:03.658  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:03.658  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:04.658  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:04.659  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:04.659  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:04.659  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:05.659  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:05.659  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:05.659  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:05.659  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:06.659  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:06.659  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:06.659  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:06.659  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:07.659  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:07.660  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:07.660  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:07.660  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:08.660  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:08.660  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:08.660  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:08.660  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:09.660  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:09.660  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:09.660  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:09.660  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:10.661  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:10.661  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:10.661  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:10.661  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:11.661  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:11.661  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:11.661  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:11.661  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:12.661  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:12.662  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:12.662  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:12.662  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:13.662  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:13.662  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:13.662  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:13.662  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:14.662  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:14.662  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:14.662  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:14.662  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:15.663  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:15.663  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:15.663  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:15.663  1410  1410 W InstallerConnection: installd not ready
+01-20 14:34:16.663  1410  1410 I InstallerConnection: connecting...
+01-20 14:34:16.663  1410  1410 I InstallerConnection: disconnecting...
+01-20 14:34:16.663  1410  1410 E InstallerConnection: connection failed
+01-20 14:34:16.663  1410  1410 W InstallerConnection: installd not ready

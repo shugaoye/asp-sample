@@ -80,7 +80,7 @@ fi
 echo "REPO_T=${REPO_T} REPO_C=${REPO_C}"
 
 case $1 in
-	android-6.0.1_r61_x86vbox*)
+	android-6.0.1_r61_x86vbox_ch*)
 		if [ -d device/generic/x86vbox ]; then
 			echo "Tagging x86vbox ..."
 			cd device/generic/x86vbox; git tag $1; git push ${REPO_T} $1; croot
@@ -93,12 +93,11 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86vbox*|android-7.1.1_r4_x86vbox*)
+	android-7.1.0_r7_x86vbox_ch*|android-7.1.1_r4_x86vbox_ch*)
 		if [ -d device/generic/x86vbox ]; then
 			echo "Tagging x86vbox ..."
 			cd device/generic/x86vbox; git tag $1; git push ${REPO_T} $1; croot
 			cd bootable/recovery; git tag $1; git push ${REPO_T} $1; croot
-			tag_goldfish $1
 			tag_android_x86 $1
 		else
 			echo "Cannot find x86vbox."
