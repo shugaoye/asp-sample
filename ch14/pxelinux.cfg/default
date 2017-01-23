@@ -10,12 +10,12 @@ append ip=dhcp console=ttyS3,115200 androidboot.selinux=permissive buildvariant=
 label 2. x86vbox
 menu x86vbox_ramdisk
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk.img androidboot.hardware=x86vbox
+append ip=dhcp console=ttyS3,115200 androidboot.selinux=permissive initrd=x86vbox/ramdisk.img androidboot.hardware=x86vbox
 
 label 3. Recovery - x86vbox
 menu x86vbox_ramdisk_recovery
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox
+append ip=dhcp console=ttyS3,115200 androidboot.selinux=permissive initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox
 
 label 4. NFS Installation - x86vbox
 menu x86vbox_install

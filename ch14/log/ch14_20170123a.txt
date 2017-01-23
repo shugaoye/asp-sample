@@ -1,0 +1,220 @@
+--------- beginning of main
+01-23 04:18:13.514  1111  1111 W auditd  : type=2000 audit(0.0:1): initialized
+01-23 04:18:48.962  1111  1111 I auditd  : type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-23 04:18:48.966     1     1 I init    : type=1400 audit(0.0:3): avc: denied { open } for path="/selinux_version" dev="tmpfs" ino=4751 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:49.017     1     1 I init    : type=1400 audit(0.0:4): avc: denied { relabelfrom } for name="init" dev="tmpfs" ino=4728 scontext=u:r:kernel:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:49.021     1     1 I init    : type=1400 audit(0.0:5): avc: denied { relabelfrom } for name="property_contexts" dev="tmpfs" ino=4741 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:49.045  1093  1093 I ueventd : type=1400 audit(0.0:6): avc: denied { open } for path="/ueventd.rc" dev="tmpfs" ino=4759 scontext=u:r:ueventd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:49.046  1093  1093 I ueventd : type=1400 audit(0.0:7): avc: denied { read } for name="modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:49.487  1093  1093 I ueventd : type=1400 audit(0.0:8): avc: denied { open } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:49.706  1093  1093 I ueventd : type=1400 audit(0.0:9): avc: denied { getattr } for path="/system/lib/modules/4.4.34-android-x86/modules.alias" dev="sda1" ino=34962 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:49.865  1093  1093 I ueventd : type=1400 audit(0.0:10): avc: denied { sys_module } for capability=16 scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+01-23 04:18:49.917  1093  1093 I ueventd : type=1400 audit(0.0:11): avc: denied { module_load } for path="/system/lib/modules/4.4.34-android-x86/kernel/drivers/macintosh/mac_hid.ko" dev="sda1" ino=33251 scontext=u:r:ueventd:s0 tcontext=u:object_r:unlabeled:s0 tclass=system permissive=1
+01-23 04:18:52.359  1111  1111 I logd    : type=1400 audit(0.0:30): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-23 04:18:52.386  1118  1118 I sh      : type=1400 audit(0.0:31): avc: denied { ioctl } for path="/dev/pts/0" dev="devpts" ino=3 ioctlcmd=5401 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-23 04:18:52.407  1122  1122 I setprop : type=1400 audit(0.0:32): avc: denied { write } for name="property_service" dev="tmpfs" ino=5201 scontext=u:r:init:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+01-23 04:18:52.495  1112  1112 I sh      : + '[' -e /vendor/etc/init.sh ']'
+01-23 04:18:52.495  1112  1112 I sh      : + do_init
+01-23 04:18:52.495  1112  1112 I sh      : + init_misc
+01-23 04:18:52.495  1112  1112 I sh      : + cat /sys/class/dmi/id/sys_vendor
+01-23 04:18:52.496  1112  1112 I sh      : + setprop ro.product.manufacturer 'innotek GmbH'
+01-23 04:18:52.505  1112  1112 I sh      : + grep 1a8d:1000
+01-23 04:18:52.507  1112  1112 I sh      : + lsusb
+01-23 04:18:52.514  1118  1118 I sh      : type=1400 audit(0.0:33): avc: denied { execute } for name="busybox" dev="tmpfs" ino=4950 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:52.514  1127  1127 I sh      : type=1400 audit(0.0:34): avc: denied { execute_no_trans } for path="/bin/busybox" dev="tmpfs" ino=4950 scontext=u:r:init:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:52.515  1127  1127 I modprobe: type=1400 audit(0.0:35): avc: denied { sys_module } for capability=16 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-23 04:18:52.515  1127  1127 I modprobe: type=1400 audit(0.0:36): avc: denied { module_load } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=system permissive=1
+01-23 04:18:52.515  1112  1112 I sh      : + '[' -d /sys/devices/system/cpu/cpu0/cpufreq ']'
+01-23 04:18:52.515  1112  1112 I sh      : + modprobe acpi-cpufreq
+01-23 04:18:52.517  1112  1112 I sh      : + init_hal_audio
+01-23 04:18:52.517  1112  1112 I sh      : + '[' -d /proc/asound/card0 ']'
+01-23 04:18:52.525  1112  1112 I sh      : + cat /proc/asound/card0/id
+01-23 04:18:52.525  1112  1112 I sh      : + '[' I82801AAICH '=' IntelHDMI ']'
+01-23 04:18:52.525  1112  1112 I sh      : + init_hal_bluetooth
+01-23 04:18:52.525  1112  1112 I sh      : + cat '/sys/class/rfkill/*/type'
+01-23 04:18:52.525  1112  1112 I sh      : /system/etc/init.sh[454]: cat: /sys/class/rfkill/*/type: No such file or directory
+01-23 04:18:52.526  1112  1112 I sh      : + type= 
+01-23 04:18:52.526  1112  1112 I sh      : + '['  '=' wlan -o  '=' bluetooth ']'
+01-23 04:18:52.526  1112  1112 I sh      : + awk ' /Class:.E0/ { print $9 } '
+01-23 04:18:52.528  1112  1112 I sh      : + busybox lsusb -v
+01-23 04:18:52.535  1112  1112 I sh      : + '[' -n  ']'
+01-23 04:18:52.535  1112  1112 I sh      : + init_hal_camera
+01-23 04:18:52.535  1112  1112 I sh      : + return
+01-23 04:18:52.535  1112  1112 I sh      : + init_hal_gps
+01-23 04:18:52.535  1112  1112 I sh      : + return
+01-23 04:18:52.535  1112  1112 I sh      : + init_hal_gralloc
+01-23 04:18:52.535  1112  1112 I sh      : + head -1
+01-23 04:18:52.538  1112  1112 I sh      : + cat /proc/fb
+01-23 04:18:52.545  1112  1112 I sh      : + init_uvesafb
+01-23 04:18:52.545  1112  1112 I sh      : + '['  '=' 0 ']'
+01-23 04:18:52.545  1112  1112 I sh      : + bpp=32 
+01-23 04:18:52.545  1112  1112 I sh      : + modprobe uvesafb 'mode_option=1024x768-32' 'mtrr=3' 'scroll=redraw'
+01-23 04:18:52.554  1135  1135 I kworker/u2:1: type=1400 audit(0.0:37): avc: denied { execute } for name="linker" dev="sda1" ino=16410 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:52.554  1135  1135 I v86d    : type=1400 audit(0.0:38): avc: denied { getattr } for path="/system" dev="sda1" ino=8153 scontext=u:r:kernel:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-23 04:18:52.555  1135  1135 I v86d    : type=1400 audit(0.0:39): avc: denied { create } for scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=netlink_connector_socket permissive=1
+01-23 04:18:52.555  1135  1135 I v86d    : type=1400 audit(0.0:40): avc: denied { net_admin } for capability=12 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:41): avc: denied { execute } for path="/dev/zero" dev="tmpfs" ino=5280 scontext=u:r:kernel:s0 tcontext=u:object_r:zero_device:s0 tclass=chr_file permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:42): avc: denied { mmap_zero } for scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=memprotect permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:43): avc: denied { read write } for name="mem" dev="tmpfs" ino=5275 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:44): avc: denied { open } for path="/dev/mem" dev="tmpfs" ino=5275 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:45): avc: denied { sys_rawio } for capability=17 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1
+01-23 04:18:52.564  1136  1136 I v86d    : type=1400 audit(0.0:46): avc: denied { execute } for path="/dev/mem" dev="tmpfs" ino=5275 scontext=u:r:kernel:s0 tcontext=u:object_r:kmem_device:s0 tclass=chr_file permissive=1
+01-23 04:18:53.657  1112  1112 I sh      : + '[' -n 2 ']'
+01-23 04:18:53.657  1112  1112 I sh      : + set_property debug.egl.trace error
+01-23 04:18:53.657  1112  1112 I sh      : + setprop debug.egl.trace error
+01-23 04:18:53.665  1112  1112 I sh      : + '[' -n 2 ']'
+01-23 04:18:53.665  1112  1112 I sh      : + >>/dev/x86.prop 
+01-23 04:18:53.665  1112  1112 I sh      : + echo 'debug.egl.trace=error'
+01-23 04:18:53.665  1112  1112 I sh      : + init_hal_hwcomposer
+01-23 04:18:53.665  1112  1112 I sh      : + return
+01-23 04:18:53.665  1112  1112 I sh      : + init_hal_lights
+01-23 04:18:53.665  1112  1112 I sh      : + chown 1000.1000 '/sys/class/backlight/*/brightness'
+01-23 04:18:53.675  1112  1112 I sh      : chown: /sys/class/backlight/*/brightness: No such file or directory
+01-23 04:18:53.675  1112  1112 I sh      : + init_hal_power
+01-23 04:18:53.675  1112  1112 I sh      : + >/sys/class/rtc/rtc0/device/power/wakeup 
+01-23 04:18:53.675  1112  1112 I sh      : + echo disabled
+01-23 04:18:54.605  1112  1112 I sh      : + init_hal_sensors
+01-23 04:18:54.605  1112  1112 I sh      : + getprop ro.hardware
+01-23 04:18:54.615  1112  1112 I sh      : + ro_hardware=x86vbox 
+01-23 04:18:54.615  1112  1112 I sh      : + '[' -f /system/lib/hw/sensors.x86vbox.so ']'
+01-23 04:18:54.635  1112  1112 I sh      : + typeset 'hal_sensors=kbd'
+01-23 04:18:54.635  1112  1112 I sh      : + typeset 'has_sensors=true'
+01-23 04:18:54.645  1112  1112 I sh      : + cat /sys/class/dmi/id/uevent
+01-23 04:18:54.646  1112  1112 I sh      : + has_sensors=false 
+01-23 04:18:54.646  1112  1112 I sh      : + 2>/dev/null 
+01-23 04:18:54.646  1112  1112 I sh      : + ls '/sys/bus/iio/devices/iio:device*'
+01-23 04:18:54.648  1112  1112 I sh      : + '[' -n  ']'
+01-23 04:18:54.650  1112  1112 I sh      : + grep -q lis3lv02d_i2c
+01-23 04:18:54.651  1112  1112 I sh      : + lsmod
+01-23 04:18:54.653  1112  1112 I sh      : + set_property ro.hardware.sensors kbd
+01-23 04:18:54.653  1112  1112 I sh      : + setprop ro.hardware.sensors kbd
+01-23 04:18:54.665  1112  1112 I sh      : + '[' -n 2 ']'
+01-23 04:18:54.665  1112  1112 I sh      : + >>/dev/x86.prop 
+01-23 04:18:54.665  1112  1112 I sh      : + echo 'ro.hardware.sensors=kbd'
+01-23 04:18:54.665  1112  1112 I sh      : + '[' kbd '!=' kbd ']'
+01-23 04:18:54.665  1112  1112 I sh      : + set_property config.override_forced_orient false
+01-23 04:18:54.665  1112  1112 I sh      : + setprop config.override_forced_orient false
+01-23 04:18:54.678  1112  1112 I sh      : + '[' -n 2 ']'
+01-23 04:18:54.678  1112  1112 I sh      : + >>/dev/x86.prop 
+01-23 04:18:54.678  1112  1112 I sh      : + echo 'config.override_forced_orient=false'
+01-23 04:18:54.678  1112  1112 I sh      : + init_tscal
+01-23 04:18:54.685  1112  1112 I sh      : + awk '{ print $6 }'
+01-23 04:18:54.687  1112  1112 I sh      : + lsusb
+01-23 04:18:54.690  1112  1112 I sh      : + init_ril
+01-23 04:18:54.695  1111  1111 I logd    : type=1400 audit(0.0:47): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_audit_socket permissive=1
+01-23 04:18:54.695  1112  1112 I sh      : + cat /sys/class/dmi/id/uevent
+01-23 04:18:54.695  1112  1112 I sh      : + set_property ro.radio.noril yes
+01-23 04:18:54.695  1112  1112 I sh      : + setprop ro.radio.noril yes
+01-23 04:18:54.705  1112  1112 I sh      : + '[' -n 2 ']'
+01-23 04:18:54.705  1112  1112 I sh      : + >>/dev/x86.prop 
+01-23 04:18:54.705  1112  1112 I sh      : + echo 'ro.radio.noril=yes'
+01-23 04:18:54.705  1112  1112 I sh      : + post_init
+01-23 04:18:54.705  1112  1112 I sh      : /system/etc/init.sh: post_init: not found
+01-23 04:18:54.705  1112  1112 I sh      : + return 0
+01-23 04:18:54.821  1152  1152 I         : debuggerd: starting
+--------- beginning of system
+01-23 04:18:54.890  1153  1153 I vold    : Vold 3.0 (the awakening) firing up
+01-23 04:18:54.890  1153  1153 V vold    : Detected support for: ext4 f2fs vfat
+01-23 04:18:55.264  1153  1153 I vold    : type=1400 audit(0.0:48): avc: denied { create } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-23 04:18:55.264  1153  1153 I vold    : type=1400 audit(0.0:49): avc: denied { setopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-23 04:18:55.264  1153  1153 I vold    : type=1400 audit(0.0:50): avc: denied { bind } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-23 04:18:55.264  1153  1153 I vold    : type=1400 audit(0.0:51): avc: denied { getopt } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-23 04:18:55.415  1153  1158 D vold    : e4crypt_init_user0
+01-23 04:18:55.416  1153  1158 D vold    : e4crypt_prepare_user_storage for volume null, user 0, serial 0, flags 1
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/system/users/0
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/misc/profiles/cur/0
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/misc/profiles/cur/0/foreign-dex
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/system_de/0
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/misc_de/0
+01-23 04:18:55.416  1153  1158 D vold    : Preparing: /data/user_de/0
+01-23 04:18:55.416  1153  1158 D vold    : e4crypt_unlock_user_key 0 serial=0 token_present=0
+01-23 04:18:55.417     1     1 I vdc     : 200 1154 Command succeeded
+01-23 04:18:55.478  1159  1159 I /system/bin/tzdatacheck: tzdata file /data/misc/zoneinfo/current/tzdata does not exist. No action required.
+01-23 04:18:55.774  1162  1162 I lowmemorykiller: Using in-kernel low memory killer interface
+01-23 04:18:56.126  1164  1164 I SurfaceFlinger: SurfaceFlinger is starting
+01-23 04:18:56.126  1164  1164 I SurfaceFlinger: SurfaceFlinger's main thread ready to run. Initializing graphics H/W...
+01-23 04:18:56.132  1164  1164 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-23 04:18:56.229  1164  1164 I EGL-DRI2: found extension DRI_Core version 1
+01-23 04:18:56.229  1164  1164 I EGL-DRI2: found extension DRI_SWRast version 5
+01-23 04:18:56.233  1164  1164 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-23 04:18:56.233  1164  1164 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-23 04:18:56.233  1164  1164 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-23 04:18:56.233  1164  1164 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-23 04:18:56.233  1164  1164 I EGL-DRI2: found extension DRI2_Fence version 1
+01-23 04:18:56.364  1164  1164 W gralloc : page flipping not supported (yres_virtual=768, requested=1536)
+01-23 04:18:56.364  1164  1164 I gralloc : using (fd=11)
+01-23 04:18:56.364  1164  1164 I gralloc : id           = VESA VGA
+01-23 04:18:56.364  1164  1164 I gralloc : xres         = 1024 px
+01-23 04:18:56.364  1164  1164 I gralloc : yres         = 768 px
+01-23 04:18:56.364  1164  1164 I gralloc : xres_virtual = 1024 px
+01-23 04:18:56.364  1164  1164 I gralloc : yres_virtual = 768 px
+01-23 04:18:56.364  1164  1164 I gralloc : bpp          = 32
+01-23 04:18:56.364  1164  1164 I gralloc : r            = 16:8
+01-23 04:18:56.364  1164  1164 I gralloc : g            =  8:8
+01-23 04:18:56.364  1164  1164 I gralloc : b            =  0:8
+01-23 04:18:56.364  1164  1164 I gralloc : width        = 163 mm (159.568100 dpi)
+01-23 04:18:56.364  1164  1164 I gralloc : height       = 122 mm (159.895081 dpi)
+01-23 04:18:56.364  1164  1164 I gralloc : refresh rate = 65.46 Hz
+01-23 04:18:56.366  1164  1164 E SurfaceFlinger: hwcomposer module not found
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: EGL information:
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: vendor    : Android
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: version   : 1.4 Android META-EGL
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: extensions: EGL_KHR_get_all_proc_addresses EGL_ANDROID_presentation_time EGL_KHR_swap_buffers_with_damage EGL_ANDROID_create_native_client_buffer EGL_ANDROID_front_buffer_auto_refresh EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_reusable_sync EGL_KHR_fence_sync EGL_KHR_create_context EGL_KHR_surfaceless_context EGL_ANDROID_image_native_buffer EGL_KHR_wait_sync EGL_ANDROID_recordable 
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: Client API: OpenGL_ES
+01-23 04:18:56.366  1164  1164 I SurfaceFlinger: EGLSurface: 8-8-8-8, config=0xae4a4680
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: OpenGL ES informations:
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: vendor    : VMware, Inc.
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: renderer  : Gallium 0.4 on llvmpipe (LLVM 3.8, 256 bits)
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: version   : OpenGL ES 3.0 Mesa 13.0.2
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: extensions: GL_EXT_blend_minmax GL_EXT_multi_draw_arrays GL_EXT_texture_compression_dxt1 GL_EXT_texture_format_BGRA8888 GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth24 GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_mapbuffer GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_stencil8 GL_OES_texture_3D GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_EXT_texture_sRGB_decode GL_OES_EGL_image GL_OES_depth_texture GL_OES_packed_depth_stencil GL_EXT_texture_type_2_10_10_10_REV GL_OES_get_program_binary GL_APPLE_texture_max_level GL_EXT_discard_framebuffer GL_EXT_read_format_bgra GL_NV_fbo_color_attachments GL_OES_EGL_image_external GL_OES_EGL_sync GL_OES_vertex_array_object GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_EXT_texture_rg GL_EXT_unpack_subimage GL_NV_draw_buffers GL_NV_read_buffer GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_EXT_draw_buffers GL_EXT_map_buffer_ra
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: GL_MAX_TEXTURE_SIZE = 8192
+01-23 04:18:56.404  1164  1164 I SurfaceFlinger: GL_MAX_VIEWPORT_DIMS = 8192
+01-23 04:18:56.404  1164  1164 D DisplayDevice: Open /dev/tty0 OK
+01-23 04:18:56.440  1164  1164 D SurfaceFlinger: shader cache generated - 24 shaders in 29.893284 ms
+01-23 04:18:56.656  1163  1163 E SELinux : avc:  denied  { add } for service=SurfaceFlinger pid=1164 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-23 04:18:56.656  1163  1163 E SELinux : avc:  denied  { add } for service=gpu pid=1164 uid=0 scontext=u:r:init:s0 tcontext=u:object_r:gpu_service:s0 tclass=service_manager permissive=1
+01-23 04:18:56.656  1164  1164 D SurfaceFlinger: Set power mode=2, type=0 flinger=0xae930000
+01-23 04:18:55.415  1153  1153 I vold    : type=1400 audit(0.0:52): avc: denied { read } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=netlink_kobject_uevent_socket permissive=1
+01-23 04:18:55.416  1154  1154 I vdc     : type=1400 audit(0.0:53): avc: denied { getattr } for path="/dev/pts/0" dev="devpts" ino=3 scontext=u:r:init:s0 tcontext=u:object_r:devpts:s0 tclass=chr_file permissive=1
+01-23 04:18:55.767  1161  1161 I init    : type=1400 audit(0.0:54): avc: denied { entrypoint } for path="/sbin/healthd" dev="tmpfs" ino=4744 scontext=u:r:healthd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:55.771  1162  1162 I lmkd    : type=1400 audit(0.0:55): avc: denied { ipc_lock } for capability=14 scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+01-23 04:18:55.774  1160  1160 I logd    : type=1400 audit(0.0:56): avc: denied { write } for name="logd" dev="tmpfs" ino=5559 scontext=u:r:init:s0 tcontext=u:object_r:logd_socket:s0 tclass=sock_file permissive=1
+01-23 04:18:57.799  1163  1163 E SELinux : avc:  denied  { find } for service=SurfaceFlinger pid=1180 uid=1003 scontext=u:r:init:s0 tcontext=u:object_r:surfaceflinger_service:s0 tclass=service_manager permissive=1
+01-23 04:18:55.838  1163  1163 I servicemanager: type=1400 audit(0.0:57): avc: denied { set_context_mgr } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-23 04:18:57.996  1164  1166 I SurfaceFlinger: auto set density to 160
+01-23 04:18:57.997  1180  1183 D libEGL  : loaded /system/lib/egl/libGLES_mesa.so
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_Core version 1
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_SWRast version 5
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_TexBuffer version 2
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_IMAGE version 11
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_RENDERER_QUERY version 1
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI_CONFIG_QUERY version 1
+01-23 04:18:58.013  1180  1183 I EGL-DRI2: found extension DRI2_Fence version 1
+01-23 04:18:58.013  1180  1183 E cutils-trace: Error opening trace file: Permission denied (13)
+01-23 04:18:56.141  1165  1165 I init    : type=1400 audit(0.0:58): avc: denied { entrypoint } for path="/system/bin/sh" dev="sda1" ino=16512 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.143  1165  1165 I sh      : type=1400 audit(0.0:59): avc: denied { read } for path="/system/bin/linker" dev="sda1" ino=16410 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.145  1165  1165 I sh      : type=1400 audit(0.0:60): avc: denied { getattr } for path="/system/bin/sh" dev="sda1" ino=16512 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.149  1165  1165 I sh      : type=1400 audit(0.0:61): avc: denied { getattr } for path="/system" dev="sda1" ino=8153 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-23 04:18:56.161  1165  1165 I sh      : type=1400 audit(0.0:62): avc: denied { open } for path="/system/lib/libc++.so" dev="sda1" ino=17114 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.161  1165  1165 I sh      : type=1400 audit(0.0:63): avc: denied { execute } for path="/system/lib/libc++.so" dev="sda1" ino=17114 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.174  1168  1168 I sh      : type=1400 audit(0.0:64): avc: denied { read } for name="getprop" dev="sda1" ino=16375 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=lnk_file permissive=1
+01-23 04:18:56.174  1168  1168 I sh      : type=1400 audit(0.0:65): avc: denied { execute_no_trans } for path="/system/bin/toybox" dev="sda1" ino=16543 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=file permissive=1
+01-23 04:18:56.221  1170  1170 I init    : type=1400 audit(0.0:66): avc: denied { entrypoint } for path="/sbin/adbd" dev="tmpfs" ino=4743 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:56.228  1170  1170 I adbd    : type=1400 audit(0.0:67): avc: denied { read } for path="/sbin/adbd" dev="tmpfs" ino=4743 scontext=u:r:adbd:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:18:56.233  1164  1164 I surfaceflinger: type=1400 audit(0.0:68): avc: denied { write } for name="fb0" dev="tmpfs" ino=5697 scontext=u:r:init:s0 tcontext=u:object_r:graphics_device:s0 tclass=chr_file permissive=1
+01-23 04:18:56.654  1164  1164 I surfaceflinger: type=1400 audit(0.0:70): avc: denied { call } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-23 04:18:56.654  1164  1164 I surfaceflinger: type=1400 audit(0.0:71): avc: denied { transfer } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-23 04:18:56.774  1161  1161 I healthd : type=1400 audit(0.0:72): avc: denied { call } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-23 04:18:56.774  1161  1161 I healthd : type=1400 audit(0.0:73): avc: denied { transfer } for scontext=u:r:healthd:s0 tcontext=u:r:init:s0 tclass=binder permissive=1
+01-23 04:18:56.774  1163  1163 I servicemanager: type=1400 audit(0.0:74): avc: denied { getattr } for scontext=u:r:init:s0 tcontext=u:r:healthd:s0 tclass=process permissive=1
+01-23 04:18:57.113  1164  1164 I surfaceflinger: type=1400 audit(0.0:75): avc: denied { execmem } for scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=process permissive=1
+01-23 04:18:57.173  1171  1171 I logcat  : type=1400 audit(0.0:76): avc: denied { append } for name="log.txt" dev="sda2" ino=13 scontext=u:r:init:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1
+01-23 04:18:57.180  1171  1171 I logcat  : type=1400 audit(0.0:77): avc: denied { write } for name="logdr" dev="tmpfs" ino=5563 scontext=u:r:init:s0 tcontext=u:object_r:logdr_socket:s0 tclass=sock_file permissive=1
+01-23 04:20:35.130  1195  1195 I ls      : type=1400 audit(0.0:78): avc: denied { getattr } for path="/init.environ.rc" dev="tmpfs" ino=4976 scontext=u:r:shell:s0 tcontext=u:object_r:tmpfs:s0 tclass=file permissive=1
+01-23 04:20:35.186  1195  1195 I ls      : type=1400 audit(0.0:79): avc: denied { getattr } for path="/init" dev="tmpfs" ino=4728 scontext=u:r:shell:s0 tcontext=u:object_r:init_exec:s0 tclass=file permissive=1
+01-23 04:20:37.706  1196  1196 I ls      : type=1400 audit(0.0:80): avc: denied { read } for name="system" dev="sda1" ino=8153 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-23 04:20:37.845  1196  1196 I ls      : type=1400 audit(0.0:81): avc: denied { open } for path="/system" dev="sda1" ino=8153 scontext=u:r:shell:s0 tcontext=u:object_r:unlabeled:s0 tclass=dir permissive=1
+01-23 04:21:14.380  1199  1199 I mount   : type=1400 audit(0.0:82): avc: denied { read } for name="/" dev="tmpfs" ino=5149 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+01-23 04:21:14.567  1199  1199 I mount   : type=1400 audit(0.0:83): avc: denied { open } for path="/dev" dev="tmpfs" ino=5149 scontext=u:r:shell:s0 tcontext=u:object_r:device:s0 tclass=dir permissive=1
+01-23 04:21:14.567  1199  1199 I mount   : type=1400 audit(0.0:84): avc: denied { read } for name="block" dev="tmpfs" ino=5217 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
+01-23 04:21:14.567  1199  1199 I mount   : type=1400 audit(0.0:85): avc: denied { open } for path="/dev/block" dev="tmpfs" ino=5217 scontext=u:r:shell:s0 tcontext=u:object_r:block_device:s0 tclass=dir permissive=1
