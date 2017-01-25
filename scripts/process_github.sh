@@ -16,6 +16,15 @@
 # DAMAGES, FOR ANY REASON WHATSOEVER.
 #
 #******************************************************************************
+#
+# This is a script to be used to process multiple projects according to the name
+# of symbol link.
+# get_remote.sh - list the remote of projects
+# pull_github.sh - pull a tag/branch from the remote
+# push_github.sh - push a tag/branch to the remote
+# add_remote.sh - add a new remote
+#
+
 
 [ -f build/envsetup.sh ] && echo "Found build/envsetup.sh." || exit
 source build/envsetup.sh
