@@ -116,7 +116,7 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch04_r*|android-7.1.1_r4_x86emu_ch04_r*)
+	android-7.1.0_r7_x86emu_ch04_r*|android-7.1.1_r4_x86emu_ch04_r*|android-6.0.1_r74_x86emu_ch04_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo "Tagging $1..."
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
@@ -125,7 +125,7 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch05_r*|android-7.1.1_r4_x86emu_ch05_r*)
+	android-7.1.0_r7_x86emu_ch05_r*|android-7.1.1_r4_x86emu_ch05_r*|android-6.0.1_r74_x86emu_ch05_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo Tagging android-7.1.0_r7_x86emu_ch05...
 			tag_goldfish $1
@@ -136,7 +136,7 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch06_r*|android-7.1.1_r4_x86emu_ch06_r*)
+	android-7.1.0_r7_x86emu_ch06_r*|android-7.1.1_r4_x86emu_ch06_r*|android-6.0.1_r74_x86emu_ch06_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo "Tagging $1..."
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
@@ -146,7 +146,7 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch07_r*|android-7.1.1_r4_x86emu_ch07_r*)
+	android-7.1.0_r7_x86emu_ch07_r*|android-7.1.1_r4_x86emu_ch07_r*|android-6.0.1_r74_x86emu_ch07_r*)
 		if [ -d device/generic/x86emu ]; then
 			echo "Tagging $1..."
 			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot

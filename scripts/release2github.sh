@@ -191,7 +191,7 @@ process_git()
 		;;
 		push)
 		echo "In $1"
-		[ -n "$3" ] && (git push $3 $2)
+		[ -n "$3" ] && (echo git push $3 $2)
 		;;
 		*)
 		get_remote
@@ -252,7 +252,7 @@ release_x86emu()
 {
 	# echo "Processing android_x86 $1 $2 $3"
 	PATH1="bootable/newinstaller";[ -d ${PATH1} ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
-	PATH1="device/generic/common";[ -d ${PATH1} ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
+	PATH1="device/generic/common";[ -f ${PATH1}/Android.mk ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
 	PATH1="device/generic/x86emu";[ -d ${PATH1} ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
 	PATH1="device/generic/goldfish";[ -d ${PATH1} ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
 	PATH1="kernel";[ -d ${PATH1} ] && (cd ${PATH1}; process_git ${PATH1} $1 $2 $3; croot)
