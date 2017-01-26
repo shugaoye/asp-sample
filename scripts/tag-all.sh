@@ -116,42 +116,13 @@ case $1 in
 			exit
 		fi
 		;;
-	android-7.1.0_r7_x86emu_ch04_r*|android-7.1.1_r4_x86emu_ch04_r*|android-6.0.1_r74_x86emu_ch04_r*)
+	android-7.1.0_r7_x86emu_ch0*|android-7.1.1_r4_x86emu_ch0*|android-6.0.1_r74_x86emu_ch0*)
 		if [ -d device/generic/x86emu ]; then
 			echo "Tagging $1..."
-			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
-		else
-			echo "Cannot find x86emu."
-			exit
-		fi
-		;;
-	android-7.1.0_r7_x86emu_ch05_r*|android-7.1.1_r4_x86emu_ch05_r*|android-6.0.1_r74_x86emu_ch05_r*)
-		if [ -d device/generic/x86emu ]; then
-			echo Tagging android-7.1.0_r7_x86emu_ch05...
-			tag_goldfish $1
-			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
-			cd device/generic/common; git tag $1; git push ${REPO_T} $1; croot
-		else
-			echo "Cannot find x86emu."
-			exit
-		fi
-		;;
-	android-7.1.0_r7_x86emu_ch06_r*|android-7.1.1_r4_x86emu_ch06_r*|android-6.0.1_r74_x86emu_ch06_r*)
-		if [ -d device/generic/x86emu ]; then
-			echo "Tagging $1..."
-			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
-			cd bootable/newinstaller; git tag $1; git push ${REPO_T} $1; croot
-		else
-			echo "Cannot find x86emu."
-			exit
-		fi
-		;;
-	android-7.1.0_r7_x86emu_ch07_r*|android-7.1.1_r4_x86emu_ch07_r*|android-6.0.1_r74_x86emu_ch07_r*)
-		if [ -d device/generic/x86emu ]; then
-			echo "Tagging $1..."
-			cd device/generic/x86emu; git tag $1; git push ${REPO_T} $1; croot
-			cd bootable/newinstaller; git tag $1; git push ${REPO_T} $1; croot
-			tag_goldfish $1
+			PATH1="device/generic/common";[ -f ${PATH1}/Android.mk ] && (cd ${PATH1}; git tag $1; git push ${REPO_T} $1; croot)
+			PATH1="device/generic/goldfish";[ -d ${PATH1} ] && (cd ${PATH1}; git tag $1; git push ${REPO_T} $1; croot)
+			PATH1="device/generic/x86emu";[ -d ${PATH1} ] && (cd ${PATH1}; git tag $1; git push ${REPO_T} $1; croot)
+			PATH1="bootable/newinstaller";[ -d ${PATH1} ] && (cd ${PATH1}; git tag $1; git push ${REPO_T} $1; croot)
 		else
 			echo "Cannot find x86emu."
 			exit

@@ -191,7 +191,7 @@ process_git()
 		;;
 		push)
 		echo "In $1"
-		[ -n "$3" ] && (echo git push $3 $2)
+		[ -n "$3" ] && (git push $3 $2)
 		;;
 		*)
 		get_remote
