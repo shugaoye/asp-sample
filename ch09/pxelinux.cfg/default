@@ -2,44 +2,13 @@ prompt 1
 default menu.c32
 timeout 100
 
-label 1. x86vbox (Two stags /dev/sda7)
-menu x86vbox_sda7_debug
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda7 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
-
-label 2. Recovery (Two stags /dev/sda7)
-menu x86vbox_recovery_debug
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda7 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2 RECOVERY=1
-
-label 3. x86vbox
-menu x86vbox_ramdisk
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk.img androidboot.hardware=x86vbox
-
-label 4. Recovery
-menu x86vbox_recovery
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/ramdisk-recovery.img androidboot.hardware=x86vbox
-
-label 3. NFS Installation - x86vbox
-menu x86vbox_install
-kernel x86vbox/kernel
-append ip=dhcp initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
-
-label 4. NFS Installation (serial port) - x86vbox
+label 1. NFS Installation (serial port) - x86vbox
 menu x86vbox_install_serial
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img root=/dev/nfs rw androidboot.hardware=x86vbox INSTALL=1 DEBUG=2 SRC=/x86vbox ROOT=10.0.2.2:/home/sgye/vol1/android-x86vbox/out/target/product qemu=1 qemu.gles=0
 
-label 8. Recovery (NFS debug) - x86vbox
-menu x86vbox_recovery_debug_nfs
+label 2. x86vbox (ROOT=/dev/sda1, serial port)
+menu x86vbox_sda1
 kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/x86vbox ROOT=192.168.56.1:/home/sgye/vol1/android-6/out/target/product VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2 RECOVERY=1
-
-label 9. x86vbox (Two stags /dev/sda1)
-menu x86vbox_sda1_debug
-kernel x86vbox/kernel
-append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1 VBOX_GUEST_ADDITIONS=1 SDCARD=vendor DATA=sda2
-
+append ip=dhcp console=ttyS3,115200 initrd=x86vbox/initrd.img androidboot.hardware=x86vbox DEBUG=2 SRC=/android-x86vbox ROOT=/dev/sda1
 
